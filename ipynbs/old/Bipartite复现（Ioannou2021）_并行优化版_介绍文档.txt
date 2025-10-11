@@ -1,0 +1,317 @@
+# Bipartite复现（Ioannou2021）_并行优化版 介绍文档
+
+## 1. 文件概述
+
+本文件是Ioannou等人2021年发表的《Randomness certification from Gaussian measurements》论文代码的并行优化版本。该版本在保持原始算法功能和精度的同时，通过并行计算显著提高了代码的运行速度，特别适合进行大规模参数扫描和性能测试。
+
+原始代码基于Jupyter Notebook格式，本优化版将其转换为Python脚本格式，并采用多进程并行技术对核心计算部分进行了优化，解决了原始代码在处理大量参数时运行速度过慢的问题。
+
+## 2. 核心功能
+
+本代码实现了基于高斯测量的量子随机性认证算法，主要包含以下核心功能：
+
+1. **TMS态（双模压缩真空态）生成**：创建用于随机性认证的量子纠缠态
+2. **对称损耗信道模拟**：模拟实际实验中的损耗效应
+3. **周期分箱POVM测量**：实现Alice端的周期分箱正交分量测量
+4. **量子态集合（Assemblage）构建**：生成测量后的条件量子态集合
+5. **半定规划（SDP）求解**：计算最优猜测概率和最小熵
+6. **同态测量模式**：支持更接近实验条件的同态测量方案
+
+## 3. 并行优化策略
+
+### 3.1 主要优化点
+
+本版本在不改变原始算法参数和计算精度的情况下，通过以下方式实现了性能优化：
+
+1. **多进程并行计算**：
+   - 使用`concurrent.futures.ProcessPoolExecutor`实现对效率η扫描的并行处理
+   - 为每个η值创建独立的工作函数，实现eta网格的并行扫描
+   - 充分利用多核CPU资源，大幅提升计算速度
+
+2. **鲁棒性提升**：
+   - 为SDP求解过程添加异常处理机制
+   - 实现求解器自动切换功能（当MOSEK失败时自动尝试SCS求解器）
+   - 为失败任务添加默认值处理，确保程序不会因单个任务失败而中断
+
+3. **用户体验优化**：
+   - 使用`tqdm`库添加进度条显示，直观展示计算进度
+   - 增加详细的运行时间统计功能
+   - 优化结果可视化，只显示有效数据点
+
+### 3.2 性能提升预期
+
+- 在多核CPU上，运行速度可提升至接近CPU核心数的倍数
+- 对于大规模参数扫描（如更多的η值和Tq值），优化效果更为明显
+- 计算密集型的SDP求解过程可以充分利用多核性能
+
+## 4. 核心函数说明
+
+### 4.1 辅助函数
+
+#### `destroy(d: int) -> np.ndarray`
+创建Fock基下的单模湮灭算符a，维度为d×d
+- **参数**：d - Fock空间截断维度
+- **返回值**：湮灭算符矩阵
+
+#### `create(d: int) -> np.ndarray`
+创建Fock基下的产生算符a†，即湮灭算符的共轭转置
+- **参数**：d - Fock空间截断维度
+- **返回值**：产生算符矩阵
+
+#### `kron(*ops) -> np.ndarray`
+计算多个算符的克罗内克积
+- **参数**：*ops - 任意数量的算符矩阵
+- **返回值**：克罗内克积结果矩阵
+
+#### `partial_trace(rho: np.ndarray, dims, keep)`
+对量子态进行偏迹操作
+- **参数**：
+  - rho - 密度矩阵
+  - dims - 各子系统维度
+  - keep - 保留的子系统索引
+- **返回值**：偏迹后的密度矩阵
+
+### 4.2 量子态生成与损耗
+
+#### `r_from_squeezing_db(s_db: float) -> float`
+将压缩参数从dB转换为自然单位r
+- **参数**：s_db - 压缩参数（dB）
+- **返回值**：自然单位的压缩参数r
+
+#### `tms_state_density(d: int, s_db: float) -> np.ndarray`
+生成截断维度为d的双模压缩真空态密度矩阵
+- **参数**：
+  - d - Fock空间截断维度
+  - s_db - 压缩参数（dB）
+- **返回值**：TMS态密度矩阵
+
+#### `apply_symmetric_loss_parallel(rho_AB: np.ndarray, d: int, eta: float) -> np.ndarray`
+对两体量子态应用对称损耗信道（优化版）
+- **参数**：
+  - rho_AB - 两体量子态密度矩阵
+  - d - Fock空间截断维度
+  - eta - 损耗效率
+- **返回值**：应用损耗后的密度矩阵
+
+### 4.3 测量算子构建
+
+#### `quadrature_op(d: int, theta: float) -> np.ndarray`
+创建角度为theta的正交算符x_theta
+- **参数**：
+  - d - Fock空间截断维度
+  - theta - 测量角度
+- **返回值**：正交算符矩阵
+
+#### `periodic_binning_povms(d: int, theta: float, T: float, o: int)`
+构建角度为theta的正交分量的周期分箱POVM测量算子
+- **参数**：
+  - d - Fock空间截断维度
+  - theta - 测量角度
+  - T - 周期大小
+  - o - 分箱数量
+- **返回值**：POVM测量算子列表
+
+#### `nonperiodic_binning_povms(d, theta, o, r)`
+Bob的非周期性分箱同态测量POVM算子构建函数
+- **参数**：
+  - d - Fock空间截断维度
+  - theta - 测量角度
+  - o - 分箱数量
+  - r - 分箱范围
+- **返回值**：POVM测量算子列表
+
+### 4.4 量子态集合与概率计算
+
+#### `assemblage_tomography(rho_AB: np.ndarray, d: int, Tq: float, oA: int = 8)`
+生成Alice执行POVM测量后的量子态集合
+- **参数**：
+  - rho_AB - 两体量子态密度矩阵
+  - d - Fock空间截断维度
+  - Tq - Alice的周期分箱大小
+  - oA - Alice的POVM分箱数量，默认为8
+- **返回值**：量子态集合
+
+#### `normalize_per_x(sigma)`
+对量子态集合进行归一化
+- **参数**：sigma - 量子态集合
+- **返回值**：归一化后的量子态集合
+
+#### `joint_probabilities(rho_AB, M_ax_list, N_by_list)`
+计算联合概率P[a,b,x,y]
+- **参数**：
+  - rho_AB - 两体量子态密度矩阵
+  - M_ax_list - Alice的POVM测量算子列表
+  - N_by_list - Bob的POVM测量算子列表
+- **返回值**：联合概率张量P[a,b,x,y]
+
+### 4.5 SDP求解函数
+
+#### `guessing_prob_sdp_tomography(sigma_obs, x_star=0, solver=SOLVER, verbose=False)`
+求解Ioannou等人论文中式(2)的原始SDP问题，用于计算最优猜测概率
+- **参数**：
+  - sigma_obs - 观测到的量子态集合
+  - x_star - 目标测量设置，默认为0
+  - solver - 使用的SDP求解器，默认为全局选择的SOLVER
+  - verbose - 是否显示详细求解过程，默认为False
+- **返回值**：最优猜测概率和求解状态
+
+#### `guessing_prob_sdp_homodyne(P, N_by_list, x_star=0, solver=None, verbose=False, mosek_params=None, scs_params=None)`
+同态测量情况下的猜测概率SDP求解
+- **参数**：
+  - P - 联合概率张量
+  - N_by_list - Bob的POVM测量算子列表
+  - x_star - 目标测量设置，默认为0
+  - solver - 使用的SDP求解器，默认为None（自动选择）
+  - verbose - 是否显示详细求解过程，默认为False
+  - mosek_params - MOSEK求解器参数，默认为None
+  - scs_params - SCS求解器参数，默认为None
+- **返回值**：最优猜测概率和求解状态
+
+### 4.6 并行优化的主函数
+
+#### `process_tomography_eta(eta, d, s_db, Tq_grid, oA, verbose)`
+处理单个eta值的层析测量情况（并行工作函数）
+- **参数**：
+  - eta - 损耗效率
+  - d - Fock空间截断维度
+  - s_db - 压缩参数（dB）
+  - Tq_grid - Alice的周期分箱大小T_q的扫描范围
+  - oA - Alice的POVM分箱数量
+  - verbose - 是否显示详细信息
+- **返回值**：eta值、最佳最小熵H_min和对应的Tq值
+
+#### `reproduce_fig2_tomography_parallel(d=8, s_db=-4.0, eta_grid=np.linspace(0.55, 1.0, 10), Tq_grid=np.linspace(2.0, 10.0, 9), oA=8, verbose=False, max_workers=None)`
+复现Ioannou等人论文中的图2（并行优化版）
+- **参数**：
+  - d - Fock空间截断维度，默认为8
+  - s_db - 压缩参数（方差dB），默认为-4.0
+  - eta_grid - 效率η的扫描范围，默认为np.linspace(0.55, 1.0, 10)
+  - Tq_grid - Alice的周期分箱大小T_q的扫描范围，默认为np.linspace(2.0, 10.0, 9)
+  - oA - Alice的POVM分箱数量，默认为8
+  - verbose - 是否显示求解器详细信息，默认为False
+  - max_workers - 并行进程数，默认为None（使用所有可用核心）
+- **返回值**：各eta值对应的最佳最小熵和最佳Tq值
+
+#### `process_homodyne_eta(eta, d, s_db, Tq_grid, oA, oB, verbose)`
+处理单个eta值的同态测量情况（并行工作函数）
+- **参数**：
+  - eta - 损耗效率
+  - d - Fock空间截断维度
+  - s_db - 压缩参数（dB）
+  - Tq_grid - Alice的周期分箱大小T_q的扫描范围
+  - oA - Alice的POVM分箱数量
+  - oB - Bob的POVM分箱数量
+  - verbose - 是否显示详细信息
+- **返回值**：eta值、最佳最小熵H_min和对应的Tq值
+
+#### `reproduce_fig2_homodyne_mb2_parallel(d=8, s_db=-4.0, eta_grid=np.linspace(0.55, 1.0, 5), Tq_grid=np.linspace(2.0, 10.0, 5), oA=8, oB=16, verbose=False, max_workers=None)`
+复现Ioannou等人论文中的图2，使用同态测量（并行优化版）
+- **参数**：
+  - d - Fock空间截断维度，默认为8
+  - s_db - 压缩参数（dB），默认为-4.0
+  - eta_grid - 效率η的扫描范围，默认为np.linspace(0.55, 1.0, 5)
+  - Tq_grid - Alice的周期分箱大小T_q的扫描范围，默认为np.linspace(2.0, 10.0, 5)
+  - oA - Alice的POVM分箱数量，默认为8
+  - oB - Bob的POVM分箱数量，默认为16
+  - verbose - 是否显示详细信息，默认为False
+  - max_workers - 并行进程数，默认为None（使用所有可用核心）
+- **返回值**：各eta值对应的最佳最小熵和最佳Tq值
+
+## 5. 重要参数说明
+
+| 参数名 | 物理意义 | 默认值 | 取值范围 |
+|--------|---------|--------|---------|
+| d | Fock空间截断维度 | 8 | 正整数（通常4-16） |
+| s_db | 压缩参数（dB） | -4.0 | 负数（绝对值越大，压缩越强） |
+| eta | 损耗效率 | 0.55-1.0 | 0.0-1.0 |
+| Tq | Alice的周期分箱大小 | 2.0-10.0 | 正实数 |
+| oA | Alice的POVM分箱数量 | 8 | 正整数 |
+| oB | Bob的POVM分箱数量 | 16 | 正整数 |
+| max_workers | 并行进程数 | None | 正整数（通常设为CPU核心数） |
+
+## 6. 使用方法
+
+### 6.1 直接运行
+
+可以直接运行脚本文件，程序会执行预设的小规模测试，展示并行优化效果：
+
+```bash
+python Bipartite复现（Ioannou2021）_并行优化版.py
+```
+
+### 6.2 作为模块调用
+
+可以在其他Python代码中导入并使用本模块的函数：
+
+```python
+from Bipartite复现（Ioannou2021）_并行优化版 import reproduce_fig2_tomography_parallel, reproduce_fig2_homodyne_mb2_parallel
+import numpy as np
+
+# 自定义参数
+eta_grid = np.linspace(0.6, 0.95, 8)
+Tq_grid = np.linspace(3.0, 9.0, 7)
+
+# 调用并行优化函数
+H_tomo, T_best_tomo = reproduce_fig2_tomography_parallel(
+    d=10, 
+    s_db=-5.0,
+    eta_grid=eta_grid,
+    Tq_grid=Tq_grid,
+    oA=8,
+    max_workers=4  # 使用4个并行进程
+)
+
+# 调用同态测量并行函数
+H_homo, T_best_homo = reproduce_fig2_homodyne_mb2_parallel(
+    d=10, 
+    s_db=-5.0,
+    eta_grid=eta_grid,
+    Tq_grid=Tq_grid,
+    oA=8, 
+    oB=16,
+    max_workers=4
+)
+```
+
+### 6.3 参数调整建议
+
+1. **Fock空间维度d**：
+   - 增大d可以提高计算精度，但会显著增加内存占用和计算时间
+   - 建议从d=8开始测试，根据结果和性能需求调整
+
+2. **并行进程数max_workers**：
+   - 建议设置为可用CPU核心数，或略少于核心数以避免系统过载
+   - 对于大规模计算，适当减少进程数可以提高稳定性
+
+3. **参数扫描范围**：
+   - 对于初步测试，建议使用较小的参数网格（如eta_grid长度5-8）
+   - 对于精确结果，可增加参数网格密度
+
+## 7. 注意事项
+
+1. **环境要求**：
+   - 需要安装numpy、cvxpy、matplotlib和tqdm库
+   - 建议安装MOSEK求解器以获得最佳性能，如不可用则自动使用SCS求解器
+
+2. **内存占用**：
+   - 由于使用了多进程，每个进程都会有独立的内存空间
+   - 在处理非常大的Fock空间维度(d)时，内存占用会相应增加
+
+3. **性能考量**：
+   - 对于大规模计算，建议先进行小规模测试以评估性能和资源需求
+   - 不同硬件配置下，并行加速比会有所不同
+
+4. **结果解释**：
+   - 程序输出的最小熵H_min表示可提取的安全随机比特数
+   - 随着损耗效率η的增加，H_min通常也会增加
+
+## 8. 总结
+
+本并行优化版代码在保持原始算法准确性的同时，通过多进程并行计算显著提高了运行速度。主要优势包括：
+
+1. **计算效率高**：充分利用多核CPU资源，大幅缩短参数扫描时间
+2. **鲁棒性强**：内置异常处理和求解器切换机制，提高程序稳定性
+3. **用户友好**：提供进度显示和运行时间统计，便于监控计算过程
+4. **可扩展性好**：支持调整并行进程数和各种算法参数，适应不同需求
+
+这个优化版本特别适合需要进行大规模参数扫描和性能测试的研究场景，可以帮助研究者更高效地开展量子随机性认证相关研究。

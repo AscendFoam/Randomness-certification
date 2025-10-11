@@ -1,0 +1,136 @@
+# Bipartite复现（Ioannou2021）.ipynb 介绍文档
+
+## 1. 文件概述
+
+本Notebook文件实现了Ioannou等人2021年发表的量子随机性认证论文的核心算法和结果复现。该论文研究了基于量子纠缠的随机性认证方案，特别是在仅有部分测量信息的情况下如何验证和提取量子随机性。
+
+主要功能和意义：
+- 实现了基于孪生光束态(TMS)的量子随机性认证完整方案
+- 对比了两种测量方法（量子态层析和同态测量）的性能差异
+- 复现了论文中的图2，展示不同传输效率下可认证的最小熵随参数变化的关系
+- 为量子随机数生成和认证提供了可直接运行的代码实现，对量子密码学研究具有重要参考价值
+
+## 2. 重要参数的物理意义
+
+| 参数名 | 描述 | 物理意义 | 典型取值 |
+|--------|------|----------|----------|
+| d | Fock空间截断维度 | 量子态的表示空间维度，影响计算精度和资源需求 | 8-12 |
+| s_db | 压缩参数(dB) | 表征TMS态的纠缠程度，决定量子关联强度 | -4.0 dB |
+| η | 传输效率 | 表示量子态在传输过程中保持完整性的概率，模拟实际损耗 | 0.55-1.0 |
+| T_q | Alice的周期分箱大小 | 影响测量精度和随机性提取效率的关键参数 | 2.0-10.0 |
+| oA | Alice的POVM分箱数量 | 决定Alice测量结果的离散化程度 | 6-8 |
+| oB | Bob的POVM分箱数量 | 决定Bob测量结果的离散化程度 | 12-16 |
+| mX | Alice的测量设置数量 | 表征测量复杂度，论文中使用2（q和p正交分量） | 2 |
+| mB | Bob的测量设置数量 | 表征测量复杂度，论文中比较了不同数量的情况 | 2或更多 |
+
+## 3. 核心函数功能说明
+
+### 3.1 量子态生成与损耗模拟
+
+#### tms_state_density(d, s_db)
+生成孪生光束态(TMS)的密度矩阵，这是一种重要的连续变量纠缠态，是随机性认证的量子资源。
+- 参数：d(Fock空间维度)、s_db(压缩参数dB)
+- 返回：d×d维的TMS态密度矩阵
+
+#### apply_symmetric_loss(rho, d, eta)
+为TMS态应用对称损耗，模拟量子态在传输过程中的衰减。
+- 参数：rho(输入密度矩阵)、d(Fock空间维度)、eta(传输效率)
+- 返回：应用损耗后的密度矩阵
+
+### 3.2 测量算子构建
+
+#### periodic_binning_povms(d, theta, Tq, oA)
+生成周期分箱的POVM测量算子，主要用于Alice的测量。
+- 参数：d(Fock空间维度)、theta(测量角度)、Tq(分箱大小)、oA(分箱数量)
+- 返回：oA个POVM测量算子的列表
+
+#### nonperiodic_binning_povms(d, theta, oB, r)
+生成非周期分箱的POVM测量算子，主要用于Bob的同态测量。
+- 参数：d(Fock空间维度)、theta(测量角度)、oB(分箱数量)、r(分箱范围)
+- 返回：oB个POVM测量算子的列表
+
+#### estimate_range_r(rho, d)
+基于量子态的二阶矩估计同态测量的分箱范围半径r。
+- 参数：rho(密度矩阵)、d(Fock空间维度)
+- 返回：估计的范围半径值
+
+### 3.3 概率计算与状态集合生成
+
+#### assemblage_tomography(rho, d, M_ax_list)
+生成量子态集合σ_{a|x}，表示Alice执行POVM测量后的条件量子态。
+- 参数：rho(密度矩阵)、d(Fock空间维度)、M_ax_list(Alice的POVM列表)
+- 返回：量子态集合assemblage[a][x]
+
+#### normalize_per_x(assemblage)
+归一化量子态集合，确保每个测量设置x下的条件态迹之和为1。
+- 参数：assemblage(量子态集合)
+- 返回：归一化后的量子态集合
+
+#### joint_probabilities(rho, M_ax_list, N_by_list)
+计算联合概率分布P[a,b,x,y]，表示Alice和Bob分别选择测量设置x,y时获得结果a,b的概率。
+- 参数：rho(密度矩阵)、M_ax_list(Alice的POVM列表)、N_by_list(Bob的POVM列表)
+- 返回：四维概率数组P[a,b,x,y]
+
+### 3.4 半定规划(SDP)求解
+
+#### guessing_prob_sdp_tomography(assemblage, x_star)
+求解论文式(2)的原始SDP问题，计算在量子态层析情况下Eve的最大猜测概率。
+- 参数：assemblage(量子态集合)、x_star(目标测量设置)
+- 返回：Eve的最大猜测概率和求解状态
+
+#### guessing_prob_sdp_homodyne(P, N_by_list, x_star)
+求解同态测量情况下的SDP问题，计算Eve的最大猜测概率。
+- 参数：P(联合概率分布)、N_by_list(Bob的POVM列表)、x_star(目标测量设置)
+- 返回：Eve的最大猜测概率和求解状态
+
+### 3.5 主函数与结果复现
+
+#### reproduce_fig2_tomography()
+复现论文图2，使用量子态层析方法，扫描不同效率η并优化H_min关于Alice的周期分箱大小T_q。
+- 参数：包含Fock空间维度、压缩参数、效率和T_q扫描范围等
+- 返回：每个η对应的最大H_min值和最优T_q值
+
+#### reproduce_fig2_homodyne_mb2()
+复现论文图2，使用同态测量方法，Bob使用2个测量设置。
+- 参数：与reproduce_fig2_tomography类似
+- 返回：每个η对应的最大H_min值和最优T_q值
+
+## 4. 函数间的联系与工作流程
+
+整个复现过程遵循以下工作流程：
+
+1. **量子资源准备**：首先通过`tms_state_density`生成初始TMS纠缠态，然后通过`apply_symmetric_loss`模拟传输损耗。
+
+2. **测量算子构建**：根据不同的测量场景，分别构建Alice和Bob的测量算子：
+   - 在层析方法中，Alice使用`periodic_binning_povms`构建周期分箱POVM
+   - 在同态测量方法中，Alice使用同样的周期分箱，Bob使用`nonperiodic_binning_povms`构建非周期分箱POVM
+
+3. **数据获取与处理**：
+   - 在层析方法中，使用`assemblage_tomography`生成量子态集合，并通过`normalize_per_x`进行归一化
+   - 在同态测量方法中，使用`joint_probabilities`直接计算联合概率分布
+
+4. **安全性分析**：
+   - 通过`guessing_prob_sdp_tomography`或`guessing_prob_sdp_homodyne`求解SDP问题，得到Eve的最大猜测概率
+   - 计算相应的最小熵H_min = -log2(p_g)
+
+5. **结果优化与可视化**：主函数`reproduce_fig2_tomography`和`reproduce_fig2_homodyne_mb2`遍历不同的效率η和分箱参数T_q，找到最优组合，并通过matplotlib绘制结果图表
+
+## 5. 关键算法亮点
+
+1. **混合测量场景**：代码同时实现了完全量子态层析和部分同态测量两种场景，便于比较不同测量策略的优劣
+
+2. **参数优化**：通过扫描关键参数（如T_q）并寻找最优值，提高了随机性认证的效率
+
+3. **数值稳定性**：在计算过程中采取了多种数值稳定措施，如在对数计算中使用max避免数值问题
+
+4. **求解器灵活性**：支持多种SDP求解器（优先MOSEK，回退SCS），适应不同的计算环境
+
+## 6. 应用领域
+
+本代码可应用于以下研究和应用场景：
+- 量子随机数生成与认证的理论研究
+- 量子密码协议的安全性分析
+- 连续变量量子信息处理
+- 设备无关和半设备无关量子随机数认证方案的开发
+
+通过调整参数（如压缩参数、传输效率等），可以模拟不同实验条件下的随机性认证性能，为实验实现提供理论指导。
