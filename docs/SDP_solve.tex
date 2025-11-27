@@ -1,0 +1,206 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\title{MDIQRNG based on continuous-variable bell state measurement}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note derives the conditional probability distribution of discretized measurement outcomes for continuous-variable (CV) Bell measurement on two-mode coherent states. The standard normalized definitions of quadrature operators $\hat{X}$ and $\hat{P}$ are adopted, and the Bell measurement is implemented via the commuting joint quadratures $X_+ = \hat{X}_1 + \hat{X}_2$ and $P_- = \hat{P}_1 - \hat{P}_2$. The conditional probabilities are derived using Gaussian distribution properties and the error function, with explicit formulas provided.
+\end{abstract}
+
+\section{Preliminaries}
+\subsection{Standard Normalized Quadrature Operators}
+The single-mode position and momentum quadrature operators are defined as:
+\[
+\hat{X} = \frac{\hat{a} + \hat{a}^\dagger}{\sqrt{2}}, \quad \hat{P} = \frac{\hat{a} - \hat{a}^\dagger}{i\sqrt{2}}
+\]
+where $\hat{a}$ and $\hat{a}^\dagger$ are the annihilation and creation operators, respectively. Key properties for a coherent state $|\alpha\rangle$:
+- Expectation values: $\langle \hat{X} \rangle = \sqrt{2}\,\text{Re}(\alpha)$, $\langle \hat{P} \rangle = \sqrt{2}\,\text{Im}(\alpha)$
+- Variances: $\text{Var}(\hat{X}) = \text{Var}(\hat{P}) = \frac{1}{2}$ (satisfies Heisenberg uncertainty principle $\Delta X \Delta P \geq \frac{1}{2}$)
+
+\subsection{Input Two-Mode Coherent States}
+The input states are two-mode coherent states $|\psi_\sigma\rangle = |\alpha_1\rangle \otimes |\alpha_2\rangle$, where:
+- $\alpha_1 = \sqrt{\mu_1} e^{i\phi_1}$, $\alpha_2 = \sqrt{\mu_2} e^{i\phi_2}$
+- Phase angles $\phi_1, \phi_2 \in \{0, \pi\}$, leading to sign parameters $s_1 = \cos\phi_1 \in \{+1, -1\}$, $s_2 = \cos\phi_2 \in \{+1, -1\}$
+- Four distinct input states are indexed by $\sigma = (s_1, s_2) \in \{(+1,+1), (+1,-1), (-1,+1), (-1,-1)\}$
+- Since $\phi_1, \phi_2 \in \{0, \pi\}$, $\text{Im}(\alpha_1) = \text{Im}(\alpha_2) = 0$, so $\langle \hat{P}_1 \rangle = \langle \hat{P}_2 \rangle = 0$
+
+\subsection{CV Bell Measurement}
+A complete CV Bell measurement requires two commuting joint quadratures. We choose:
+\[
+X_+ = \hat{X}_1 + \hat{X}_2, \quad P_- = \hat{P}_1 - \hat{P}_2
+\]
+where $[X_+, P_-] = 0$ (commuting) and the measurement is informationally complete.
+
+\subsection{Discretization of Measurement Outcomes}
+- Continuous output of $X_+$: $x_+ \in \mathbb{R}$, discretized into $n$ intervals $I_{+k} = [c_{k-1}, c_k)$ for $k = 1, 2, ..., n$ (with $c_0 \to -\infty$, $c_n \to +\infty$)
+- Continuous output of $P_-$: $p_- \in \mathbb{R}$, discretized into $n$ intervals $I_{-l} = [d_{l-1}, d_l)$ for $l = 1, 2, ..., n$ (with $d_0 \to -\infty$, $d_n \to +\infty$)
+- Discretized measurement results: Joint intervals $(I_{+k}, I_{-l})$ denoted as $(k, l)$, totaling $n^2$ distinct outcomes
+
+\section{Joint Probability Density of Continuous Outcomes}
+For input state $\sigma = (s_1, s_2)$, the joint probability density of continuous outcomes $(x_+, p_-)$ follows a Gaussian distribution (linear combinations of Gaussian variables are Gaussian).
+
+\subsection{Mean Values}
+- Mean of $X_+$: $\mu_{+\sigma} = \langle X_+ \rangle_\sigma = \langle \hat{X}_1 \rangle + \langle \hat{X}_2 \rangle = \sqrt{2}(s_1\sqrt{\mu_1} + s_2\sqrt{\mu_2})$
+- Mean of $P_-$: $\mu_{-\sigma} = \langle P_- \rangle_\sigma = \langle \hat{P}_1 \rangle - \langle \hat{P}_2 \rangle = 0$
+
+\subsection{Variances}
+Since the two modes are independent:
+- Variance of $X_+$: $\text{Var}(X_+) = \text{Var}(\hat{X}_1) + \text{Var}(\hat{X}_2) = \frac{1}{2} + \frac{1}{2} = 1$
+- Variance of $P_-$: $\text{Var}(P_-) = \text{Var}(\hat{P}_1) + \text{Var}(\hat{P}_2) = \frac{1}{2} + \frac{1}{2} = 1$
+
+\subsection{Joint Gaussian Density}
+The joint probability density is separable (due to independence of $X_+$ and $P_-$):
+\[
+f(x_+, p_-|\sigma) = f_+(x_+|\sigma) \cdot f_-(p_-)
+\]
+where:
+- $f_+(x_+|\sigma) = \frac{1}{\sqrt{2\pi}} \exp\left( -\frac{(x_+ - \mu_{+\sigma})^2}{2} \right)$ (marginal density of $X_+$)
+- $f_-(p_-) = \frac{1}{\sqrt{2\pi}} \exp\left( -\frac{p_-^2}{2} \right)$ (marginal density of $P_-$)
+
+Thus, the joint density simplifies to:
+\[
+f(x_+, p_-|\sigma) = \frac{1}{2\pi} \exp\left( -\frac{(x_+ - \mu_{+\sigma})^2}{2} - \frac{p_-^2}{2} \right)
+\]
+
+\section{Derivation of Conditional Probabilities for Discretized Outcomes}
+The conditional probability $P((k,l)|\sigma)$ is the integral of the joint density over the discrete joint interval $(I_{+k}, I_{-l})$.
+
+\subsection{Definition of Conditional Probability}
+\[
+P((k,l)|\sigma) = \iint_{I_{+k} \times I_{-l}} f(x_+, p_-|\sigma) \, dx_+ dp_-
+\]
+
+\subsection{Separable Integration}
+Due to the separability of $f(x_+, p_-|\sigma)$, the double integral splits into a product of single integrals:
+\[
+P((k,l)|\sigma) = \left( \int_{c_{k-1}}^{c_k} f_+(x_+|\sigma) \, dx_+ \right) \cdot \left( \int_{d_{l-1}}^{d_l} f_-(p_-) \, dp_- \right)
+\]
+
+\subsection{Evaluation via Error Function}
+The error function is defined as $\text{erf}(z) = \frac{2}{\sqrt{\pi}} \int_0^z \exp(-t^2) dt$, which simplifies Gaussian integrals.
+
+\subsubsection{Integral for $X_+$}
+Let $t = \frac{x_+ - \mu_{+\sigma}}{\sqrt{2}}$ (so $dx_+ = \sqrt{2} dt$). The integral becomes:
+\[
+\int_{c_{k-1}}^{c_k} \frac{1}{\sqrt{2\pi}} \exp\left( -\frac{(x_+ - \mu_{+\sigma})^2}{2} \right) dx_+ = \frac{1}{2} \left[ \text{erf}\left( \frac{c_k - \mu_{+\sigma}}{\sqrt{2}} \right) - \text{erf}\left( \frac{c_{k-1} - \mu_{+\sigma}}{\sqrt{2}} \right) \right]
+\]
+
+\subsubsection{Integral for $P_-$}
+Let $t = \frac{p_-}{\sqrt{2}}$ (so $dp_- = \sqrt{2} dt$). The integral becomes:
+\[
+\int_{d_{l-1}}^{d_l} \frac{1}{\sqrt{2\pi}} \exp\left( -\frac{p_-^2}{2} \right) dp_- = \frac{1}{2} \left[ \text{erf}\left( \frac{d_l}{\sqrt{2}} \right) - \text{erf}\left( \frac{d_{l-1}}{\sqrt{2}} \right) \right]
+\]
+
+\subsection{Final Conditional Probability Formula}
+Substitute $\mu_{+\sigma} = \sqrt{2}(s_1\sqrt{\mu_1} + s_2\sqrt{\mu_2})$ and simplify the argument of the error function:
+\begin{equation}
+  \begin{aligned}
+      P((k,l)|s_1,s_2) &= \frac{1}{4} \cdot \left[ \text{erf}\left( \frac{c_k}{\sqrt{2}} - s_1\sqrt{\mu_1} - s_2\sqrt{\mu_2} \right) - \text{erf}\left( \frac{c_{k-1}}{\sqrt{2}} - s_1\sqrt{\mu_1} - s_2\sqrt{\mu_2} \right) \right] \\
+& \cdot \left[ \text{erf}\left( \frac{d_l}{\sqrt{2}} \right) - \text{erf}\left( \frac{d_{l-1}}{\sqrt{2}} \right) \right]
+  \end{aligned}  
+\end{equation}
+
+
+
+
+where:
+- $(s_1, s_2) \in \{(+1,+1), (+1,-1), (-1,+1), (-1,-1)\}$ (four input states)
+- $k, l \in \{1, 2, ..., n\}$ (discretized outcome indices)
+- $c_{k-1}, c_k$ and $d_{l-1}, d_l$ are user-defined discretization boundaries. 
+
+Remark: The mean photon number $\mu_1$ and $\mu_2$ can be the same, and need to be optimized, for example $[0,10]$. The boundary $|c_1|$, $|c_{n-1}|$,  $|d_1|$, $|d_{n-1}|$ can be set to be 10.
+
+
+
+\section{Matrix Representation of Input Two-Mode Coherent States}
+This section derives the vector (matrix) representations of the four input two-mode coherent states under the assumption $\mu_1 = \mu_2 = \mu$ (denoted $\alpha = \sqrt{\mu}$ for simplicity). We first define a two-dimensional subspace basis for each single mode, then extend it to the two-mode space.
+
+\subsection{Single-Mode Basis and State Expansion}
+For each mode (Mode 1 and Mode 2, symmetric due to $\mu_1 = \mu_2$), we define a two-dimensional orthonormal basis $\{ |0\rangle, |1\rangle \}$ where:
+- Basis vector $|0\rangle = |\alpha\rangle$ (coherent state with phase $\phi = 0$)
+- Basis vector $|1\rangle$: Normalized vector orthogonal to $|0\rangle$, i.e., $\langle 0 | 1 \rangle = 0$ and $\langle 1 | 1 \rangle = 1$
+
+The complementary coherent state $|-\alpha\rangle$ (phase $\phi = \pi$) lies in this two-dimensional subspace and can be expanded as:
+\[
+|-\alpha\rangle = \delta |0\rangle + \sqrt{1 - \delta^2} |1\rangle
+\]
+where $\delta = \langle 0 | -\alpha \rangle = \langle \alpha | -\alpha \rangle$ is the inner product of $|\alpha\rangle$ and $|-\alpha\rangle$.
+
+\subsection{Inner Product $\delta$ Calculation}
+The inner product of two coherent states $|\alpha\rangle$ and $|\beta\rangle$ is given by:
+\[
+\langle \alpha | \beta \rangle = \exp\left( -\frac{1}{2} \left( |\alpha|^2 + |\beta|^2 - 2\alpha^* \beta \right) \right)
+\]
+For $\beta = -\alpha$ and $|\alpha|^2 = \mu$ (real $\alpha$), substitute into the formula:
+\[
+\delta = \langle \alpha | -\alpha \rangle = \exp\left( -\frac{1}{2} \left( \mu + \mu - 2\alpha \cdot (-\alpha) \right) \right) = \exp\left( -\frac{1}{2} (2\mu + 2\mu) \right) = \exp(-2\mu)
+\]
+Thus, $\delta = e^{-2\mu}$, a real positive parameter dependent only on the average photon number $\mu$.
+
+\subsection{Two-Mode Space Basis}
+The two-mode Hilbert space is the tensor product of the two single-mode subspaces. We adopt the orthonormal basis for the two-mode space as:
+\[
+\{ |00\rangle, |01\rangle, |10\rangle, |11\rangle \}
+\]
+where $|ij\rangle = |i\rangle_1 \otimes |j\rangle_2$ (subscripts 1 and 2 denote Mode 1 and Mode 2, respectively). The vector representation of a two-mode state is a 4-dimensional column vector, with components ordered by $\{ |00\rangle, |01\rangle, |10\rangle, |11\rangle \}$.
+
+\subsection{Vector Representations of Four Input States}
+All four input states are tensor products of single-mode coherent states $|\phi_{s_1}\rangle_1 \otimes |\phi_{s_2}\rangle_2$, where $|\phi_{+1}\rangle = |\alpha\rangle = |0\rangle$ and $|\phi_{-1}\rangle = |-\alpha\rangle = \delta |0\rangle + \sqrt{1 - \delta^2} |1\rangle$. We derive their vector representations using tensor product expansion.
+
+\subsubsection{Input State 1: $\sigma = (+1, +1)$ → $|\alpha\rangle_1 \otimes |\alpha\rangle_2$}
+Substitute $|\phi_{+1}\rangle = |0\rangle$ for both modes:
+\[
+|\alpha\rangle_1 \otimes |\alpha\rangle_2 = |0\rangle_1 \otimes |0\rangle_2 = |00\rangle
+\]
+Vector representation (components ordered by $|00\rangle, |01\rangle, |10\rangle, |11\rangle$):
+\[
+\boxed{
+|\psi_{(+1,+1)}\rangle = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}
+}
+\]
+
+\subsubsection{Input State 2: $\sigma = (+1, -1)$ → $|\alpha\rangle_1 \otimes |-\alpha\rangle_2$}
+Substitute $|\phi_{+1}\rangle_1 = |0\rangle_1$ and $|\phi_{-1}\rangle_2 = \delta |0\rangle_2 + \sqrt{1 - \delta^2} |1\rangle_2$, then expand the tensor product:
+\[
+|\alpha\rangle_1 \otimes |-\alpha\rangle_2 = |0\rangle_1 \otimes \left( \delta |0\rangle_2 + \sqrt{1 - \delta^2} |1\rangle_2 \right) = \delta |00\rangle + \sqrt{1 - \delta^2} |01\rangle
+\]
+Vector representation:
+\[
+\boxed{
+|\psi_{(+1,-1)}\rangle = \begin{pmatrix} \delta \\ \sqrt{1 - \delta^2} \\ 0 \\ 0 \end{pmatrix}
+}
+\]
+
+\subsubsection{Input State 3: $\sigma = (-1, +1)$ → $|-\alpha\rangle_1 \otimes |\alpha\rangle_2$}
+Substitute $|\phi_{-1}\rangle_1 = \delta |0\rangle_1 + \sqrt{1 - \delta^2} |1\rangle_1$ and $|\phi_{+1}\rangle_2 = |0\rangle_2$, then expand the tensor product:
+\[
+|-\alpha\rangle_1 \otimes |\alpha\rangle_2 = \left( \delta |0\rangle_1 + \sqrt{1 - \delta^2} |1\rangle_1 \right) \otimes |0\rangle_2 = \delta |00\rangle + \sqrt{1 - \delta^2} |10\rangle
+\]
+Vector representation:
+\[
+\boxed{
+|\psi_{(-1,+1)}\rangle = \begin{pmatrix} \delta \\ 0 \\ \sqrt{1 - \delta^2} \\ 0 \end{pmatrix}
+}
+\]
+
+\subsubsection{Input State 4: $\sigma = (-1, -1)$ → $|-\alpha\rangle_1 \otimes |-\alpha\rangle_2$}
+Substitute $|\phi_{-1}\rangle_1 = \delta |0\rangle_1 + \sqrt{1 - \delta^2} |1\rangle_1$ and $|\phi_{-1}\rangle_2 = \delta |0\rangle_2 + \sqrt{1 - \delta^2} |1\rangle_2$, then expand the tensor product using distributivity:
+
+\begin{align*}
+|-\alpha\rangle_1 \otimes |-\alpha\rangle_2 &= \left( \delta |0\rangle_1 + \sqrt{1 - \delta^2} |1\rangle_1 \right) \otimes \left( \delta |0\rangle_2 + \sqrt{1 - \delta^2} |1\rangle_2 \right) \\
+&= \delta^2 |00\rangle + \delta \sqrt{1 - \delta^2} |01\rangle + \delta \sqrt{1 - \delta^2} |10\rangle + (1 - \delta^2) |11\rangle
+\end{align*}
+
+Vector representation:
+\[
+\boxed{
+|\psi_{(-1,-1)}\rangle = \begin{pmatrix} \delta^2 \\ \delta \sqrt{1 - \delta^2} \\ \delta \sqrt{1 - \delta^2} \\ 1 - \delta^2 \end{pmatrix}
+}
+\]
+\end{document}
