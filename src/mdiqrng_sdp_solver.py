@@ -46,7 +46,7 @@ class MDIQRNG_SDP_Solver:
 
     def __init__(
         self,
-        n: int = 3,
+        n: int = 2,
         mu: float = 1.0,
         boundary: float = 10.0,
         verbose: bool = True
@@ -100,16 +100,10 @@ class MDIQRNG_SDP_Solver:
         """
         # Create n+1 boundary points (including -∞ and +∞)
         # For n intervals, we need n+1 boundaries: c_0, c_1, ..., c_n
-        if self.n == 2:
-            # Special case: 2 intervals → 3 boundaries: [-∞, 0, +∞]
-            self.c_bounds = np.array([-np.inf, 0.0, np.inf])
-            self.d_bounds = np.array([-np.inf, 0.0, np.inf])
-        else:
-            # General case: n intervals → n+1 boundaries
-            # Inner boundaries are evenly spaced between -boundary and +boundary
-            inner_bounds = np.linspace(-self.boundary, self.boundary, self.n - 1)
-            self.c_bounds = np.concatenate([[-np.inf], inner_bounds, [np.inf]])
-            self.d_bounds = np.concatenate([[-np.inf], inner_bounds, [np.inf]])
+        # Inner boundaries are evenly spaced between -boundary and +boundary
+        inner_bounds = np.linspace(-self.boundary, self.boundary, self.n - 1)
+        self.c_bounds = np.concatenate([[-np.inf], inner_bounds, [np.inf]])
+        self.d_bounds = np.concatenate([[-np.inf], inner_bounds, [np.inf]])
 
         if self.verbose:
             print(f"Discretization boundaries (n={self.n}):")
