@@ -1,0 +1,44 @@
+{
+  "n_out_8": {
+    "solver": "MOSEK",
+    "status": "optimal",
+    "p_guess": 0.1720563356473706,
+    "H_min": 2.539047077332949,
+    "route": "route2_random_high_output_search",
+    "num_outputs": 8,
+    "num_trials": 20,
+    "target_input": [
+      1,
+      3
+    ],
+    "raw_H_min": 2.539047678061298
+  },
+  "n_out_12": {
+    "solver": "MOSEK",
+    "status": "optimal",
+    "p_guess": 0.13238732288919988,
+    "H_min": 2.9171631153443665,
+    "route": "route2_random_high_output_search",
+    "num_outputs": 12,
+    "num_trials": 20,
+    "target_input": [
+      3,
+      1
+    ],
+    "raw_H_min": 2.917367387754346
+  },
+  "n_out_16": {
+    "solver": "MOSEK",
+    "status": "optimal",
+    "p_guess": 0.10754676439639566,
+    "H_min": 3.2169639737478954,
+    "route": "route2_random_high_output_search",
+    "num_outputs": 16,
+    "num_trials": 20,
+    "target_input": [
+      3,
+      2
+    ],
+    "raw_H_min": 3.2169650115673756
+  }
+}

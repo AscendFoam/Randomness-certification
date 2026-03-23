@@ -1,0 +1,95 @@
+[
+  {
+    "solver": "MOSEK",
+    "status": "optimal",
+    "p_guess": 0.6843914387440427,
+    "H_min": 0.5471063820482972,
+    "target_input": [
+      0,
+      2
+    ],
+    "raw_H_min": 2.0,
+    "route": "route3_cv_four_phase",
+    "mu": 0.05,
+    "cutoff": 12,
+    "num_phases": 4,
+    "num_inputs": 16,
+    "num_outputs": 4,
+    "local_rank": 4,
+    "joint_dim": 16,
+    "operator_span_rank": 16,
+    "operator_space_dim": 256,
+    "x_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ],
+    "p_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ]
+  },
+  {
+    "solver": "MOSEK",
+    "status": "optimal",
+    "p_guess": 0.6647636969344684,
+    "H_min": 0.5890864968986553,
+    "target_input": [
+      1,
+      1
+    ],
+    "raw_H_min": 1.7921682178863778,
+    "route": "route3_cv_four_phase",
+    "mu": 0.05,
+    "cutoff": 12,
+    "num_phases": 5,
+    "num_inputs": 25,
+    "num_outputs": 4,
+    "local_rank": 5,
+    "joint_dim": 25,
+    "operator_span_rank": 25,
+    "operator_space_dim": 625,
+    "x_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ],
+    "p_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ]
+  },
+  {
+    "solver": "MOSEK",
+    "status": "optimal",
+    "p_guess": 0.6442699304541979,
+    "H_min": 0.634262832421894,
+    "target_input": [
+      0,
+      3
+    ],
+    "raw_H_min": 2.0,
+    "route": "route3_cv_four_phase",
+    "mu": 0.05,
+    "cutoff": 12,
+    "num_phases": 6,
+    "num_inputs": 36,
+    "num_outputs": 4,
+    "local_rank": 6,
+    "joint_dim": 36,
+    "operator_span_rank": 36,
+    "operator_space_dim": 1296,
+    "x_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ],
+    "p_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ]
+  }
+]

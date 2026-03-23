@@ -1,0 +1,108 @@
+from __future__ import annotations
+
+import argparse
+
+from .phaseinsensitive import (
+    DEFAULT_CUTOFF,
+    DEFAULT_NUM_OUTPUTS,
+    DEFAULT_PROB_FLOOR,
+    DEFAULT_Q,
+    DEFAULT_SELECTED_MU,
+    FULL_MU,
+    compare_route4_primal_dual,
+    result_to_json,
+    run_route4_dual,
+    run_route4_primal,
+    search_route4_triplets,
+    sweep_route4_outputs,
+)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Standalone runner for QRNG route 4.")
+    parser.add_argument(
+        "--mode",
+        choices=["dual-single", "primal-single", "primal-dual-compare", "output-sweep", "subset-search"],
+        default="dual-single",
+    )
+    parser.add_argument("--solver", type=str, default=None)
+    parser.add_argument("--verbose", action="store_true")
+    parser.add_argument("--selected-mu", nargs="+", type=int, default=list(DEFAULT_SELECTED_MU))
+    parser.add_argument("--q-values", nargs="+", type=float, default=list(DEFAULT_Q))
+    parser.add_argument("--cutoff", type=int, default=DEFAULT_CUTOFF)
+    parser.add_argument("--num-outputs", type=int, default=DEFAULT_NUM_OUTPUTS)
+    parser.add_argument("--output-values", nargs="+", type=int, default=[4, 6, 8, 12, 16])
+    parser.add_argument("--prob-floor", type=float, default=DEFAULT_PROB_FLOOR)
+    parser.add_argument("--shift", type=int, default=0)
+    parser.add_argument("--subset-size", type=int, default=3)
+    parser.add_argument("--certify-top-k", type=int, default=3)
+    parser.add_argument("--full-mu", nargs="+", type=int, default=list(FULL_MU))
+    parser.add_argument("--max-primal-variables", type=int, default=3_000_000)
+    args = parser.parse_args()
+
+    prob_floor = None if args.prob_floor <= 0 else args.prob_floor
+
+    if args.mode == "dual-single":
+        result = run_route4_dual(
+            num_outputs=args.num_outputs,
+            selected_mu_list=args.selected_mu,
+            q_selected=args.q_values,
+            cutoff=args.cutoff,
+            prob_floor=prob_floor,
+            shift=args.shift,
+            preferred_solver=args.solver,
+            verbose=args.verbose,
+        )
+    elif args.mode == "primal-single":
+        result = run_route4_primal(
+            num_outputs=args.num_outputs,
+            selected_mu_list=args.selected_mu,
+            q_selected=args.q_values,
+            cutoff=args.cutoff,
+            prob_floor=prob_floor,
+            shift=args.shift,
+            preferred_solver=args.solver,
+            verbose=args.verbose,
+            max_primal_variables=args.max_primal_variables,
+        )
+    elif args.mode == "primal-dual-compare":
+        result = compare_route4_primal_dual(
+            num_outputs=args.num_outputs,
+            selected_mu_list=args.selected_mu,
+            q_selected=args.q_values,
+            cutoff=args.cutoff,
+            prob_floor=prob_floor,
+            shift=args.shift,
+            preferred_solver=args.solver,
+            verbose=args.verbose,
+            max_primal_variables=args.max_primal_variables,
+        )
+    elif args.mode == "output-sweep":
+        result = sweep_route4_outputs(
+            output_values=args.output_values,
+            selected_mu_list=args.selected_mu,
+            q_selected=args.q_values,
+            cutoff=args.cutoff,
+            prob_floor=prob_floor,
+            shift=args.shift,
+            preferred_solver=args.solver,
+            verbose=args.verbose,
+        )
+    else:
+        result = search_route4_triplets(
+            num_outputs=args.num_outputs,
+            subset_size=args.subset_size,
+            certify_top_k=args.certify_top_k,
+            cutoff=args.cutoff,
+            prob_floor=prob_floor,
+            shift=args.shift,
+            preferred_solver=args.solver,
+            verbose=args.verbose,
+            full_mu=args.full_mu,
+        )
+
+    print(result_to_json(result))
+
+
+if __name__ == "__main__":
+    main()

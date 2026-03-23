@@ -1,0 +1,110 @@
+[
+  {
+    "tomography": {
+      "solver": "MOSEK",
+      "status": "optimal",
+      "p_guess": 0.9196431222321302,
+      "H_min": 0.12085397901411832,
+      "T_q": 4.0,
+      "route": "route1_steering",
+      "source": "split_sms",
+      "bob_mode": "tomography",
+      "dimension": 4,
+      "squeezing_db": -8.0,
+      "eta": 0.8,
+      "num_alice_bins": 4,
+      "num_bob_bins": 6,
+      "num_bob_settings": 2,
+      "bob_range": 4.331870005613701
+    },
+    "homodyne_mB2": {
+      "solver": "SCS",
+      "status": "optimal",
+      "p_guess": 0.9946842483329565,
+      "H_min": 0.007689464365343234,
+      "T_q": 2.0,
+      "route": "route1_steering",
+      "source": "split_sms",
+      "bob_mode": "homodyne",
+      "dimension": 4,
+      "squeezing_db": -8.0,
+      "eta": 0.8,
+      "num_alice_bins": 4,
+      "num_bob_bins": 6,
+      "num_bob_settings": 2,
+      "bob_range": 4.331870005613701
+    }
+  },
+  {
+    "tomography": {
+      "solver": "MOSEK",
+      "status": "optimal",
+      "p_guess": 0.8151712891680659,
+      "H_min": 0.2948248550915337,
+      "T_q": 4.0,
+      "route": "route1_steering",
+      "source": "split_sms",
+      "bob_mode": "tomography",
+      "dimension": 4,
+      "squeezing_db": -8.0,
+      "eta": 0.9,
+      "num_alice_bins": 4,
+      "num_bob_bins": 6,
+      "num_bob_settings": 2,
+      "bob_range": 4.342894767747383
+    },
+    "homodyne_mB2": {
+      "solver": "SCS",
+      "status": "optimal",
+      "p_guess": 0.9675651805519124,
+      "H_min": 0.04756924242457401,
+      "T_q": 2.0,
+      "route": "route1_steering",
+      "source": "split_sms",
+      "bob_mode": "homodyne",
+      "dimension": 4,
+      "squeezing_db": -8.0,
+      "eta": 0.9,
+      "num_alice_bins": 4,
+      "num_bob_bins": 6,
+      "num_bob_settings": 2,
+      "bob_range": 4.342894767747383
+    }
+  },
+  {
+    "tomography": {
+      "solver": "MOSEK",
+      "status": "optimal",
+      "p_guess": 0.4490131728583198,
+      "H_min": 1.1551703244452163,
+      "T_q": 4.0,
+      "route": "route1_steering",
+      "source": "split_sms",
+      "bob_mode": "tomography",
+      "dimension": 4,
+      "squeezing_db": -8.0,
+      "eta": 1.0,
+      "num_alice_bins": 4,
+      "num_bob_bins": 6,
+      "num_bob_settings": 2,
+      "bob_range": 4.3538916134786305
+    },
+    "homodyne_mB2": {
+      "solver": "SCS",
+      "status": "optimal_inaccurate",
+      "p_guess": 0.7603097813050869,
+      "H_min": 0.3953407435765259,
+      "T_q": 2.0,
+      "route": "route1_steering",
+      "source": "split_sms",
+      "bob_mode": "homodyne",
+      "dimension": 4,
+      "squeezing_db": -8.0,
+      "eta": 1.0,
+      "num_alice_bins": 4,
+      "num_bob_bins": 6,
+      "num_bob_settings": 2,
+      "bob_range": 4.3538916134786305
+    }
+  }
+]
