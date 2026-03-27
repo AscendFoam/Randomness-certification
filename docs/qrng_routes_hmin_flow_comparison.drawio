@@ -1,0 +1,317 @@
+<mxfile host="app.diagrams.net" modified="2026-03-27T12:00:00.000Z" agent="Codex" version="24.7.17" type="device" compressed="false">
+  <diagram id="qrng-routes-hmin" name="RouteFlows">
+    <mxGraphModel dx="2200" dy="1400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3400" pageHeight="2400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="2" value="QRNG 五条路线的 H_min 计算流程对比" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f2937;strokeColor=#111827;fontColor=#ffffff;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="3210" height="42" as="geometry" />
+        </mxCell>
+
+        <mxCell id="3" value="图例" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="78" width="60" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="协议/输入与硬件" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="85" y="72" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="统计生成 / raw 排名 / 扫描" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="275" y="72" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="正式认证优化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="495" y="72" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="最终输出" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="645" y="72" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="对比口径：Route1 用 steering SDP；Route2/3/5 共用 single-device prepare-and-measure MDI SDP；Route4 用 phase-insensitive 对角 primal / dual。raw 熵或分布上界只用于筛选，不等于最终认证值。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="780" y="72" width="2450" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="100" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fbff;strokeColor=#d0d7de;" vertex="1" parent="1">
+          <mxGeometry x="20" y="140" width="620" height="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="101" value="Route 1&#xa;Steering QRNG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="30" y="150" width="600" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="102" value="&lt;b&gt;1. 选协议参数&lt;/b&gt;&lt;br/&gt;source=tmsv / split-SMS&lt;br/&gt;dimension, squeezing_db, eta&lt;br/&gt;num_alice_bins, num_bob_bins, num_bob_settings&lt;br/&gt;以及 T_q 扫描网格" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="580" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="103" value="&lt;b&gt;2. 构造高斯纠缠源&lt;/b&gt;&lt;br/&gt;build_source_state()&lt;br/&gt;生成双模态 ρ_AB&lt;br/&gt;并施加对称损耗 η" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="355" width="580" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="104" value="&lt;b&gt;3. 构造测量模型&lt;/b&gt;&lt;br/&gt;Alice: 周期 coarse-grained q / p POVM&lt;br/&gt;Bob: 多角度 trusted homodyne binning POVM&lt;br/&gt;bob_homodyne_angles() 生成受信设置" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="470" width="580" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="105" value="&lt;b&gt;4. 对每个 T_q 循环&lt;/b&gt;&lt;br/&gt;alice_periodic_povms() 给出 Alice POVM 和互补周期 T_p&lt;br/&gt;这是 route1 里的主要外层参数扫描" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="595" width="580" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="106" value="&lt;b&gt;5. 生成观测数据&lt;/b&gt;&lt;br/&gt;tomography 分支: assemblage_tomography() 得 σ&lt;sub&gt;a|x&lt;/sub&gt;&lt;br/&gt;homodyne 分支: joint_probabilities() 得 P(a,b|x,y)&lt;br/&gt;后者更贴近实验可做版本" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="715" width="580" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="107" value="&lt;b&gt;6. 解 steering SDP&lt;/b&gt;&lt;br/&gt;guessing_prob_sdp_tomography() 或&lt;br/&gt;guessing_prob_sdp_homodyne()&lt;br/&gt;变量是 σ&lt;sub&gt;e,a,x&lt;/sub&gt;，并施加 no-signalling 约束" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="845" width="580" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="108" value="&lt;b&gt;7. 选最优 T_q&lt;/b&gt;&lt;br/&gt;比较每个 T_q 的 p_guess / H_min&lt;br/&gt;保留最佳 T_q 与对应 T_p" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="975" width="580" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="109" value="&lt;b&gt;8. 输出结果&lt;/b&gt;&lt;br/&gt;H_min = -log2(p_guess)&lt;br/&gt;返回最佳参数点与 route1 配置摘要" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1090" width="580" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="110" value="&lt;b&gt;Route1 备注&lt;/b&gt;&lt;br/&gt;1. 物理图像是“高斯纠缠源 + Alice 非受信 + Bob 受信”的 steering 路线。&lt;br/&gt;2. tomography 更像理论上界；实验判断应主要看 homodyne 分支。&lt;br/&gt;3. 当前实现里真正被优化的是 T_q；eta、压缩度和 Bob 设置数通常通过外部 sweep 比较。&lt;br/&gt;4. 认证后端不是 route2/3/5 的 single-device MDI SDP，而是专门的 steering SDP。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;dashed=1;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1210" width="580" height="250" as="geometry" />
+        </mxCell>
+
+        <mxCell id="111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="102" target="103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="103" target="104">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="104" target="105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="105" target="106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="106" target="107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="107" target="108">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="108" target="109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="200" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffaf4;strokeColor=#d0d7de;" vertex="1" parent="1">
+          <mxGeometry x="670" y="140" width="620" height="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="201" value="Route 2&#xa;Prepare-and-Measure MDI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="680" y="150" width="600" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="202" value="&lt;b&gt;1. 选可信输入与模式&lt;/b&gt;&lt;br/&gt;默认使用 local_ic_qubit_states()&lt;br/&gt;每边 4 个 qubit 输入态&lt;br/&gt;可选 baseline 或高输出随机 POVM 搜索" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="230" width="580" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="203" value="&lt;b&gt;2. 构造 product inputs&lt;/b&gt;&lt;br/&gt;product_input_states()&lt;br/&gt;得到 16 个联合输入 ρ&lt;sub&gt;xy&lt;/sub&gt; 及标签 (x,y)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="355" width="580" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="204" value="&lt;b&gt;3. 指定中央测量 POVM&lt;/b&gt;&lt;br/&gt;baseline: fourier_povm_4d()&lt;br/&gt;高熵搜索: random_frame_povm(d, num_outputs)&lt;br/&gt;关键是整体 central outcome c，不再拆成 (a,b)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="470" width="580" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="205" value="&lt;b&gt;4. 计算 P(c|x,y)&lt;/b&gt;&lt;br/&gt;measurement_probabilities()&lt;br/&gt;直接由 ρ&lt;sub&gt;xy&lt;/sub&gt; 与 POVM 元素求轨迹得到观测统计" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="600" width="580" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="206" value="&lt;b&gt;5. raw 预筛选&lt;/b&gt;&lt;br/&gt;对每个目标输入算 raw_H_min = -log2 max_c P(c|x,y)&lt;br/&gt;可选：search_route2_high_entropy() 先在多次随机 POVM 试验里挑 raw 最优 trial" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="715" width="580" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="207" value="&lt;b&gt;6. 单设备 MDI SDP&lt;/b&gt;&lt;br/&gt;SingleDeviceGuessingProblem&lt;br/&gt;变量 M&lt;sub&gt;c,e&lt;/sub&gt;，约束观测概率、POVM 完备性和 Eve 归一化&lt;br/&gt;目标是最大化 target input 的猜测概率" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="845" width="580" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="208" value="&lt;b&gt;7. 扫描目标输入&lt;/b&gt;&lt;br/&gt;certify_target_inputs() 对候选 target input 逐个认证&lt;br/&gt;保留 certified_best_target" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="985" width="580" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="209" value="&lt;b&gt;8. 输出结果&lt;/b&gt;&lt;br/&gt;H_min = -log2(p_guess)&lt;br/&gt;给出最佳 target、输出数、operator span 等诊断" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1100" width="580" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="210" value="&lt;b&gt;Route2 备注&lt;/b&gt;&lt;br/&gt;1. 这是当前项目里“干净的单设备 prepare-and-measure MDI”原型。&lt;br/&gt;2. 认证后端与 route3 / route5 相同，区别主要来自 trusted inputs 与中央测量统计怎么生成。&lt;br/&gt;3. 旧 MDI 写法里把中心结果拆成局域输出并加 C3/C4 的问题，在这里被整体 outcome c 的建模替代。&lt;br/&gt;4. 高输出搜索只是数值可行性工具，不等于实验端已经有同样自由的 POVM。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;dashed=1;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1220" width="580" height="250" as="geometry" />
+        </mxCell>
+
+        <mxCell id="211" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="202" target="203">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="212" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="203" target="204">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="213" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="204" target="205">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="214" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="205" target="206">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="215" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="206" target="207">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="216" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="207" target="208">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="217" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="208" target="209">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="300" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fff9;strokeColor=#d0d7de;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="140" width="620" height="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="301" value="Route 3&#xa;CV Hardware + Single-Device SDP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="150" width="600" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="302" value="&lt;b&gt;1. 选连续变量硬件参数&lt;/b&gt;&lt;br/&gt;mu, cutoff, num_phases&lt;br/&gt;num_x_bins, num_p_bins, quadrature_range&lt;br/&gt;以及最多认证多少个输入" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="230" width="580" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="303" value="&lt;b&gt;2. 构造 trusted alphabet&lt;/b&gt;&lt;br/&gt;phase_alphabet()&lt;br/&gt;固定振幅 |α| = √mu&lt;br/&gt;只在相位上均匀取 num_phases 个 coherent states" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="355" width="580" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="304" value="&lt;b&gt;3. 支撑降维与联合输入&lt;/b&gt;&lt;br/&gt;reduced_joint_inputs()&lt;br/&gt;把 local coherent states 投影到精确支撑子空间&lt;br/&gt;得到 reduced ρ&lt;sub&gt;xy&lt;/sub&gt; 与 joint_basis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="480" width="580" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="305" value="&lt;b&gt;4. 构造中央 CV Bell / dual-homodyne POVM&lt;/b&gt;&lt;br/&gt;balanced beamsplitter + q / p coarse graining&lt;br/&gt;dual_homodyne_povm() 生成离散输出标签 (x_bin, p_bin)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="610" width="580" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="306" value="&lt;b&gt;5. 计算观测统计&lt;/b&gt;&lt;br/&gt;project_povm_to_basis() + dual_homodyne_probabilities()&lt;br/&gt;从同一套 reduced states / POVM 直接得到 P(c|x,y)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="740" width="580" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="307" value="&lt;b&gt;6. raw 目标预筛选&lt;/b&gt;&lt;br/&gt;计算每个输入的 raw_H_min&lt;br/&gt;按 raw 值排序，只把 top inputs 送去正式认证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="860" width="580" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="308" value="&lt;b&gt;7. Single-device MDI SDP&lt;/b&gt;&lt;br/&gt;对候选 target input 调用 SingleDeviceGuessingProblem&lt;br/&gt;返回 certified p_guess 与 H_min" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="975" width="580" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="309" value="&lt;b&gt;8. 输出结果&lt;/b&gt;&lt;br/&gt;H_min、target_input、output_labels&lt;br/&gt;以及 local_rank / operator_span_rank / joint_dim 诊断" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="1095" width="580" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="310" value="&lt;b&gt;Route3 备注&lt;/b&gt;&lt;br/&gt;1. 硬件直觉是强的：可信相干态输入 + beam splitter + dual-homodyne。&lt;br/&gt;2. 但 trusted alphabet 只有“固定振幅、只扫相位”，因此局域算符张成常常先天受限。&lt;br/&gt;3. route3 的认证后端和 route2 一样，主要差别是 P(c|x,y) 的物理生成方式。&lt;br/&gt;4. 这条路线很适合解释“为什么硬件看起来自然，不代表认证就一定高”。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;dashed=1;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="1220" width="580" height="250" as="geometry" />
+        </mxCell>
+
+        <mxCell id="311" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="302" target="303">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="312" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="303" target="304">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="313" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="304" target="305">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="314" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="305" target="306">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="315" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="306" target="307">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="316" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="307" target="308">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="317" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="308" target="309">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="400" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8fb;strokeColor=#d0d7de;" vertex="1" parent="1">
+          <mxGeometry x="1970" y="140" width="620" height="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="401" value="Route 4&#xa;Phase-Insensitive APD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="150" width="600" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="402" value="&lt;b&gt;1. 选 route4 参数&lt;/b&gt;&lt;br/&gt;selected_mu_list, q_selected, cutoff&lt;br/&gt;num_outputs = N, prob_floor, shift&lt;br/&gt;决定从实验概率表里抽哪几行、压成多少个输出" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="230" width="580" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="403" value="&lt;b&gt;2. 读入实验数据&lt;/b&gt;&lt;br/&gt;load_probability_data() 读取 Probability.mat&lt;br/&gt;当前文件是 9 × 256 概率表&lt;br/&gt;每一行对应一个测试态光强" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="360" width="580" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="404" value="&lt;b&gt;3. 256 → N 粗粒化&lt;/b&gt;&lt;br/&gt;coarse_grain_row() + equal-cover edges&lt;br/&gt;从 256 个原始 bin 聚合成 N 个离散输出&lt;br/&gt;同时保留 edges / block widths 诊断" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="485" width="580" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="405" value="&lt;b&gt;4. 构造理论输入模型&lt;/b&gt;&lt;br/&gt;build_coherent_diagonals()&lt;br/&gt;把每个 μ 对应成 Fock 基下对角的相干态分布 ρ&lt;sub&gt;x&lt;/sub&gt;&lt;br/&gt;phase-insensitive 假设使 POVM 也只需对角" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="615" width="580" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="406" value="&lt;b&gt;5. 病理诊断与可选正则化&lt;/b&gt;&lt;br/&gt;检查 mixed_zero_columns_raw / all_zero_columns_raw&lt;br/&gt;必要时用 prob_floor 处理 exact 零概率问题&lt;br/&gt;同时可算 distribution-only 上界作预筛选" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="755" width="580" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="407" value="&lt;b&gt;6. 解优化问题&lt;/b&gt;&lt;br/&gt;主力：solve_phaseinsensitive_dual() 的对偶 LP&lt;br/&gt;小规模交叉验证：solve_phaseinsensitive_primal()&lt;br/&gt;两者都使用 prepare_phaseinsensitive_instance() 的同一统计输入" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="895" width="580" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="408" value="&lt;b&gt;7. 可选 subset search&lt;/b&gt;&lt;br/&gt;search_route4_triplets() 先按 distribution-only_H_min 筛 μ 子集&lt;br/&gt;再只对 top-k 子集跑正式 dual 认证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="1035" width="580" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="409" value="&lt;b&gt;8. 输出结果&lt;/b&gt;&lt;br/&gt;H_min = -log2(p_guess)&lt;br/&gt;并返回 Probability.mat 路径、edges、零概率病理诊断等" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="1150" width="580" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="410" value="&lt;b&gt;Route4 备注&lt;/b&gt;&lt;br/&gt;1. 这是最贴现有 APD 实验数据的一条路，因为它直接吃 Probability.mat。&lt;br/&gt;2. 认证后端不是一般 central Bell POVM，而是“phase-insensitive、Fock 对角”的特殊 primal / dual。&lt;br/&gt;3. 这条线的核心不是重新生成 P(c|x,y)，而是把现成实验统计压缩后送入优化。&lt;br/&gt;4. 因此它特别适合回答“现有 APD 数据在这个假设下最多能认证多少随机性”。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;dashed=1;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="1270" width="580" height="250" as="geometry" />
+        </mxCell>
+
+        <mxCell id="411" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="402" target="403">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="412" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="403" target="404">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="413" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="404" target="405">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="414" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="405" target="406">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="415" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="406" target="407">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="416" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="407" target="408">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="417" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="408" target="409">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="500" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f7f7ff;strokeColor=#d0d7de;" vertex="1" parent="1">
+          <mxGeometry x="2620" y="140" width="620" height="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="501" value="Route 5&#xa;Generalized Coherent Alphabet + IQ Search" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="2630" y="150" width="600" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="502" value="&lt;b&gt;1. 选 route5 搜索空间&lt;/b&gt;&lt;br/&gt;可直接给 alpha_values&lt;br/&gt;或给 radius × phase 网格&lt;br/&gt;也可从固定光强菜单映射出 radius pool" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2640" y="230" width="580" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="503" value="&lt;b&gt;2. 构造广义 coherent alphabet&lt;/b&gt;&lt;br/&gt;generalized_coherent_alphabet() / reduced_joint_inputs_from_alphas()&lt;br/&gt;同时扫描振幅与相位，生成更强的 trusted inputs&lt;br/&gt;并投影到精确支撑子空间" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2640" y="355" width="580" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="504" value="&lt;b&gt;3. 生成物理受限 IQ 分区家族&lt;/b&gt;&lt;br/&gt;x_bins, p_bins, quadrature_range, gamma&lt;br/&gt;中央测量仍是 beam splitter + dual-homodyne&lt;br/&gt;只是搜索 axis-aligned 的数字 coarse-graining" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2640" y="495" width="580" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="505" value="&lt;b&gt;4. 对每个分区候选算原始统计&lt;/b&gt;&lt;br/&gt;_raw_partition_candidates() / dual_homodyne_probabilities()&lt;br/&gt;得到每个 alphabet × partition 的 P(c|x,y) 和 raw_best_H_min" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2640" y="635" width="580" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="506" value="&lt;b&gt;5. 外层 alphabet search（可选）&lt;/b&gt;&lt;br/&gt;search_route5_alphabets() 按&lt;br/&gt;local span ratio + raw partition score 排 alphabet&lt;br/&gt;只把 top-k alphabet 送去正式认证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2640" y="760" width="580" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="507" value="&lt;b&gt;6. 正式认证 top-k 候选&lt;/b&gt;&lt;br/&gt;search_route5_iq_partitions() / certify_target_inputs()&lt;br/&gt;调用与 route2 / route3 相同的 SingleDeviceGuessingProblem SDP&lt;br/&gt;对目标输入逐个算 certified H_min" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2640" y="895" width="580" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="508" value="&lt;b&gt;7. 选最佳 alphabet + partition + target&lt;/b&gt;&lt;br/&gt;比较所有已认证候选的 H_min&lt;br/&gt;保留最佳 radii / phases / x_bounds / p_bounds / target_input" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2640" y="1035" width="580" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="509" value="&lt;b&gt;8. 输出结果&lt;/b&gt;&lt;br/&gt;H_min = -log2(p_guess)&lt;br/&gt;同时输出 local_rank / operator_span_rank、所选 alphabet、IQ 分区和目标输入" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2640" y="1160" width="580" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="510" value="&lt;b&gt;Route5 备注&lt;/b&gt;&lt;br/&gt;1. route5 = “route3 的高速 CV 前端 + route2 的 single-device MDI 认证后端”。&lt;br/&gt;2. 它不需要当前的 Probability.mat；真正需要的是与 IQ / dual-homodyne 模型匹配的新实验统计。&lt;br/&gt;3. 相比 route3，关键升级是 trusted alphabet 不再只扫相位，而是能系统地扫振幅 + 相位。&lt;br/&gt;4. 这条路线天然支持先做 raw 搜索，再对 top-k 候选做高成本 formal SDP。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;dashed=1;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2640" y="1280" width="580" height="250" as="geometry" />
+        </mxCell>
+
+        <mxCell id="511" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="502" target="503">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="512" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="503" target="504">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="513" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="504" target="505">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="514" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="505" target="506">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="515" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="506" target="507">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="516" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="507" target="508">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="517" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="508" target="509">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="600" value="补充比较：Route2 / Route3 / Route5 的 formal 认证都落到同一个 SingleDeviceGuessingProblem；Route1 与 Route4 则分别对应 steering SDP 和 phase-insensitive diagonal primal / dual。也就是说，五条路线的最大区别并不只是“求解器”，更在于 trusted inputs、中央测量模型、以及观测统计 P 的来源。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="20" y="2120" width="3210" height="55" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
