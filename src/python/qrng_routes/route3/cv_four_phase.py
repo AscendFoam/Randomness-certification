@@ -5,10 +5,10 @@ import math
 import numpy as np
 
 from ..common import (
+    SingleDeviceGuessingProblem,
     balanced_beamsplitter_unitary,
     coherent_state,
     density_from_ket,
-    guessing_prob_single_device,
     kron,
     operator_span_rank,
     project_density_to_basis,
@@ -236,10 +236,9 @@ def run_route3(
         candidate_order = candidate_order[:max_inputs_to_certify]
 
     best: dict | None = None
+    reusable_problem = SingleDeviceGuessingProblem(joint_states, probabilities)
     for target_input in candidate_order:
-        current = guessing_prob_single_device(
-            joint_states,
-            probabilities,
+        current = reusable_problem.solve(
             target_input=target_input,
             preferred_solver=preferred_solver,
             verbose=verbose,

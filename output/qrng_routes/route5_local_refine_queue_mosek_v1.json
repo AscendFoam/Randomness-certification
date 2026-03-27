@@ -1,0 +1,1548 @@
+{
+  "route": "route5_local_refine_queue",
+  "cutoff": 4,
+  "phase_values": [
+    0.0,
+    0.78539816339,
+    1.57079632679,
+    2.35619449019,
+    3.14159265359,
+    3.92699081699,
+    4.71238898038,
+    5.49778714378
+  ],
+  "num_x_bins": 6,
+  "num_p_bins": 2,
+  "quadrature_ranges": [
+    1.8,
+    1.85,
+    1.9,
+    1.95,
+    2.0
+  ],
+  "gamma_values": [
+    1.0,
+    1.05,
+    1.1,
+    1.15,
+    1.2,
+    1.25
+  ],
+  "scout_num_quadrature_nodes": 20,
+  "cert_num_quadrature_nodes": 12,
+  "max_inputs": 3,
+  "candidate_limit": 8,
+  "scout_results": [
+    {
+      "candidate_key": "r0.0000_0.9000_1.0500",
+      "radii": [
+        0.0,
+        0.9,
+        1.05
+      ],
+      "raw_best_H_min": 3.4457002604042084,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9000_1.1000",
+      "radii": [
+        0.0,
+        0.9,
+        1.1
+      ],
+      "raw_best_H_min": 3.3870841344879445,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.2000",
+      "radii": [
+        0.0,
+        0.85,
+        1.2
+      ],
+      "raw_best_H_min": 3.3611608486518483,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.0500",
+      "radii": [
+        0.0,
+        0.85,
+        1.05
+      ],
+      "raw_best_H_min": 3.357032185112249,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.1500",
+      "radii": [
+        0.0,
+        0.85,
+        1.15
+      ],
+      "raw_best_H_min": 3.3549720063638233,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.1000",
+      "radii": [
+        0.0,
+        0.85,
+        1.1
+      ],
+      "raw_best_H_min": 3.353441701062796,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.2500",
+      "radii": [
+        0.0,
+        0.85,
+        1.25
+      ],
+      "raw_best_H_min": 3.3434281377365878,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9000_1.1500",
+      "radii": [
+        0.0,
+        0.9,
+        1.15
+      ],
+      "raw_best_H_min": 3.3276425350050705,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9500_1.0500",
+      "radii": [
+        0.0,
+        0.95,
+        1.05
+      ],
+      "raw_best_H_min": 3.3114894406416755,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9500_1.1000",
+      "radii": [
+        0.0,
+        0.95,
+        1.1
+      ],
+      "raw_best_H_min": 3.298895859832086,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9500_1.3000",
+      "radii": [
+        0.0,
+        0.95,
+        1.3
+      ],
+      "raw_best_H_min": 3.298895859832086,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9500_1.2500",
+      "radii": [
+        0.0,
+        0.95,
+        1.25
+      ],
+      "raw_best_H_min": 3.2988958598320846,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9500_1.2000",
+      "radii": [
+        0.0,
+        0.95,
+        1.2
+      ],
+      "raw_best_H_min": 3.2988958598320837,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9500_1.1500",
+      "radii": [
+        0.0,
+        0.95,
+        1.15
+      ],
+      "raw_best_H_min": 3.298895859832083,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.3000",
+      "radii": [
+        0.0,
+        0.85,
+        1.3
+      ],
+      "raw_best_H_min": 3.28192267758988,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9000_1.2000",
+      "radii": [
+        0.0,
+        0.9,
+        1.2
+      ],
+      "raw_best_H_min": 3.2681995842672085,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9000_1.2500",
+      "radii": [
+        0.0,
+        0.9,
+        1.25
+      ],
+      "raw_best_H_min": 3.2518121391105064,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_0.9000_1.3000",
+      "radii": [
+        0.0,
+        0.9,
+        1.3
+      ],
+      "raw_best_H_min": 3.2518121391105055,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0000_1.0500",
+      "radii": [
+        0.0,
+        1.0,
+        1.05
+      ],
+      "raw_best_H_min": 3.2423840152451326,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0000_1.1500",
+      "radii": [
+        0.0,
+        1.0,
+        1.15
+      ],
+      "raw_best_H_min": 3.2423840152451318,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0000_1.1000",
+      "radii": [
+        0.0,
+        1.0,
+        1.1
+      ],
+      "raw_best_H_min": 3.242384015245131,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0000_1.3000",
+      "radii": [
+        0.0,
+        1.0,
+        1.3
+      ],
+      "raw_best_H_min": 3.24238401524513,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0000_1.2000",
+      "radii": [
+        0.0,
+        1.0,
+        1.2
+      ],
+      "raw_best_H_min": 3.242384015245129,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0000_1.2500",
+      "radii": [
+        0.0,
+        1.0,
+        1.25
+      ],
+      "raw_best_H_min": 3.2423840152451278,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0500_1.2500",
+      "radii": [
+        0.0,
+        1.05,
+        1.25
+      ],
+      "raw_best_H_min": 3.199198164964739,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2666666666666668,
+        -0.6333333333333334,
+        0.0,
+        0.6333333333333332,
+        1.2666666666666664,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.9,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0500_1.3000",
+      "radii": [
+        0.0,
+        1.05,
+        1.3
+      ],
+      "raw_best_H_min": 3.1733740430857393,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2666666666666668,
+        -0.6333333333333334,
+        0.0,
+        0.6333333333333332,
+        1.2666666666666664,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.9,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0500_1.2000",
+      "radii": [
+        0.0,
+        1.05,
+        1.2
+      ],
+      "raw_best_H_min": 3.172546733305966,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2666666666666668,
+        -0.6333333333333334,
+        0.0,
+        0.6333333333333332,
+        1.2666666666666664,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.9,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0500_1.1500",
+      "radii": [
+        0.0,
+        1.05,
+        1.15
+      ],
+      "raw_best_H_min": 3.108138087050034,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_best_target_index": 262,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2666666666666668,
+        -0.6333333333333334,
+        0.0,
+        0.6333333333333332,
+        1.2666666666666664,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.9,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    },
+    {
+      "candidate_key": "r0.0000_1.0500_1.1000",
+      "radii": [
+        0.0,
+        1.05,
+        1.1
+      ],
+      "raw_best_H_min": 3.0740045517121586,
+      "raw_best_target": [
+        7,
+        7
+      ],
+      "raw_best_target_index": 126,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.8,
+      "p_range": 0.0,
+      "x_gamma": 1.0,
+      "p_gamma": 1.0,
+      "num_outputs": 12,
+      "local_operator_span_rank": 13,
+      "local_operator_space_dim": 16,
+      "num_partition_candidates": 30,
+      "selection_strategy": "rank partitions by raw-best target entropy, then certify top candidates"
+    }
+  ],
+  "certified_results": [
+    {
+      "candidate_key": "r0.0000_0.8500_1.2500",
+      "radii": [
+        0.0,
+        0.85,
+        1.25
+      ],
+      "scout_rank": 7,
+      "output_json": "output/qrng_routes/route5_local_refine_queue_mosek_v1/r0.0000_0.8500_1.2500.json",
+      "H_min": 2.116391738342206,
+      "raw_best_H_min": 2.992180490728227,
+      "target_input": [
+        15,
+        7
+      ],
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "num_quadrature_nodes": 12,
+      "num_inputs_certified": 3,
+      "solver": "MOSEK",
+      "status": "optimal"
+    },
+    {
+      "candidate_key": "r0.0000_0.9000_1.1500",
+      "radii": [
+        0.0,
+        0.9,
+        1.15
+      ],
+      "scout_rank": 8,
+      "output_json": "output/qrng_routes/route5_local_refine_queue_mosek_v1/r0.0000_0.9000_1.1500.json",
+      "H_min": 2.1103015927472493,
+      "raw_best_H_min": 3.103814383432892,
+      "target_input": [
+        11,
+        3
+      ],
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "num_quadrature_nodes": 12,
+      "num_inputs_certified": 3,
+      "solver": "MOSEK",
+      "status": "optimal"
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.2000",
+      "radii": [
+        0.0,
+        0.85,
+        1.2
+      ],
+      "scout_rank": 3,
+      "output_json": "output/qrng_routes/route5_local_refine_queue_mosek_v1/r0.0000_0.8500_1.2000.json",
+      "H_min": 2.1005505662074744,
+      "raw_best_H_min": 2.9863414362327103,
+      "target_input": [
+        11,
+        3
+      ],
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "num_quadrature_nodes": 12,
+      "num_inputs_certified": 3,
+      "solver": "MOSEK",
+      "status": "optimal"
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.1000",
+      "radii": [
+        0.0,
+        0.85,
+        1.1
+      ],
+      "scout_rank": 6,
+      "output_json": "output/qrng_routes/route5_local_refine_queue_mosek_v1/r0.0000_0.8500_1.1000.json",
+      "H_min": 2.0828304257748815,
+      "raw_best_H_min": 3.0251712061430656,
+      "target_input": [
+        11,
+        11
+      ],
+      "raw_best_target": [
+        15,
+        15
+      ],
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "num_quadrature_nodes": 12,
+      "num_inputs_certified": 3,
+      "solver": "MOSEK",
+      "status": "optimal"
+    },
+    {
+      "candidate_key": "r0.0000_0.9000_1.0500",
+      "radii": [
+        0.0,
+        0.9,
+        1.05
+      ],
+      "scout_rank": 1,
+      "output_json": "output/qrng_routes/route5_local_refine_queue_mosek_v1/r0.0000_0.9000_1.0500.json",
+      "H_min": 2.080576095263865,
+      "raw_best_H_min": 3.1182317302825386,
+      "target_input": [
+        15,
+        15
+      ],
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "num_quadrature_nodes": 12,
+      "num_inputs_certified": 3,
+      "solver": "MOSEK",
+      "status": "optimal"
+    },
+    {
+      "candidate_key": "r0.0000_0.9000_1.1000",
+      "radii": [
+        0.0,
+        0.9,
+        1.1
+      ],
+      "scout_rank": 2,
+      "output_json": "output/qrng_routes/route5_local_refine_queue_mosek_v1/r0.0000_0.9000_1.1000.json",
+      "H_min": 2.079897091835091,
+      "raw_best_H_min": 3.1084496440401255,
+      "target_input": [
+        15,
+        15
+      ],
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "num_quadrature_nodes": 12,
+      "num_inputs_certified": 3,
+      "solver": "MOSEK",
+      "status": "optimal"
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.0500",
+      "radii": [
+        0.0,
+        0.85,
+        1.05
+      ],
+      "scout_rank": 4,
+      "output_json": "output/qrng_routes/route5_local_refine_queue_mosek_v1/r0.0000_0.8500_1.0500.json",
+      "H_min": 2.0724285694728777,
+      "raw_best_H_min": 2.995899860924557,
+      "target_input": [
+        15,
+        15
+      ],
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "num_quadrature_nodes": 12,
+      "num_inputs_certified": 3,
+      "solver": "MOSEK",
+      "status": "optimal"
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.1500",
+      "radii": [
+        0.0,
+        0.85,
+        1.15
+      ],
+      "scout_rank": 5,
+      "output_json": "output/qrng_routes/route5_local_refine_queue_mosek_v1/r0.0000_0.8500_1.1500.json",
+      "H_min": 2.0693696737493177,
+      "raw_best_H_min": 3.0286032864562764,
+      "target_input": [
+        15,
+        7
+      ],
+      "raw_best_target": [
+        15,
+        15
+      ],
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "num_quadrature_nodes": 12,
+      "num_inputs_certified": 3,
+      "solver": "MOSEK",
+      "status": "optimal"
+    }
+  ],
+  "best_certified_result": {
+    "candidate_key": "r0.0000_0.8500_1.2500",
+    "radii": [
+      0.0,
+      0.85,
+      1.25
+    ],
+    "scout_rank": 7,
+    "output_json": "output/qrng_routes/route5_local_refine_queue_mosek_v1/r0.0000_0.8500_1.2500.json",
+    "H_min": 2.116391738342206,
+    "raw_best_H_min": 2.992180490728227,
+    "target_input": [
+      15,
+      7
+    ],
+    "raw_best_target": [
+      15,
+      7
+    ],
+    "num_x_bins": 6,
+    "num_p_bins": 2,
+    "x_bounds": [
+      -Infinity,
+      -1.2000000000000002,
+      -0.6000000000000001,
+      0.0,
+      0.5999999999999999,
+      1.1999999999999997,
+      Infinity
+    ],
+    "p_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ],
+    "quadrature_range": 1.8,
+    "boundary_gamma": 1.0,
+    "num_quadrature_nodes": 12,
+    "num_inputs_certified": 3,
+    "solver": "MOSEK",
+    "status": "optimal"
+  }
+}

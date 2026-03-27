@@ -1,0 +1,214 @@
+{
+  "solver": "SCS",
+  "status": "optimal_inaccurate",
+  "p_guess": 0.7547068106779277,
+  "H_min": 0.4060118013513192,
+  "target_index": 68,
+  "target_input": [
+    7,
+    5
+  ],
+  "target_alphas": [
+    {
+      "real": -1.2,
+      "imag": -2.4818772853225733e-13,
+      "abs": 1.2,
+      "phase": -3.1415926535895866
+    },
+    {
+      "real": 1.2,
+      "imag": 0.0,
+      "abs": 1.2,
+      "phase": 0.0
+    }
+  ],
+  "raw_H_min": 2.2817390740199106,
+  "raw_p_guess": 0.20564970764309703,
+  "route": "route5_cv_generalized_iq",
+  "cutoff": 4,
+  "num_local_states": 9,
+  "num_inputs": 81,
+  "num_outputs": 8,
+  "num_x_bins": 2,
+  "num_p_bins": 4,
+  "output_labels": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "local_alphas": [
+    {
+      "real": 0.0,
+      "imag": 0.0,
+      "abs": 0.0,
+      "phase": 0.0
+    },
+    {
+      "real": 0.8,
+      "imag": 0.0,
+      "abs": 0.8,
+      "phase": 0.0
+    },
+    {
+      "real": 3.917271088117398e-12,
+      "imag": 0.8,
+      "abs": 0.8,
+      "phase": 1.57079632679
+    },
+    {
+      "real": -0.8,
+      "imag": -1.6545848568817156e-13,
+      "abs": 0.8,
+      "phase": -3.1415926535895866
+    },
+    {
+      "real": -3.751812602429227e-12,
+      "imag": -0.8,
+      "abs": 0.8,
+      "phase": -1.5707963267995864
+    },
+    {
+      "real": 1.2,
+      "imag": 0.0,
+      "abs": 1.2,
+      "phase": 0.0
+    },
+    {
+      "real": 5.875906632176097e-12,
+      "imag": 1.2,
+      "abs": 1.2,
+      "phase": 1.57079632679
+    },
+    {
+      "real": -1.2,
+      "imag": -2.4818772853225733e-13,
+      "abs": 1.2,
+      "phase": -3.1415926535895866
+    },
+    {
+      "real": -5.62771890364384e-12,
+      "imag": -1.2,
+      "abs": 1.2,
+      "phase": -1.5707963267995864
+    }
+  ],
+  "local_rank": 4,
+  "local_operator_span_rank": 9,
+  "local_operator_space_dim": 16,
+  "joint_dim": 16,
+  "operator_span_rank": 81,
+  "operator_space_dim": 256,
+  "x_bounds": [
+    -Infinity,
+    0.0,
+    Infinity
+  ],
+  "p_bounds": [
+    -Infinity,
+    -1.25,
+    0.0,
+    1.25,
+    Infinity
+  ],
+  "boundary_gamma": 1.0,
+  "quadrature_range": 2.5,
+  "num_quadrature_nodes": 40,
+  "raw_best_target_index": 68,
+  "raw_best_target": [
+    7,
+    5
+  ],
+  "raw_best_target_alphas": [
+    {
+      "real": -1.2,
+      "imag": -2.4818772853225733e-13,
+      "abs": 1.2,
+      "phase": -3.1415926535895866
+    },
+    {
+      "real": 1.2,
+      "imag": 0.0,
+      "abs": 1.2,
+      "phase": 0.0
+    }
+  ],
+  "raw_best_H_min": 2.2817390740199106,
+  "certified_best_target_index": 68,
+  "certified_best_target": [
+    7,
+    5
+  ],
+  "certified_best_target_alphas": [
+    {
+      "real": -1.2,
+      "imag": -2.4818772853225733e-13,
+      "abs": 1.2,
+      "phase": -3.1415926535895866
+    },
+    {
+      "real": 1.2,
+      "imag": 0.0,
+      "abs": 1.2,
+      "phase": 0.0
+    }
+  ],
+  "num_inputs_certified": 1,
+  "target_scan": [
+    {
+      "solver": "SCS",
+      "status": "optimal_inaccurate",
+      "p_guess": 0.7547068106779277,
+      "H_min": 0.4060118013513192,
+      "target_index": 68,
+      "target_input": [
+        7,
+        5
+      ],
+      "target_alphas": [
+        {
+          "real": -1.2,
+          "imag": -2.4818772853225733e-13,
+          "abs": 1.2,
+          "phase": -3.1415926535895866
+        },
+        {
+          "real": 1.2,
+          "imag": 0.0,
+          "abs": 1.2,
+          "phase": 0.0
+        }
+      ],
+      "raw_H_min": 2.2817390740199106,
+      "raw_p_guess": 0.20564970764309703
+    }
+  ]
+}

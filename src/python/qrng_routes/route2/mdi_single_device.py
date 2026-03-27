@@ -2,7 +2,12 @@ from __future__ import annotations
 
 import numpy as np
 
-from ..common import density_from_ket, guessing_prob_single_device, kron, operator_span_rank
+from ..common import (
+    SingleDeviceGuessingProblem,
+    density_from_ket,
+    kron,
+    operator_span_rank,
+)
 
 
 def tetrahedral_qubit_states() -> list[np.ndarray]:
@@ -112,13 +117,12 @@ def certify_target_inputs(
     """Certify one or more target inputs and return the best certified one."""
     raw_h = -np.log2(np.maximum(probabilities.max(axis=1), 1e-15))
     indices = list(range(len(input_states))) if target_indices is None else list(target_indices)
+    reusable_problem = SingleDeviceGuessingProblem(input_states, probabilities)
 
     best: dict | None = None
     scan: list[dict] = []
     for target_input in indices:
-        current = guessing_prob_single_device(
-            input_states,
-            probabilities,
+        current = reusable_problem.solve(
             target_input=target_input,
             preferred_solver=preferred_solver,
             verbose=verbose,

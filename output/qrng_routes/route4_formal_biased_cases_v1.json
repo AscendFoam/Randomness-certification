@@ -1,0 +1,176 @@
+{
+  "generated_at": "2026-03-26 10:39:16",
+  "solver": "MOSEK",
+  "cutoff": 280,
+  "prob_floor": 1e-12,
+  "cases": [
+    {
+      "name": "pair_140_160_N12_q10_90",
+      "selected_mu_list": [
+        140,
+        160
+      ],
+      "q_selected": [
+        0.1,
+        0.9
+      ],
+      "num_outputs": 12,
+      "distribution_only_H_min": 1.1436193948716615,
+      "distribution_only_p_guess": 0.45262262449778146,
+      "mixed_zero_columns_raw": [
+        4
+      ],
+      "all_zero_columns_raw": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "optimal",
+      "p_guess": 0.7408610585537817,
+      "H_min": 0.43272509072402177,
+      "elapsed_seconds": 44.73263907432556
+    },
+    {
+      "name": "pair_140_160_N12_q05_95",
+      "selected_mu_list": [
+        140,
+        160
+      ],
+      "q_selected": [
+        0.05,
+        0.95
+      ],
+      "num_outputs": 12,
+      "distribution_only_H_min": 1.142452396657954,
+      "distribution_only_p_guess": 0.4529888997477573,
+      "mixed_zero_columns_raw": [
+        4
+      ],
+      "all_zero_columns_raw": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "optimal",
+      "p_guess": 0.7420145795464976,
+      "H_min": 0.4304805608272858,
+      "elapsed_seconds": 26.473453044891357
+    },
+    {
+      "name": "pair_140_160_N16_q10_90",
+      "selected_mu_list": [
+        140,
+        160
+      ],
+      "q_selected": [
+        0.1,
+        0.9
+      ],
+      "num_outputs": 16,
+      "distribution_only_H_min": 1.4276087764389127,
+      "distribution_only_p_guess": 0.3717465409978106,
+      "mixed_zero_columns_raw": [
+        5
+      ],
+      "all_zero_columns_raw": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "optimal",
+      "p_guess": 0.7135921047607096,
+      "H_min": 0.48682844163248407,
+      "elapsed_seconds": 33.309876918792725
+    },
+    {
+      "name": "pair_140_160_N16_q05_95",
+      "selected_mu_list": [
+        140,
+        160
+      ],
+      "q_selected": [
+        0.05,
+        0.95
+      ],
+      "num_outputs": 16,
+      "distribution_only_H_min": 1.436117333368123,
+      "distribution_only_p_guess": 0.3695605504978032,
+      "mixed_zero_columns_raw": [
+        5
+      ],
+      "all_zero_columns_raw": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "optimal",
+      "p_guess": 0.7172883432590893,
+      "H_min": 0.4793749093403549,
+      "elapsed_seconds": 45.58653402328491
+    },
+    {
+      "name": "triple_120_140_160_N12_q10_10_80",
+      "selected_mu_list": [
+        120,
+        140,
+        160
+      ],
+      "q_selected": [
+        0.1,
+        0.1,
+        0.8
+      ],
+      "num_outputs": 12,
+      "distribution_only_H_min": 1.140746541650798,
+      "distribution_only_p_guess": 0.45352483449786946,
+      "mixed_zero_columns_raw": [
+        3,
+        4
+      ],
+      "all_zero_columns_raw": [
+        0,
+        1,
+        2
+      ],
+      "status": "optimal",
+      "p_guess": 0.7382499487514761,
+      "H_min": 0.43781874367848006,
+      "elapsed_seconds": 761.354407787323
+    },
+    {
+      "name": "triple_120_140_160_N12_q05_05_90",
+      "selected_mu_list": [
+        120,
+        140,
+        160
+      ],
+      "q_selected": [
+        0.05,
+        0.05,
+        0.9
+      ],
+      "num_outputs": 12,
+      "distribution_only_H_min": 1.1410164164128709,
+      "distribution_only_p_guess": 0.45344000474780133,
+      "mixed_zero_columns_raw": [
+        3,
+        4
+      ],
+      "all_zero_columns_raw": [
+        0,
+        1,
+        2
+      ],
+      "status": "optimal",
+      "p_guess": 0.7406225347729851,
+      "H_min": 0.43318964811799193,
+      "elapsed_seconds": 656.8066518306732
+    }
+  ]
+}

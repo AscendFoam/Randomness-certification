@@ -215,7 +215,11 @@ def guessing_prob_sdp_tomography(
         cp.real(sum(cp.trace(sigma_e[(e, e, x_star)]) for e in range(num_outputs)))
     )
     problem = cp.Problem(objective, constraints)
-    solver_name, status = solve_cvxpy_problem(problem, preferred_solver, verbose)
+    solver_name, status = solve_cvxpy_problem(
+        problem,
+        preferred_solver=preferred_solver,
+        verbose=verbose,
+    )
 
     value = problem.value
     return {
@@ -270,7 +274,11 @@ def guessing_prob_sdp_homodyne(
         cp.real(sum(cp.trace(sigma_e[(e, e, x_star)]) for e in range(num_outputs)))
     )
     problem = cp.Problem(objective, constraints)
-    solver_name, status = solve_cvxpy_problem(problem, preferred_solver, verbose)
+    solver_name, status = solve_cvxpy_problem(
+        problem,
+        preferred_solver=preferred_solver,
+        verbose=verbose,
+    )
 
     value = problem.value
     return {
