@@ -1,0 +1,458 @@
+{
+  "route3": {
+    "case": "route3_tex_compatible",
+    "mu": 0.05,
+    "cutoff": 12,
+    "num_x_bins": 2,
+    "num_p_bins": 2,
+    "quadrature_range": 3.0,
+    "num_nodes": 400,
+    "x_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ],
+    "p_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ],
+    "output_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "note": "This matches SDP_solve.tex after accounting for the repository's current balanced-beamsplitter / p-axis sign convention.",
+    "summary": {
+      "max_abs_error": 0.00010625494195365404,
+      "mean_abs_error": 5.312747097767356e-05,
+      "p95_abs_error": 0.00010625494195365404
+    },
+    "per_input": [
+      {
+        "input_index": 0,
+        "label": [
+          0,
+          0
+        ],
+        "alpha_1": {
+          "real": 0.22360679774997896,
+          "imag": 0.0
+        },
+        "alpha_2": {
+          "real": 0.22360679774997896,
+          "imag": 0.0
+        },
+        "max_abs_error": 0.00010625494195359853
+      },
+      {
+        "input_index": 1,
+        "label": [
+          0,
+          1
+        ],
+        "alpha_1": {
+          "real": 0.22360679774997896,
+          "imag": 0.0
+        },
+        "alpha_2": {
+          "real": -0.22360679774997896,
+          "imag": 2.738393491321013e-17
+        },
+        "max_abs_error": 1.7763568394002505e-15
+      },
+      {
+        "input_index": 2,
+        "label": [
+          1,
+          0
+        ],
+        "alpha_1": {
+          "real": -0.22360679774997896,
+          "imag": 2.738393491321013e-17
+        },
+        "alpha_2": {
+          "real": 0.22360679774997896,
+          "imag": 0.0
+        },
+        "max_abs_error": 1.6653345369377348e-15
+      },
+      {
+        "input_index": 3,
+        "label": [
+          1,
+          1
+        ],
+        "alpha_1": {
+          "real": -0.22360679774997896,
+          "imag": 2.738393491321013e-17
+        },
+        "alpha_2": {
+          "real": -0.22360679774997896,
+          "imag": 2.738393491321013e-17
+        },
+        "max_abs_error": 0.00010625494195365404
+      }
+    ]
+  },
+  "route5": {
+    "case": "route5_fixed_intensity_080160",
+    "intensity_values": [
+      0.0,
+      80.0,
+      160.0
+    ],
+    "max_radius": 1.2,
+    "scaling_rule": "radius = max_radius * sqrt(intensity / max_intensity_in_menu)",
+    "mapped_radii": [
+      0.0,
+      0.848528137423857,
+      1.2
+    ],
+    "radius_mapping": [
+      {
+        "intensity": 0.0,
+        "radius": 0.0
+      },
+      {
+        "intensity": 80.0,
+        "radius": 0.848528137423857
+      },
+      {
+        "intensity": 160.0,
+        "radius": 1.2
+      }
+    ],
+    "phase_values": [
+      0.0,
+      0.7853981633974483,
+      1.5707963267948966,
+      2.356194490192345,
+      3.141592653589793,
+      3.9269908169872414,
+      4.71238898038469,
+      5.497787143782138
+    ],
+    "num_x_bins": 6,
+    "num_p_bins": 2,
+    "quadrature_range": 1.8,
+    "x_bounds": [
+      -Infinity,
+      -1.2,
+      -0.6,
+      0.0,
+      0.6,
+      1.2,
+      Infinity
+    ],
+    "p_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ],
+    "cutoff_results": [
+      {
+        "cutoff": 4,
+        "num_nodes": 1200,
+        "num_inputs": 289,
+        "num_outputs": 12,
+        "local_rank": 4,
+        "joint_dim": 16,
+        "local_operator_span_rank": 13,
+        "summary": {
+          "max_abs_error": 0.32396368446196083,
+          "mean_abs_error": 0.08276472967488734,
+          "p95_abs_error": 0.22056041156837217
+        },
+        "top_error_inputs": [
+          {
+            "input_index": 217,
+            "label": [
+              12,
+              13
+            ],
+            "max_abs_error": 0.32396368446196083
+          },
+          {
+            "input_index": 251,
+            "label": [
+              14,
+              13
+            ],
+            "max_abs_error": 0.3239636844619608
+          },
+          {
+            "input_index": 179,
+            "label": [
+              10,
+              9
+            ],
+            "max_abs_error": 0.32396368446196067
+          },
+          {
+            "input_index": 281,
+            "label": [
+              16,
+              9
+            ],
+            "max_abs_error": 0.32396368446196067
+          },
+          {
+            "input_index": 243,
+            "label": [
+              14,
+              5
+            ],
+            "max_abs_error": 0.24039595176017703
+          },
+          {
+            "input_index": 209,
+            "label": [
+              12,
+              5
+            ],
+            "max_abs_error": 0.24039595176017697
+          },
+          {
+            "input_index": 171,
+            "label": [
+              10,
+              1
+            ],
+            "max_abs_error": 0.24039595176017692
+          },
+          {
+            "input_index": 273,
+            "label": [
+              16,
+              1
+            ],
+            "max_abs_error": 0.24039595176017692
+          },
+          {
+            "input_index": 268,
+            "label": [
+              15,
+              13
+            ],
+            "max_abs_error": 0.22635092955501357
+          },
+          {
+            "input_index": 200,
+            "label": [
+              11,
+              13
+            ],
+            "max_abs_error": 0.2263509295550135
+          }
+        ]
+      },
+      {
+        "cutoff": 8,
+        "num_nodes": 1200,
+        "num_inputs": 289,
+        "num_outputs": 12,
+        "local_rank": 8,
+        "joint_dim": 64,
+        "local_operator_span_rank": 17,
+        "summary": {
+          "max_abs_error": 0.025786565315038257,
+          "mean_abs_error": 0.013438180089105911,
+          "p95_abs_error": 0.02055302134633019
+        },
+        "top_error_inputs": [
+          {
+            "input_index": 252,
+            "label": [
+              14,
+              14
+            ],
+            "max_abs_error": 0.025786565315038257
+          },
+          {
+            "input_index": 216,
+            "label": [
+              12,
+              12
+            ],
+            "max_abs_error": 0.02578656531503809
+          },
+          {
+            "input_index": 180,
+            "label": [
+              10,
+              10
+            ],
+            "max_abs_error": 0.025786565315037924
+          },
+          {
+            "input_index": 288,
+            "label": [
+              16,
+              16
+            ],
+            "max_abs_error": 0.025786565315037757
+          },
+          {
+            "input_index": 200,
+            "label": [
+              11,
+              13
+            ],
+            "max_abs_error": 0.023721549330794733
+          },
+          {
+            "input_index": 264,
+            "label": [
+              15,
+              9
+            ],
+            "max_abs_error": 0.023721549330794678
+          },
+          {
+            "input_index": 268,
+            "label": [
+              15,
+              13
+            ],
+            "max_abs_error": 0.023721549330794678
+          },
+          {
+            "input_index": 196,
+            "label": [
+              11,
+              9
+            ],
+            "max_abs_error": 0.023721549330794567
+          },
+          {
+            "input_index": 177,
+            "label": [
+              10,
+              7
+            ],
+            "max_abs_error": 0.02113842025715812
+          },
+          {
+            "input_index": 211,
+            "label": [
+              12,
+              7
+            ],
+            "max_abs_error": 0.02113842025715812
+          }
+        ]
+      },
+      {
+        "cutoff": 12,
+        "num_nodes": 1200,
+        "num_inputs": 289,
+        "num_outputs": 12,
+        "local_rank": 12,
+        "joint_dim": 144,
+        "local_operator_span_rank": 17,
+        "summary": {
+          "max_abs_error": 0.02123189346175436,
+          "mean_abs_error": 0.013282438496711721,
+          "p95_abs_error": 0.021112307502254846
+        },
+        "top_error_inputs": [
+          {
+            "input_index": 201,
+            "label": [
+              11,
+              14
+            ],
+            "max_abs_error": 0.02123189346175436
+          },
+          {
+            "input_index": 265,
+            "label": [
+              15,
+              10
+            ],
+            "max_abs_error": 0.021231893461754248
+          },
+          {
+            "input_index": 203,
+            "label": [
+              11,
+              16
+            ],
+            "max_abs_error": 0.021231893461754192
+          },
+          {
+            "input_index": 267,
+            "label": [
+              15,
+              12
+            ],
+            "max_abs_error": 0.021231893461754192
+          },
+          {
+            "input_index": 249,
+            "label": [
+              14,
+              11
+            ],
+            "max_abs_error": 0.021224865032350992
+          },
+          {
+            "input_index": 219,
+            "label": [
+              12,
+              15
+            ],
+            "max_abs_error": 0.021224865032350826
+          },
+          {
+            "input_index": 185,
+            "label": [
+              10,
+              15
+            ],
+            "max_abs_error": 0.021224865032350715
+          },
+          {
+            "input_index": 283,
+            "label": [
+              16,
+              11
+            ],
+            "max_abs_error": 0.021224865032350604
+          },
+          {
+            "input_index": 65,
+            "label": [
+              3,
+              14
+            ],
+            "max_abs_error": 0.021118034078977388
+          },
+          {
+            "input_index": 129,
+            "label": [
+              7,
+              10
+            ],
+            "max_abs_error": 0.021118034078977277
+          }
+        ]
+      }
+    ],
+    "note": "Unlike the tex-compatible route3 test, route5 comparisons should be interpreted as a convergence diagnostic because the current formal route5 pipeline uses a low Fock cutoff, while the analytic formula corresponds to the ideal infinite-dimensional model."
+  }
+}

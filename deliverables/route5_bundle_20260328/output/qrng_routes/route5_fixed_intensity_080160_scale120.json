@@ -1,0 +1,46 @@
+{
+  "H_min": 2.101017214340893,
+  "raw_best_H_min": 2.982964531637191,
+  "target_input": [
+    15,
+    7
+  ],
+  "raw_best_target": [
+    15,
+    7
+  ],
+  "num_outputs": 12,
+  "num_x_bins": 6,
+  "num_p_bins": 2,
+  "quadrature_range": 1.8,
+  "boundary_gamma": 1.0,
+  "solver": "MOSEK",
+  "status": "optimal",
+  "radii": [
+    0.0,
+    0.848528137423857,
+    1.2
+  ],
+  "target_alphas": [
+    {
+      "real": -5.62771890364384e-12,
+      "imag": -1.2,
+      "abs": 1.2,
+      "phase": -1.5707963267995864
+    },
+    {
+      "real": -3.979398199378282e-12,
+      "imag": -0.848528137423857,
+      "abs": 0.848528137423857,
+      "phase": -1.5707963267995864
+    }
+  ],
+  "intensity_subset": [
+    0,
+    80,
+    160
+  ],
+  "max_radius": 1.2,
+  "scaling_rule": "radius = max_radius * sqrt(intensity / max_intensity_in_menu)",
+  "note": "Formal single-point MOSEK result for the fixed intensity subset [0,80,160] under the ratio-preserving route5 radius mapping."
+}
