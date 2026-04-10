@@ -1,0 +1,659 @@
+{
+  "route": "route6_first_round_raw_scout_nonvacuum",
+  "num_alphabet_candidates": 15,
+  "num_x_candidates": 37,
+  "num_p_candidates": 1,
+  "top10": [
+    {
+      "alphabet_candidate_index": 7,
+      "radius_values": [
+        1.2
+      ],
+      "phase_values": [
+        1.5707963267948966,
+        4.71238898038469
+      ],
+      "num_local_states": 2,
+      "alpha_values": [
+        {
+          "real": 7.347880794884119e-17,
+          "imag": 1.2,
+          "abs": 1.2,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -2.2043642384652356e-16,
+          "imag": -1.2,
+          "abs": 1.2,
+          "phase": -1.5707963267948968
+        }
+      ],
+      "local_rank": 2,
+      "joint_dim": 4,
+      "local_operator_span_rank": 2,
+      "local_gram_rank": 2,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "num_outputs": 12,
+      "x_bounds": [
+        -Infinity,
+        -0.8164965809277263,
+        -0.2886751345948129,
+        0.0,
+        0.28867513459481275,
+        0.8164965809277257,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.5,
+      "p_range": 0.0,
+      "x_gamma": 1.5,
+      "p_gamma": 1.0,
+      "raw_best_H_min": 3.2013163092623222,
+      "raw_best_target_index": 0,
+      "raw_best_target": [
+        0,
+        0
+      ],
+      "alphabet_type": "other"
+    },
+    {
+      "alphabet_candidate_index": 8,
+      "radius_values": [
+        1.2
+      ],
+      "phase_values": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ],
+      "num_local_states": 4,
+      "alpha_values": [
+        {
+          "real": 1.2,
+          "imag": 0.0,
+          "abs": 1.2,
+          "phase": 0.0
+        },
+        {
+          "real": 7.347880794884119e-17,
+          "imag": 1.2,
+          "abs": 1.2,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -1.2,
+          "imag": 1.4695761589768238e-16,
+          "abs": 1.2,
+          "phase": 3.141592653589793
+        },
+        {
+          "real": -2.2043642384652356e-16,
+          "imag": -1.2,
+          "abs": 1.2,
+          "phase": -1.5707963267948968
+        }
+      ],
+      "local_rank": 4,
+      "joint_dim": 16,
+      "local_operator_span_rank": 4,
+      "local_gram_rank": 4,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "num_outputs": 12,
+      "x_bounds": [
+        -Infinity,
+        -0.8164965809277263,
+        -0.2886751345948129,
+        0.0,
+        0.28867513459481275,
+        0.8164965809277257,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.5,
+      "p_range": 0.0,
+      "x_gamma": 1.5,
+      "p_gamma": 1.0,
+      "raw_best_H_min": 3.2013163092623222,
+      "raw_best_target_index": 5,
+      "raw_best_target": [
+        1,
+        1
+      ],
+      "alphabet_type": "single_radius_many_phase"
+    },
+    {
+      "alphabet_candidate_index": 12,
+      "radius_values": [
+        0.4,
+        1.2
+      ],
+      "phase_values": [
+        1.5707963267948966,
+        4.71238898038469
+      ],
+      "num_local_states": 4,
+      "alpha_values": [
+        {
+          "real": 2.4492935982947065e-17,
+          "imag": 0.4,
+          "abs": 0.4,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -7.347880794884119e-17,
+          "imag": -0.4,
+          "abs": 0.4,
+          "phase": -1.5707963267948968
+        },
+        {
+          "real": 7.347880794884119e-17,
+          "imag": 1.2,
+          "abs": 1.2,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -2.2043642384652356e-16,
+          "imag": -1.2,
+          "abs": 1.2,
+          "phase": -1.5707963267948968
+        }
+      ],
+      "local_rank": 4,
+      "joint_dim": 16,
+      "local_operator_span_rank": 4,
+      "local_gram_rank": 4,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "num_outputs": 12,
+      "x_bounds": [
+        -Infinity,
+        -0.8164965809277263,
+        -0.2886751345948129,
+        0.0,
+        0.28867513459481275,
+        0.8164965809277257,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.5,
+      "p_range": 0.0,
+      "x_gamma": 1.5,
+      "p_gamma": 1.0,
+      "raw_best_H_min": 3.2013163092623222,
+      "raw_best_target_index": 10,
+      "raw_best_target": [
+        2,
+        2
+      ],
+      "alphabet_type": "multi_radius_few_phase"
+    },
+    {
+      "alphabet_candidate_index": 14,
+      "radius_values": [
+        0.8,
+        1.2
+      ],
+      "phase_values": [
+        1.5707963267948966,
+        4.71238898038469
+      ],
+      "num_local_states": 4,
+      "alpha_values": [
+        {
+          "real": 4.898587196589413e-17,
+          "imag": 0.8,
+          "abs": 0.8,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -1.4695761589768238e-16,
+          "imag": -0.8,
+          "abs": 0.8,
+          "phase": -1.5707963267948968
+        },
+        {
+          "real": 7.347880794884119e-17,
+          "imag": 1.2,
+          "abs": 1.2,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -2.2043642384652356e-16,
+          "imag": -1.2,
+          "abs": 1.2,
+          "phase": -1.5707963267948968
+        }
+      ],
+      "local_rank": 4,
+      "joint_dim": 16,
+      "local_operator_span_rank": 4,
+      "local_gram_rank": 4,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "num_outputs": 12,
+      "x_bounds": [
+        -Infinity,
+        -0.8164965809277263,
+        -0.2886751345948129,
+        0.0,
+        0.28867513459481275,
+        0.8164965809277257,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.5,
+      "p_range": 0.0,
+      "x_gamma": 1.5,
+      "p_gamma": 1.0,
+      "raw_best_H_min": 3.2013163092623222,
+      "raw_best_target_index": 10,
+      "raw_best_target": [
+        2,
+        2
+      ],
+      "alphabet_type": "multi_radius_few_phase"
+    },
+    {
+      "alphabet_candidate_index": 4,
+      "radius_values": [
+        0.8
+      ],
+      "phase_values": [
+        1.5707963267948966,
+        4.71238898038469
+      ],
+      "num_local_states": 2,
+      "alpha_values": [
+        {
+          "real": 4.898587196589413e-17,
+          "imag": 0.8,
+          "abs": 0.8,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -1.4695761589768238e-16,
+          "imag": -0.8,
+          "abs": 0.8,
+          "phase": -1.5707963267948968
+        }
+      ],
+      "local_rank": 2,
+      "joint_dim": 4,
+      "local_operator_span_rank": 2,
+      "local_gram_rank": 2,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "num_outputs": 12,
+      "x_bounds": [
+        -Infinity,
+        -0.8164965809277263,
+        -0.2886751345948129,
+        0.0,
+        0.28867513459481275,
+        0.8164965809277257,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.5,
+      "p_range": 0.0,
+      "x_gamma": 1.5,
+      "p_gamma": 1.0,
+      "raw_best_H_min": 3.201316309262322,
+      "raw_best_target_index": 0,
+      "raw_best_target": [
+        0,
+        0
+      ],
+      "alphabet_type": "other"
+    },
+    {
+      "alphabet_candidate_index": 5,
+      "radius_values": [
+        0.8
+      ],
+      "phase_values": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ],
+      "num_local_states": 4,
+      "alpha_values": [
+        {
+          "real": 0.8,
+          "imag": 0.0,
+          "abs": 0.8,
+          "phase": 0.0
+        },
+        {
+          "real": 4.898587196589413e-17,
+          "imag": 0.8,
+          "abs": 0.8,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.8,
+          "imag": 9.797174393178826e-17,
+          "abs": 0.8,
+          "phase": 3.141592653589793
+        },
+        {
+          "real": -1.4695761589768238e-16,
+          "imag": -0.8,
+          "abs": 0.8,
+          "phase": -1.5707963267948968
+        }
+      ],
+      "local_rank": 4,
+      "joint_dim": 16,
+      "local_operator_span_rank": 4,
+      "local_gram_rank": 4,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "num_outputs": 12,
+      "x_bounds": [
+        -Infinity,
+        -0.8164965809277263,
+        -0.2886751345948129,
+        0.0,
+        0.28867513459481275,
+        0.8164965809277257,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.5,
+      "p_range": 0.0,
+      "x_gamma": 1.5,
+      "p_gamma": 1.0,
+      "raw_best_H_min": 3.201316309262322,
+      "raw_best_target_index": 5,
+      "raw_best_target": [
+        1,
+        1
+      ],
+      "alphabet_type": "single_radius_many_phase"
+    },
+    {
+      "alphabet_candidate_index": 10,
+      "radius_values": [
+        0.4,
+        0.8
+      ],
+      "phase_values": [
+        1.5707963267948966,
+        4.71238898038469
+      ],
+      "num_local_states": 4,
+      "alpha_values": [
+        {
+          "real": 2.4492935982947065e-17,
+          "imag": 0.4,
+          "abs": 0.4,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -7.347880794884119e-17,
+          "imag": -0.4,
+          "abs": 0.4,
+          "phase": -1.5707963267948968
+        },
+        {
+          "real": 4.898587196589413e-17,
+          "imag": 0.8,
+          "abs": 0.8,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -1.4695761589768238e-16,
+          "imag": -0.8,
+          "abs": 0.8,
+          "phase": -1.5707963267948968
+        }
+      ],
+      "local_rank": 4,
+      "joint_dim": 16,
+      "local_operator_span_rank": 4,
+      "local_gram_rank": 4,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "num_outputs": 12,
+      "x_bounds": [
+        -Infinity,
+        -0.8164965809277263,
+        -0.2886751345948129,
+        0.0,
+        0.28867513459481275,
+        0.8164965809277257,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.5,
+      "p_range": 0.0,
+      "x_gamma": 1.5,
+      "p_gamma": 1.0,
+      "raw_best_H_min": 3.201316309262322,
+      "raw_best_target_index": 10,
+      "raw_best_target": [
+        2,
+        2
+      ],
+      "alphabet_type": "multi_radius_few_phase"
+    },
+    {
+      "alphabet_candidate_index": 0,
+      "radius_values": [
+        0.4
+      ],
+      "phase_values": [
+        0.0,
+        3.141592653589793
+      ],
+      "num_local_states": 2,
+      "alpha_values": [
+        {
+          "real": 0.4,
+          "imag": 0.0,
+          "abs": 0.4,
+          "phase": 0.0
+        },
+        {
+          "real": -0.4,
+          "imag": 4.898587196589413e-17,
+          "abs": 0.4,
+          "phase": 3.141592653589793
+        }
+      ],
+      "local_rank": 2,
+      "joint_dim": 4,
+      "local_operator_span_rank": 2,
+      "local_gram_rank": 2,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "num_outputs": 12,
+      "x_bounds": [
+        -Infinity,
+        -0.8164965809277263,
+        -0.2886751345948129,
+        0.0,
+        0.28867513459481275,
+        0.8164965809277257,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.5,
+      "p_range": 0.0,
+      "x_gamma": 1.5,
+      "p_gamma": 1.0,
+      "raw_best_H_min": 3.2013163092623214,
+      "raw_best_target_index": 1,
+      "raw_best_target": [
+        0,
+        1
+      ],
+      "alphabet_type": "other"
+    },
+    {
+      "alphabet_candidate_index": 1,
+      "radius_values": [
+        0.4
+      ],
+      "phase_values": [
+        1.5707963267948966,
+        4.71238898038469
+      ],
+      "num_local_states": 2,
+      "alpha_values": [
+        {
+          "real": 2.4492935982947065e-17,
+          "imag": 0.4,
+          "abs": 0.4,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -7.347880794884119e-17,
+          "imag": -0.4,
+          "abs": 0.4,
+          "phase": -1.5707963267948968
+        }
+      ],
+      "local_rank": 2,
+      "joint_dim": 4,
+      "local_operator_span_rank": 2,
+      "local_gram_rank": 2,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "num_outputs": 12,
+      "x_bounds": [
+        -Infinity,
+        -0.8164965809277263,
+        -0.2886751345948129,
+        0.0,
+        0.28867513459481275,
+        0.8164965809277257,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.5,
+      "p_range": 0.0,
+      "x_gamma": 1.5,
+      "p_gamma": 1.0,
+      "raw_best_H_min": 3.2013163092623214,
+      "raw_best_target_index": 0,
+      "raw_best_target": [
+        0,
+        0
+      ],
+      "alphabet_type": "other"
+    },
+    {
+      "alphabet_candidate_index": 2,
+      "radius_values": [
+        0.4
+      ],
+      "phase_values": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ],
+      "num_local_states": 4,
+      "alpha_values": [
+        {
+          "real": 0.4,
+          "imag": 0.0,
+          "abs": 0.4,
+          "phase": 0.0
+        },
+        {
+          "real": 2.4492935982947065e-17,
+          "imag": 0.4,
+          "abs": 0.4,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.4,
+          "imag": 4.898587196589413e-17,
+          "abs": 0.4,
+          "phase": 3.141592653589793
+        },
+        {
+          "real": -7.347880794884119e-17,
+          "imag": -0.4,
+          "abs": 0.4,
+          "phase": -1.5707963267948968
+        }
+      ],
+      "local_rank": 4,
+      "joint_dim": 16,
+      "local_operator_span_rank": 4,
+      "local_gram_rank": 4,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "num_outputs": 12,
+      "x_bounds": [
+        -Infinity,
+        -0.8164965809277263,
+        -0.2886751345948129,
+        0.0,
+        0.28867513459481275,
+        0.8164965809277257,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "x_range": 1.5,
+      "p_range": 0.0,
+      "x_gamma": 1.5,
+      "p_gamma": 1.0,
+      "raw_best_H_min": 3.2013163092623214,
+      "raw_best_target_index": 2,
+      "raw_best_target": [
+        0,
+        2
+      ],
+      "alphabet_type": "single_radius_many_phase"
+    }
+  ]
+}

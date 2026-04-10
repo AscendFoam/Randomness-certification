@@ -1,0 +1,102 @@
+{
+  "radii": [
+    0.54,
+    0.66,
+    0.72
+  ],
+  "alpha_values": [
+    {
+      "real": 0.54,
+      "imag": 0.0,
+      "abs": 0.54
+    },
+    {
+      "real": 4.041334437186266e-17,
+      "imag": 0.66,
+      "abs": 0.66
+    },
+    {
+      "real": -0.72,
+      "imag": 8.817456953860943e-17,
+      "abs": 0.72
+    }
+  ],
+  "row_indices": [
+    5,
+    6,
+    7
+  ],
+  "edges": [
+    0,
+    121,
+    132,
+    256
+  ],
+  "solver": "MOSEK",
+  "status": "optimal",
+  "p_guess": 0.42705658234227034,
+  "H_min": 1.2275008642534182,
+  "distribution_only_p_guess": 0.34431629499999994,
+  "distribution_only_H_min": 1.5381936358517396,
+  "regularized_entries": 0,
+  "input_offdiagonal_metrics": {
+    "per_input": [
+      {
+        "input_index": 0,
+        "fro_norm": 1.0,
+        "offdiag_fro_norm": 0.6272279305973402,
+        "offdiag_over_fro": 0.6272279305973402,
+        "max_abs_offdiag": 0.40341661215719793
+      },
+      {
+        "input_index": 1,
+        "fro_norm": 1.0,
+        "offdiag_fro_norm": 0.7059021810924849,
+        "offdiag_over_fro": 0.7059021810924849,
+        "max_abs_offdiag": 0.42694123324131295
+      },
+      {
+        "input_index": 2,
+        "fro_norm": 1.0,
+        "offdiag_fro_norm": 0.7372304682213445,
+        "offdiag_over_fro": 0.7372304682213445,
+        "max_abs_offdiag": 0.42874765721296804
+      }
+    ],
+    "max_offdiag_over_fro": 0.7372304682213445,
+    "mean_offdiag_over_fro": 0.6901201933037232,
+    "max_abs_offdiag": 0.42874765721296804
+  },
+  "residual_summary": {
+    "psd_min_eig_min": -8.493907703578095e-11,
+    "psd_min_eig_max_neg_part": 8.493907703578095e-11,
+    "psd_violation_max": -0.0,
+    "psd_violation_mean": 0.0,
+    "completeness_violation_max": 1.5327444303153264e-12,
+    "completeness_violation_mean": 1.3061828023079323e-12,
+    "completeness_direct_fro_max": 4.287465376678744e-12,
+    "measurement_violation_max": 9.022116387313872e-11,
+    "measurement_violation_mean": 4.088287627934576e-11,
+    "measurement_direct_abs_max": 9.022116387313872e-11,
+    "measurement_direct_abs_mean": 4.088287627934576e-11,
+    "strategy_weight_sum": 0.9999999999591986,
+    "strategy_weight_min": 5.02398925326635e-06
+  },
+  "measurement_direct_abs_matrix": [
+    [
+      3.1173730263844845e-11,
+      2.915528929392508e-11,
+      2.6120161589204827e-11
+    ],
+    [
+      1.4015719140836325e-11,
+      5.05330499667167e-12,
+      8.004796825389349e-11
+    ],
+    [
+      7.74258219116055e-11,
+      1.473272719099139e-11,
+      9.022116387313872e-11
+    ]
+  ]
+}

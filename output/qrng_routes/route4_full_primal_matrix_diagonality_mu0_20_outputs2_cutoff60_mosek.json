@@ -1,0 +1,97 @@
+{
+  "route": "route4_phaseinsensitive_full_primal_matrix_diagonality_check",
+  "solver": "MOSEK",
+  "status": "optimal",
+  "p_guess": 0.9999979671997808,
+  "H_min": 2.9327137761028894e-06,
+  "selected_mu_list": [
+    0,
+    20
+  ],
+  "q_selected": [
+    0.5,
+    0.5
+  ],
+  "num_inputs": 2,
+  "num_outputs": 2,
+  "cutoff": 60,
+  "num_strategies": 8,
+  "matrix_count": 16,
+  "max_offdiag_over_fro": 0.0,
+  "median_offdiag_over_fro": 0.0,
+  "max_offdiag_over_diag": 0.0,
+  "median_offdiag_over_diag": 0.0,
+  "num_nearly_diagonal_1e-6": 16,
+  "num_nearly_diagonal_1e-4": 16,
+  "representative_entries": [
+    {
+      "strategy_id": 0,
+      "lambda_tuple": [
+        0,
+        0,
+        0
+      ],
+      "output": 0,
+      "fro_norm": 3.5571978272300484,
+      "diag_norm": 3.5571978272300484,
+      "offdiag_norm": 0.0,
+      "offdiag_over_fro": 0.0,
+      "offdiag_over_diag": 0.0,
+      "max_abs_offdiag": 0.0,
+      "min_eig": 0.24998101872356454,
+      "trace": 26.94346457958452
+    },
+    {
+      "strategy_id": 0,
+      "lambda_tuple": [
+        0,
+        0,
+        0
+      ],
+      "output": 1,
+      "fro_norm": 0.842567315948898,
+      "diag_norm": 0.842567315948898,
+      "offdiag_norm": 0.0,
+      "offdiag_over_fro": 0.0,
+      "offdiag_over_diag": 0.0,
+      "max_abs_offdiag": 0.0,
+      "min_eig": -1.9017821871076736e-08,
+      "trace": 3.053863380906969
+    },
+    {
+      "strategy_id": 7,
+      "lambda_tuple": [
+        1,
+        1,
+        1
+      ],
+      "output": 0,
+      "fro_norm": 1.9467021219501146e-06,
+      "diag_norm": 1.9467021219501146e-06,
+      "offdiag_norm": 0.0,
+      "offdiag_over_fro": 0.0,
+      "offdiag_over_diag": 0.0,
+      "max_abs_offdiag": 0.0,
+      "min_eig": 1.7097338646149767e-07,
+      "trace": 1.4327791589552533e-05
+    },
+    {
+      "strategy_id": 7,
+      "lambda_tuple": [
+        1,
+        1,
+        1
+      ],
+      "output": 1,
+      "fro_norm": 1.003239542332853e-06,
+      "diag_norm": 1.003239542332853e-06,
+      "offdiag_norm": 0.0,
+      "offdiag_over_fro": 0.0,
+      "offdiag_over_diag": 0.0,
+      "max_abs_offdiag": 0.0,
+      "min_eig": -1.452269393115591e-08,
+      "trace": 6.185590039422623e-06
+    }
+  ],
+  "note": "All extracted optimal M_{c,lambda} matrices are exactly diagonal at the exported numerical precision."
+}

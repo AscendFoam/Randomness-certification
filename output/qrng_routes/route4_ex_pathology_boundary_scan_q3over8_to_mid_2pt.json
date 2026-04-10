@@ -1,0 +1,75 @@
+{
+  "rows": [
+    {
+      "index": 0,
+      "t": 0.0,
+      "radii": [
+        0.538125,
+        0.661875,
+        0.718125
+      ],
+      "probabilities": [
+        [
+          0.32673052,
+          0.328953185,
+          0.34431629499999994
+        ],
+        [
+          0.020149,
+          0.09780728,
+          0.88204372
+        ],
+        [
+          0.00019224499999999999,
+          0.003522365,
+          0.99628539
+        ]
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999997,
+            "offdiag_fro_norm": 0.6258147319503455,
+            "offdiag_over_fro": 0.6258147319503458,
+            "max_abs_offdiag": 0.4028293402482805
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7069568679085952,
+            "offdiag_over_fro": 0.7069568679085951,
+            "max_abs_offdiag": 0.4270943524226207
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7363245169409638,
+            "offdiag_over_fro": 0.7363245169409638,
+            "max_abs_offdiag": 0.4287855712455911
+          }
+        ],
+        "max_offdiag_over_fro": 0.7363245169409638,
+        "mean_offdiag_over_fro": 0.6896987055999683,
+        "max_abs_offdiag": 0.4287855712455911
+      },
+      "distribution_only_H_min": 1.5381936358517396,
+      "scs": {
+        "status": null,
+        "solver": null,
+        "H_min": null,
+        "p_guess": null,
+        "error": null,
+        "error_message": null
+      },
+      "mosek": {
+        "status": "optimal",
+        "solver": "MOSEK",
+        "H_min": 1.4731286908861705,
+        "p_guess": 0.36020030528784436,
+        "error": null,
+        "error_message": null
+      }
+    }
+  ]
+}

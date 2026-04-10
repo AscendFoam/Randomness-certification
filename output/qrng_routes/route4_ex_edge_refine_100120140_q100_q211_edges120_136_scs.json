@@ -1,0 +1,816 @@
+{
+  "best": {
+    "edge": 128,
+    "edges": [
+      0,
+      128,
+      256
+    ],
+    "q_label": "bias100",
+    "q_values": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "distribution_only_H_min": 0.892724900930255,
+    "full_status": "optimal",
+    "full_H_min": 0.8732775800624346,
+    "full_p_guess": 0.5459052285067192
+  },
+  "top10": [
+    {
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8732775800624346,
+      "full_p_guess": 0.5459052285067192
+    },
+    {
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.8250308386201571,
+      "full_p_guess": 0.5644701363283369
+    },
+    {
+      "edge": 126,
+      "edges": [
+        0,
+        126,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9380224404275525,
+      "full_status": "optimal",
+      "full_H_min": 0.7619807812144879,
+      "full_p_guess": 0.5896861515510946
+    },
+    {
+      "edge": 125,
+      "edges": [
+        0,
+        125,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.8538103469547512,
+      "full_status": "optimal",
+      "full_H_min": 0.6983130035149918,
+      "full_p_guess": 0.6162924389569976
+    },
+    {
+      "edge": 124,
+      "edges": [
+        0,
+        124,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.7794452746447508,
+      "full_status": "optimal",
+      "full_H_min": 0.6451681576025758,
+      "full_p_guess": 0.6394182570022422
+    },
+    {
+      "edge": 123,
+      "edges": [
+        0,
+        123,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.7049575826520322,
+      "full_status": "optimal",
+      "full_H_min": 0.5845218336192001,
+      "full_p_guess": 0.66687032920868
+    },
+    {
+      "edge": 122,
+      "edges": [
+        0,
+        122,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.635440633257813,
+      "full_status": "optimal",
+      "full_H_min": 0.5321081254366357,
+      "full_p_guess": 0.6915434835633358
+    },
+    {
+      "edge": 121,
+      "edges": [
+        0,
+        121,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.5707440274306353,
+      "full_status": "optimal",
+      "full_H_min": 0.4840338381324332,
+      "full_p_guess": 0.714975723367228
+    },
+    {
+      "edge": 120,
+      "edges": [
+        0,
+        120,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.5143155305022303,
+      "full_status": "optimal",
+      "full_H_min": 0.44273919724120464,
+      "full_p_guess": 0.7357363634249752
+    },
+    {
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal",
+      "full_H_min": 0.40405349295055104,
+      "full_p_guess": 0.7557319422409698
+    }
+  ],
+  "rows": [
+    {
+      "edge": 120,
+      "edges": [
+        0,
+        120,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.5143155305022303,
+      "full_status": "optimal",
+      "full_H_min": 0.44273919724120464,
+      "full_p_guess": 0.7357363634249752
+    },
+    {
+      "edge": 120,
+      "edges": [
+        0,
+        120,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.24151608364915172,
+      "full_status": "optimal",
+      "full_H_min": 0.21142210371348286,
+      "full_p_guess": 0.8636854533406224
+    },
+    {
+      "edge": 121,
+      "edges": [
+        0,
+        121,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.5707440274306353,
+      "full_status": "optimal",
+      "full_H_min": 0.4840338381324332,
+      "full_p_guess": 0.714975723367228
+    },
+    {
+      "edge": 121,
+      "edges": [
+        0,
+        121,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.2661260725136674,
+      "full_status": "optimal",
+      "full_H_min": 0.23033541195254445,
+      "full_p_guess": 0.852436685851844
+    },
+    {
+      "edge": 122,
+      "edges": [
+        0,
+        122,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.635440633257813,
+      "full_status": "optimal",
+      "full_H_min": 0.5321081254366357,
+      "full_p_guess": 0.6915434835633358
+    },
+    {
+      "edge": 122,
+      "edges": [
+        0,
+        122,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.2939083299930806,
+      "full_status": "optimal",
+      "full_H_min": 0.2521940832969333,
+      "full_p_guess": 0.8396185329006135
+    },
+    {
+      "edge": 123,
+      "edges": [
+        0,
+        123,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.7049575826520322,
+      "full_status": "optimal",
+      "full_H_min": 0.5845218336192001,
+      "full_p_guess": 0.66687032920868
+    },
+    {
+      "edge": 123,
+      "edges": [
+        0,
+        123,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.3232663732300078,
+      "full_status": "optimal",
+      "full_H_min": 0.2757927772344962,
+      "full_p_guess": 0.8259962991171667
+    },
+    {
+      "edge": 124,
+      "edges": [
+        0,
+        124,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.7794452746447508,
+      "full_status": "optimal",
+      "full_H_min": 0.6451681576025758,
+      "full_p_guess": 0.6394182570022422
+    },
+    {
+      "edge": 124,
+      "edges": [
+        0,
+        124,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.3539774823510868,
+      "full_status": "optimal",
+      "full_H_min": 0.30250700400658365,
+      "full_p_guess": 0.8108421525424436
+    },
+    {
+      "edge": 125,
+      "edges": [
+        0,
+        125,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.8538103469547512,
+      "full_status": "optimal",
+      "full_H_min": 0.6983130035149918,
+      "full_p_guess": 0.6162924389569976
+    },
+    {
+      "edge": 125,
+      "edges": [
+        0,
+        125,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.38445101526762104,
+      "full_status": "optimal",
+      "full_H_min": 0.32638662433927734,
+      "full_p_guess": 0.7975314826435853
+    },
+    {
+      "edge": 126,
+      "edges": [
+        0,
+        126,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9380224404275525,
+      "full_status": "optimal",
+      "full_H_min": 0.7619807812144879,
+      "full_p_guess": 0.5896861515510946
+    },
+    {
+      "edge": 126,
+      "edges": [
+        0,
+        126,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.4180973051948362,
+      "full_status": "optimal",
+      "full_H_min": 0.3542377250959574,
+      "full_p_guess": 0.7822828677337923
+    },
+    {
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.8250308386201571,
+      "full_p_guess": 0.5644701363283369
+    },
+    {
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.4346078135054384,
+      "full_status": "optimal",
+      "full_H_min": 0.38195591172190513,
+      "full_p_guess": 0.7673964990225505
+    },
+    {
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8732775800624346,
+      "full_p_guess": 0.5459052285067192
+    },
+    {
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal",
+      "full_H_min": 0.40405349295055104,
+      "full_p_guess": 0.7557319422409698
+    },
+    {
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.8126349084533154,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.38716388665654855,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 130,
+      "edges": [
+        0,
+        130,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.7381524584541074,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 130,
+      "edges": [
+        0,
+        130,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.3648831561506949,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 131,
+      "edges": [
+        0,
+        131,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.6690372087118857,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 131,
+      "edges": [
+        0,
+        131,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.34425656718693,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 132,
+      "edges": [
+        0,
+        132,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.6089280533238923,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 132,
+      "edges": [
+        0,
+        132,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.3265808330376672,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 133,
+      "edges": [
+        0,
+        133,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.5495519672904343,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 133,
+      "edges": [
+        0,
+        133,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.30948289150809843,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 134,
+      "edges": [
+        0,
+        134,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.4947875606145393,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 134,
+      "edges": [
+        0,
+        134,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.29427325082158406,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 135,
+      "edges": [
+        0,
+        135,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.4474673446267247,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 135,
+      "edges": [
+        0,
+        135,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.2817962925324298,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 136,
+      "edges": [
+        0,
+        136,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.40099507174035626,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "edge": 136,
+      "edges": [
+        0,
+        136,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.27035840185462173,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    }
+  ]
+}

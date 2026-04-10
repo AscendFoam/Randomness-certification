@@ -1,0 +1,75 @@
+{
+  "rows": [
+    {
+      "index": 0,
+      "t": 0.0,
+      "radii": [
+        0.537890625,
+        0.662109375,
+        0.717890625
+      ],
+      "probabilities": [
+        [
+          0.32673052,
+          0.328953185,
+          0.34431629499999994
+        ],
+        [
+          0.020149,
+          0.09780728,
+          0.88204372
+        ],
+        [
+          0.00019224499999999999,
+          0.003522365,
+          0.99628539
+        ]
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6256376674048308,
+            "offdiag_over_fro": 0.6256376674048307,
+            "max_abs_offdiag": 0.40275544920027356
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.7070883484988801,
+            "offdiag_over_fro": 0.7070883484988802,
+            "max_abs_offdiag": 0.42711304380270526
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0000000000000004,
+            "offdiag_fro_norm": 0.7362109540778349,
+            "offdiag_over_fro": 0.7362109540778345,
+            "max_abs_offdiag": 0.4287898939144957
+          }
+        ],
+        "max_offdiag_over_fro": 0.7362109540778345,
+        "mean_offdiag_over_fro": 0.6896456566605152,
+        "max_abs_offdiag": 0.4287898939144957
+      },
+      "distribution_only_H_min": 1.5381936358517396,
+      "scs": {
+        "status": null,
+        "solver": null,
+        "H_min": null,
+        "p_guess": null,
+        "error": null,
+        "error_message": null
+      },
+      "mosek": {
+        "status": null,
+        "solver": null,
+        "H_min": null,
+        "p_guess": null,
+        "error": "RuntimeError",
+        "error_message": "All solvers failed: MOSEK: Solver 'MOSEK' failed. Try another solver, or solve with verbose=True for more information."
+      }
+    }
+  ]
+}

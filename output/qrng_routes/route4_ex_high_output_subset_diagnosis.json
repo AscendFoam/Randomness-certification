@@ -1,0 +1,248 @@
+{
+  "rows": [
+    {
+      "label": "single_100_3out",
+      "intensities": [
+        100
+      ],
+      "row_indices": [
+        5
+      ],
+      "phases": [
+        0.0
+      ],
+      "q_values": [
+        1.0
+      ],
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "max_abs_alpha": 0.63,
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "optimal",
+      "full_H_min": -2.547484285219241e-08,
+      "full_p_guess": 1.0000000176578157
+    },
+    {
+      "label": "pair_100_120_3out",
+      "intensities": [
+        100,
+        120
+      ],
+      "row_indices": [
+        5,
+        6
+      ],
+      "phases": [
+        0.0,
+        1.5707963267948966
+      ],
+      "q_values": [
+        1.0,
+        0.0
+      ],
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "max_abs_alpha": 0.63,
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "optimal",
+      "full_H_min": 0.2182215039223453,
+      "full_p_guess": 0.8596244938192622
+    },
+    {
+      "label": "pair_100_140_3out",
+      "intensities": [
+        100,
+        140
+      ],
+      "row_indices": [
+        5,
+        7
+      ],
+      "phases": [
+        0.0,
+        3.141592653589793
+      ],
+      "q_values": [
+        1.0,
+        0.0
+      ],
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "max_abs_alpha": 0.63,
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "optimal",
+      "full_H_min": 0.27994081957439054,
+      "full_p_guess": 0.8236248022777433
+    },
+    {
+      "label": "triple_100_120_140_3out",
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "max_abs_alpha": 0.63,
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "label": "single_100_4out",
+      "intensities": [
+        100
+      ],
+      "row_indices": [
+        5
+      ],
+      "phases": [
+        0.0
+      ],
+      "q_values": [
+        1.0
+      ],
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "max_abs_alpha": 0.63,
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "optimal",
+      "full_H_min": 3.4597006241201525e-14,
+      "full_p_guess": 0.999999999999976
+    },
+    {
+      "label": "pair_100_120_4out",
+      "intensities": [
+        100,
+        120
+      ],
+      "row_indices": [
+        5,
+        6
+      ],
+      "phases": [
+        0.0,
+        1.5707963267948966
+      ],
+      "q_values": [
+        1.0,
+        0.0
+      ],
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "max_abs_alpha": 0.63,
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "optimal",
+      "full_H_min": 0.2329622703921392,
+      "full_p_guess": 0.8508859817315289
+    },
+    {
+      "label": "pair_100_140_4out",
+      "intensities": [
+        100,
+        140
+      ],
+      "row_indices": [
+        5,
+        7
+      ],
+      "phases": [
+        0.0,
+        3.141592653589793
+      ],
+      "q_values": [
+        1.0,
+        0.0
+      ],
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "max_abs_alpha": 0.63,
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "optimal",
+      "full_H_min": 0.29433851993561544,
+      "full_p_guess": 0.8154461312335781
+    },
+    {
+      "label": "triple_100_120_140_4out",
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "max_abs_alpha": 0.63,
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    }
+  ]
+}

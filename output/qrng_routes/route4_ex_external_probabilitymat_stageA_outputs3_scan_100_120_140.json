@@ -1,0 +1,2824 @@
+{
+  "scan_name": "route4_ex external stage A outputs=3 around [100,120,140]",
+  "probability_path": "src/matlab/Probability.mat",
+  "row_indices": [
+    5,
+    6,
+    7
+  ],
+  "intensities": [
+    100,
+    120,
+    140
+  ],
+  "phase_patterns": {
+    "0_pi2_pi": [
+      0.0,
+      1.5707963267948966,
+      3.141592653589793
+    ],
+    "0_pi3_2pi3": [
+      0.0,
+      1.0471975511965976,
+      2.0943951023931953
+    ],
+    "0_pi4_pi2": [
+      0.0,
+      0.7853981633974483,
+      1.5707963267948966
+    ],
+    "0_pi4_3pi4": [
+      0.0,
+      0.7853981633974483,
+      2.356194490192345
+    ]
+  },
+  "max_abs_alpha_values": [
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    1.0
+  ],
+  "cutoff_values": [
+    6,
+    8,
+    10
+  ],
+  "num_outputs": 3,
+  "case_timeout_sec": 25,
+  "completed_cases": 72,
+  "best_case_so_far": {
+    "case_id": 1,
+    "phase_pattern": "0_pi2_pi",
+    "phases": [
+      0.0,
+      1.5707963267948966,
+      3.141592653589793
+    ],
+    "max_abs_alpha": 0.75,
+    "cutoff": 6,
+    "num_outputs": 3,
+    "intensities": [
+      100,
+      120,
+      140
+    ],
+    "row_indices": [
+      5,
+      6,
+      7
+    ],
+    "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+    "distribution_only_H_min": 0.28669160958758827,
+    "distribution_only_p_guess": 0.8197798249998246,
+    "diagonal_status": "infeasible",
+    "diagonal_H_min": null,
+    "diagonal_p_guess": null,
+    "full_status": "optimal",
+    "full_H_min": 0.09198291856979945,
+    "full_p_guess": 0.9382323050539698,
+    "p_guess_abs_gap": null,
+    "H_min_abs_gap": null,
+    "alpha_values": [
+      {
+        "real": 0.6338656910463875,
+        "imag": 0.0,
+        "abs": 0.6338656910463875,
+        "phase": 0.0
+      },
+      {
+        "real": 4.2517598316477687e-17,
+        "imag": 0.6943650748294136,
+        "abs": 0.6943650748294136,
+        "phase": 1.5707963267948966
+      },
+      {
+        "real": -0.75,
+        "imag": 9.184850993605148e-17,
+        "abs": 0.75,
+        "phase": 3.141592653589793
+      }
+    ],
+    "input_offdiagonal_metrics": {
+      "per_input": [
+        {
+          "input_index": 0,
+          "fro_norm": 0.9999999999999998,
+          "offdiag_fro_norm": 0.6906673545498465,
+          "offdiag_over_fro": 0.6906673545498466,
+          "max_abs_offdiag": 0.42413657737926
+        },
+        {
+          "input_index": 1,
+          "fro_norm": 1.0000000000000002,
+          "offdiag_fro_norm": 0.7244450881240971,
+          "offdiag_over_fro": 0.724445088124097,
+          "max_abs_offdiag": 0.4287468157438588
+        },
+        {
+          "input_index": 2,
+          "fro_norm": 1.0,
+          "offdiag_fro_norm": 0.7511224055500048,
+          "offdiag_over_fro": 0.7511224055500048,
+          "max_abs_offdiag": 0.42734875650525267
+        }
+      ],
+      "max_offdiag_over_fro": 0.7511224055500048,
+      "mean_offdiag_over_fro": 0.722078282741316,
+      "max_abs_offdiag": 0.4287468157438588
+    }
+  },
+  "top10_so_far": [
+    {
+      "case_id": 1,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.09198291856979945,
+      "full_p_guess": 0.9382323050539698,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.6338656910463875,
+          "imag": 0.0,
+          "abs": 0.6338656910463875,
+          "phase": 0.0
+        },
+        {
+          "real": 4.2517598316477687e-17,
+          "imag": 0.6943650748294136,
+          "abs": 0.6943650748294136,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.75,
+          "imag": 9.184850993605148e-17,
+          "abs": 0.75,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6906673545498465,
+            "offdiag_over_fro": 0.6906673545498466,
+            "max_abs_offdiag": 0.42413657737926
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7244450881240971,
+            "offdiag_over_fro": 0.724445088124097,
+            "max_abs_offdiag": 0.4287468157438588
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7511224055500048,
+            "offdiag_over_fro": 0.7511224055500048,
+            "max_abs_offdiag": 0.42734875650525267
+          }
+        ],
+        "max_offdiag_over_fro": 0.7511224055500048,
+        "mean_offdiag_over_fro": 0.722078282741316,
+        "max_abs_offdiag": 0.4287468157438588
+      }
+    },
+    {
+      "case_id": 4,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.07209829086823859,
+      "full_p_guess": 0.9512534651891156,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.6761234037828133,
+          "imag": 0.0,
+          "abs": 0.6761234037828133,
+          "phase": 0.0
+        },
+        {
+          "real": 4.5352104870909535e-17,
+          "imag": 0.7406560798180412,
+          "abs": 0.7406560798180412,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.8,
+          "imag": 9.797174393178826e-17,
+          "abs": 0.8,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999997,
+            "offdiag_fro_norm": 0.7148078249053353,
+            "offdiag_over_fro": 0.7148078249053356,
+            "max_abs_offdiag": 0.4280505657434395
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.7469153945988664,
+            "offdiag_over_fro": 0.7469153945988665,
+            "max_abs_offdiag": 0.4279424257099764
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7718987136726471,
+            "offdiag_over_fro": 0.7718987136726468,
+            "max_abs_offdiag": 0.42185727811323237
+          }
+        ],
+        "max_offdiag_over_fro": 0.7718987136726468,
+        "mean_offdiag_over_fro": 0.744540644392283,
+        "max_abs_offdiag": 0.4280505657434395
+      }
+    },
+    {
+      "case_id": 7,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.05788874514490783,
+      "full_p_guess": 0.9606689440329069,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.7183811165192391,
+          "imag": 0.0,
+          "abs": 0.7183811165192391,
+          "phase": 0.0
+        },
+        {
+          "real": 4.818661142534137e-17,
+          "imag": 0.7869470848066686,
+          "abs": 0.7869470848066686,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.85,
+          "imag": 1.0409497792752501e-16,
+          "abs": 0.85,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.7364485331928268,
+            "offdiag_over_fro": 0.7364485331928269,
+            "max_abs_offdiag": 0.4287807416485431
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.766746979854626,
+            "offdiag_over_fro": 0.7667469798546258,
+            "max_abs_offdiag": 0.42365587632071566
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.7899940349481285,
+            "offdiag_over_fro": 0.7899940349481286,
+            "max_abs_offdiag": 0.4127504400074457
+          }
+        ],
+        "max_offdiag_over_fro": 0.7899940349481286,
+        "mean_offdiag_over_fro": 0.7643965159985271,
+        "max_abs_offdiag": 0.4287807416485431
+      }
+    },
+    {
+      "case_id": 61,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.055718402417223686,
+      "full_p_guess": 0.9621152302348537,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.7183811165192391,
+          "imag": 0.0,
+          "abs": 0.7183811165192391,
+          "phase": 0.0
+        },
+        {
+          "real": 0.5564556201017805,
+          "imag": 0.5564556201017804,
+          "abs": 0.7869470848066685,
+          "phase": 0.7853981633974483
+        },
+        {
+          "real": -0.6010407640085653,
+          "imag": 0.6010407640085654,
+          "abs": 0.85,
+          "phase": 2.356194490192345
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.7364485331928268,
+            "offdiag_over_fro": 0.7364485331928269,
+            "max_abs_offdiag": 0.4287807416485431
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7667469798546259,
+            "offdiag_over_fro": 0.7667469798546259,
+            "max_abs_offdiag": 0.4236558763207156
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.7899940349481283,
+            "offdiag_over_fro": 0.7899940349481284,
+            "max_abs_offdiag": 0.41275044000744565
+          }
+        ],
+        "max_offdiag_over_fro": 0.7899940349481284,
+        "mean_offdiag_over_fro": 0.7643965159985271,
+        "max_abs_offdiag": 0.4287807416485431
+      }
+    },
+    {
+      "case_id": 67,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.04382219875061038,
+      "full_p_guess": 0.9700814581756774,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.8028965419920907,
+          "imag": 0.0,
+          "abs": 0.8028965419920907,
+          "phase": 0.0
+        },
+        {
+          "real": 0.6219209871725783,
+          "imag": 0.6219209871725782,
+          "abs": 0.8795290947839237,
+          "phase": 0.7853981633974482
+        },
+        {
+          "real": -0.67175144212722,
+          "imag": 0.6717514421272202,
+          "abs": 0.95,
+          "phase": 2.356194490192345
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7730169504523748,
+            "offdiag_over_fro": 0.7730169504523746,
+            "max_abs_offdiag": 0.42142446677823797
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7995542369264815,
+            "offdiag_over_fro": 0.7995542369264815,
+            "max_abs_offdiag": 0.40584419086438606
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.8194227453175528,
+            "offdiag_over_fro": 0.8194227453175529,
+            "max_abs_offdiag": 0.38541110523080563
+          }
+        ],
+        "max_offdiag_over_fro": 0.8194227453175529,
+        "mean_offdiag_over_fro": 0.797331310898803,
+        "max_abs_offdiag": 0.42142446677823797
+      }
+    },
+    {
+      "case_id": 68,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.043783178810395604,
+      "full_p_guess": 0.9701076958983585,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.8028965419920907,
+          "imag": 0.0,
+          "abs": 0.8028965419920907,
+          "phase": 0.0
+        },
+        {
+          "real": 0.6219209871725783,
+          "imag": 0.6219209871725782,
+          "abs": 0.8795290947839237,
+          "phase": 0.7853981633974482
+        },
+        {
+          "real": -0.67175144212722,
+          "imag": 0.6717514421272202,
+          "abs": 0.95,
+          "phase": 2.356194490192345
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7730466909019069,
+            "offdiag_over_fro": 0.7730466909019067,
+            "max_abs_offdiag": 0.4214003900868754
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 0.9999999999999997,
+            "offdiag_fro_norm": 0.799623010599632,
+            "offdiag_over_fro": 0.7996230105996323,
+            "max_abs_offdiag": 0.4057823045227439
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.8195604234346391,
+            "offdiag_over_fro": 0.8195604234346392,
+            "max_abs_offdiag": 0.38527867326667653
+          }
+        ],
+        "max_offdiag_over_fro": 0.8195604234346392,
+        "mean_offdiag_over_fro": 0.7974100416453928,
+        "max_abs_offdiag": 0.4214003900868754
+      }
+    },
+    {
+      "case_id": 70,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.04025725008998453,
+      "full_p_guess": 0.9724815266554803,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.8451542547285166,
+          "imag": 0.0,
+          "abs": 0.8451542547285166,
+          "phase": 0.0
+        },
+        {
+          "real": 0.6546536707079772,
+          "imag": 0.6546536707079771,
+          "abs": 0.9258200997725515,
+          "phase": 0.7853981633974483
+        },
+        {
+          "real": -0.7071067811865475,
+          "imag": 0.7071067811865476,
+          "abs": 1.0,
+          "phase": 2.356194490192345
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.7883484986567917,
+            "offdiag_over_fro": 0.7883484986567918,
+            "max_abs_offdiag": 0.41377976305193453
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.8130405038805726,
+            "offdiag_over_fro": 0.8130405038805728,
+            "max_abs_offdiag": 0.39299734849590773
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.8313392780900402,
+            "offdiag_over_fro": 0.8313392780900399,
+            "max_abs_offdiag": 0.36809815950920255
+          }
+        ],
+        "max_offdiag_over_fro": 0.8313392780900399,
+        "mean_offdiag_over_fro": 0.8109094268758016,
+        "max_abs_offdiag": 0.41377976305193453
+      }
+    }
+  ],
+  "cases": [
+    {
+      "case_id": 1,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.09198291856979945,
+      "full_p_guess": 0.9382323050539698,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.6338656910463875,
+          "imag": 0.0,
+          "abs": 0.6338656910463875,
+          "phase": 0.0
+        },
+        {
+          "real": 4.2517598316477687e-17,
+          "imag": 0.6943650748294136,
+          "abs": 0.6943650748294136,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.75,
+          "imag": 9.184850993605148e-17,
+          "abs": 0.75,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6906673545498465,
+            "offdiag_over_fro": 0.6906673545498466,
+            "max_abs_offdiag": 0.42413657737926
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7244450881240971,
+            "offdiag_over_fro": 0.724445088124097,
+            "max_abs_offdiag": 0.4287468157438588
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7511224055500048,
+            "offdiag_over_fro": 0.7511224055500048,
+            "max_abs_offdiag": 0.42734875650525267
+          }
+        ],
+        "max_offdiag_over_fro": 0.7511224055500048,
+        "mean_offdiag_over_fro": 0.722078282741316,
+        "max_abs_offdiag": 0.4287468157438588
+      }
+    },
+    {
+      "case_id": 2,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 3,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 4,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.07209829086823859,
+      "full_p_guess": 0.9512534651891156,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.6761234037828133,
+          "imag": 0.0,
+          "abs": 0.6761234037828133,
+          "phase": 0.0
+        },
+        {
+          "real": 4.5352104870909535e-17,
+          "imag": 0.7406560798180412,
+          "abs": 0.7406560798180412,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.8,
+          "imag": 9.797174393178826e-17,
+          "abs": 0.8,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999997,
+            "offdiag_fro_norm": 0.7148078249053353,
+            "offdiag_over_fro": 0.7148078249053356,
+            "max_abs_offdiag": 0.4280505657434395
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.7469153945988664,
+            "offdiag_over_fro": 0.7469153945988665,
+            "max_abs_offdiag": 0.4279424257099764
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7718987136726471,
+            "offdiag_over_fro": 0.7718987136726468,
+            "max_abs_offdiag": 0.42185727811323237
+          }
+        ],
+        "max_offdiag_over_fro": 0.7718987136726468,
+        "mean_offdiag_over_fro": 0.744540644392283,
+        "max_abs_offdiag": 0.4280505657434395
+      }
+    },
+    {
+      "case_id": 5,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 6,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 7,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.05788874514490783,
+      "full_p_guess": 0.9606689440329069,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.7183811165192391,
+          "imag": 0.0,
+          "abs": 0.7183811165192391,
+          "phase": 0.0
+        },
+        {
+          "real": 4.818661142534137e-17,
+          "imag": 0.7869470848066686,
+          "abs": 0.7869470848066686,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.85,
+          "imag": 1.0409497792752501e-16,
+          "abs": 0.85,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.7364485331928268,
+            "offdiag_over_fro": 0.7364485331928269,
+            "max_abs_offdiag": 0.4287807416485431
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.766746979854626,
+            "offdiag_over_fro": 0.7667469798546258,
+            "max_abs_offdiag": 0.42365587632071566
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.7899940349481285,
+            "offdiag_over_fro": 0.7899940349481286,
+            "max_abs_offdiag": 0.4127504400074457
+          }
+        ],
+        "max_offdiag_over_fro": 0.7899940349481286,
+        "mean_offdiag_over_fro": 0.7643965159985271,
+        "max_abs_offdiag": 0.4287807416485431
+      }
+    },
+    {
+      "case_id": 8,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 9,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 10,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 11,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 12,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 13,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 14,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 15,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 16,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 17,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 18,
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 19,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 20,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 21,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 22,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 23,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 24,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 25,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 26,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 27,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 28,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 29,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 30,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 31,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 32,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 33,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 34,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 35,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 36,
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 37,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.6338656910463875,
+          "imag": 0.0,
+          "abs": 0.6338656910463875,
+          "phase": 0.0
+        },
+        {
+          "real": 0.49099025303098287,
+          "imag": 0.4909902530309828,
+          "abs": 0.6943650748294136,
+          "phase": 0.7853981633974483
+        },
+        {
+          "real": 4.592425496802574e-17,
+          "imag": 0.75,
+          "abs": 0.75,
+          "phase": 1.5707963267948966
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6906673545498465,
+            "offdiag_over_fro": 0.6906673545498466,
+            "max_abs_offdiag": 0.42413657737926
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.7244450881240968,
+            "offdiag_over_fro": 0.7244450881240969,
+            "max_abs_offdiag": 0.4287468157438586
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7511224055500048,
+            "offdiag_over_fro": 0.7511224055500048,
+            "max_abs_offdiag": 0.42734875650525267
+          }
+        ],
+        "max_offdiag_over_fro": 0.7511224055500048,
+        "mean_offdiag_over_fro": 0.722078282741316,
+        "max_abs_offdiag": 0.4287468157438586
+      }
+    },
+    {
+      "case_id": 38,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 39,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 40,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 41,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 42,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 43,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 44,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 45,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 46,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 47,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 48,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 49,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 50,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 51,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 52,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 53,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 54,
+      "phase_pattern": "0_pi4_pi2",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 55,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 56,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 57,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.75,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 58,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 59,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 60,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.8,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 61,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.055718402417223686,
+      "full_p_guess": 0.9621152302348537,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.7183811165192391,
+          "imag": 0.0,
+          "abs": 0.7183811165192391,
+          "phase": 0.0
+        },
+        {
+          "real": 0.5564556201017805,
+          "imag": 0.5564556201017804,
+          "abs": 0.7869470848066685,
+          "phase": 0.7853981633974483
+        },
+        {
+          "real": -0.6010407640085653,
+          "imag": 0.6010407640085654,
+          "abs": 0.85,
+          "phase": 2.356194490192345
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.7364485331928268,
+            "offdiag_over_fro": 0.7364485331928269,
+            "max_abs_offdiag": 0.4287807416485431
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7667469798546259,
+            "offdiag_over_fro": 0.7667469798546259,
+            "max_abs_offdiag": 0.4236558763207156
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.7899940349481283,
+            "offdiag_over_fro": 0.7899940349481284,
+            "max_abs_offdiag": 0.41275044000744565
+          }
+        ],
+        "max_offdiag_over_fro": 0.7899940349481284,
+        "mean_offdiag_over_fro": 0.7643965159985271,
+        "max_abs_offdiag": 0.4287807416485431
+      }
+    },
+    {
+      "case_id": 62,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 63,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.85,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 64,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 65,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 66,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.9,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 67,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.04382219875061038,
+      "full_p_guess": 0.9700814581756774,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.8028965419920907,
+          "imag": 0.0,
+          "abs": 0.8028965419920907,
+          "phase": 0.0
+        },
+        {
+          "real": 0.6219209871725783,
+          "imag": 0.6219209871725782,
+          "abs": 0.8795290947839237,
+          "phase": 0.7853981633974482
+        },
+        {
+          "real": -0.67175144212722,
+          "imag": 0.6717514421272202,
+          "abs": 0.95,
+          "phase": 2.356194490192345
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7730169504523748,
+            "offdiag_over_fro": 0.7730169504523746,
+            "max_abs_offdiag": 0.42142446677823797
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7995542369264815,
+            "offdiag_over_fro": 0.7995542369264815,
+            "max_abs_offdiag": 0.40584419086438606
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.8194227453175528,
+            "offdiag_over_fro": 0.8194227453175529,
+            "max_abs_offdiag": 0.38541110523080563
+          }
+        ],
+        "max_offdiag_over_fro": 0.8194227453175529,
+        "mean_offdiag_over_fro": 0.797331310898803,
+        "max_abs_offdiag": 0.42142446677823797
+      }
+    },
+    {
+      "case_id": 68,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.043783178810395604,
+      "full_p_guess": 0.9701076958983585,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.8028965419920907,
+          "imag": 0.0,
+          "abs": 0.8028965419920907,
+          "phase": 0.0
+        },
+        {
+          "real": 0.6219209871725783,
+          "imag": 0.6219209871725782,
+          "abs": 0.8795290947839237,
+          "phase": 0.7853981633974482
+        },
+        {
+          "real": -0.67175144212722,
+          "imag": 0.6717514421272202,
+          "abs": 0.95,
+          "phase": 2.356194490192345
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7730466909019069,
+            "offdiag_over_fro": 0.7730466909019067,
+            "max_abs_offdiag": 0.4214003900868754
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 0.9999999999999997,
+            "offdiag_fro_norm": 0.799623010599632,
+            "offdiag_over_fro": 0.7996230105996323,
+            "max_abs_offdiag": 0.4057823045227439
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.8195604234346391,
+            "offdiag_over_fro": 0.8195604234346392,
+            "max_abs_offdiag": 0.38527867326667653
+          }
+        ],
+        "max_offdiag_over_fro": 0.8195604234346392,
+        "mean_offdiag_over_fro": 0.7974100416453928,
+        "max_abs_offdiag": 0.4214003900868754
+      }
+    },
+    {
+      "case_id": 69,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 0.95,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 70,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 6,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning(",
+      "distribution_only_H_min": 0.28669160958758827,
+      "distribution_only_p_guess": 0.8197798249998246,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.04025725008998453,
+      "full_p_guess": 0.9724815266554803,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.8451542547285166,
+          "imag": 0.0,
+          "abs": 0.8451542547285166,
+          "phase": 0.0
+        },
+        {
+          "real": 0.6546536707079772,
+          "imag": 0.6546536707079771,
+          "abs": 0.9258200997725515,
+          "phase": 0.7853981633974483
+        },
+        {
+          "real": -0.7071067811865475,
+          "imag": 0.7071067811865476,
+          "abs": 1.0,
+          "phase": 2.356194490192345
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.7883484986567917,
+            "offdiag_over_fro": 0.7883484986567918,
+            "max_abs_offdiag": 0.41377976305193453
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.8130405038805726,
+            "offdiag_over_fro": 0.8130405038805728,
+            "max_abs_offdiag": 0.39299734849590773
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.8313392780900402,
+            "offdiag_over_fro": 0.8313392780900399,
+            "max_abs_offdiag": 0.36809815950920255
+          }
+        ],
+        "max_offdiag_over_fro": 0.8313392780900399,
+        "mean_offdiag_over_fro": 0.8109094268758016,
+        "max_abs_offdiag": 0.41377976305193453
+      }
+    },
+    {
+      "case_id": 71,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 8,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    },
+    {
+      "case_id": 72,
+      "phase_pattern": "0_pi4_3pi4",
+      "phases": [
+        0.0,
+        0.7853981633974483,
+        2.356194490192345
+      ],
+      "max_abs_alpha": 1.0,
+      "cutoff": 10,
+      "num_outputs": 3,
+      "intensities": [
+        100,
+        120,
+        140
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "error": "TimeoutExpired"
+    }
+  ]
+}

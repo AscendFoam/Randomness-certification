@@ -1,0 +1,1892 @@
+{
+  "best": {
+    "case_id": 7,
+    "window": "100_120_140",
+    "row_indices": [
+      5,
+      6,
+      7
+    ],
+    "intensities": [
+      100.0,
+      120.0,
+      140.0
+    ],
+    "num_outputs": 3,
+    "edges": [
+      0,
+      121,
+      132,
+      256
+    ],
+    "phase_pattern": "0_pi2_pi",
+    "phases": [
+      0.0,
+      1.5707963267948966,
+      3.141592653589793
+    ],
+    "model_family": "free_monotone_radii",
+    "model_parameters": {
+      "radii": [
+        0.54,
+        0.66,
+        0.72
+      ]
+    },
+    "q_values": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "alpha_values": [
+      {
+        "real": 0.54,
+        "imag": 0.0,
+        "abs": 0.54,
+        "phase": 0.0
+      },
+      {
+        "real": 4.041334437186266e-17,
+        "imag": 0.66,
+        "abs": 0.66,
+        "phase": 1.5707963267948966
+      },
+      {
+        "real": -0.72,
+        "imag": 8.817456953860943e-17,
+        "abs": 0.72,
+        "phase": 3.141592653589793
+      }
+    ],
+    "distribution_only_H_min": 1.5381936358517396,
+    "full_status": "optimal",
+    "full_H_min": 0.9976325252930068,
+    "full_p_guess": 0.5008211778046651
+  },
+  "top20": [
+    {
+      "case_id": 7,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.54,
+          0.66,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.54,
+          "imag": 0.0,
+          "abs": 0.54,
+          "phase": 0.0
+        },
+        {
+          "real": 4.041334437186266e-17,
+          "imag": 0.66,
+          "abs": 0.66,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.72,
+          "imag": 8.817456953860943e-17,
+          "abs": 0.72,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "optimal",
+      "full_H_min": 0.9976325252930068,
+      "full_p_guess": 0.5008211778046651
+    }
+  ],
+  "results": [
+    {
+      "case_id": 1,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.6
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.50709255283711,
+          "imag": 0.0,
+          "abs": 0.50709255283711,
+          "phase": 0.0
+        },
+        {
+          "real": 3.401407865318214e-17,
+          "imag": 0.5554920598635308,
+          "abs": 0.5554920598635308,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.6,
+          "imag": 7.347880794884119e-17,
+          "abs": 0.6,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 2,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.63
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 3,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.66
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.5578018081208209,
+          "imag": 0.0,
+          "abs": 0.5578018081208209,
+          "phase": 0.0
+        },
+        {
+          "real": 3.7415486518500363e-17,
+          "imag": 0.6110412658498839,
+          "abs": 0.6110412658498839,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.66,
+          "imag": 8.082668874372532e-17,
+          "abs": 0.66,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 4,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.54,
+          0.66
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 3.306546357697854e-17,
+          "imag": 0.54,
+          "abs": 0.54,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.66,
+          "imag": 8.082668874372532e-17,
+          "abs": 0.66,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 5,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.54,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 3.306546357697854e-17,
+          "imag": 0.54,
+          "abs": 0.54,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.72,
+          "imag": 8.817456953860943e-17,
+          "abs": 0.72,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 6,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.66,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 4.041334437186266e-17,
+          "imag": 0.66,
+          "abs": 0.66,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.72,
+          "imag": 8.817456953860943e-17,
+          "abs": 0.72,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 7,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.54,
+          0.66,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.54,
+          "imag": 0.0,
+          "abs": 0.54,
+          "phase": 0.0
+        },
+        {
+          "real": 4.041334437186266e-17,
+          "imag": 0.66,
+          "abs": 0.66,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.72,
+          "imag": 8.817456953860943e-17,
+          "abs": 0.72,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "optimal",
+      "full_H_min": 0.9976325252930068,
+      "full_p_guess": 0.5008211778046651
+    },
+    {
+      "case_id": 8,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.6
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.50709255283711,
+          "imag": 0.0,
+          "abs": 0.50709255283711,
+          "phase": 0.0
+        },
+        {
+          "real": 0.27774602993176545,
+          "imag": 0.48107023544236377,
+          "abs": 0.5554920598635308,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.2999999999999999,
+          "imag": 0.5196152422706632,
+          "abs": 0.6,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 9,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.63
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 0.29163333142835374,
+          "imag": 0.505123747214482,
+          "abs": 0.5832666628567075,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3149999999999999,
+          "imag": 0.5455960043841964,
+          "abs": 0.63,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 10,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.66
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.5578018081208209,
+          "imag": 0.0,
+          "abs": 0.5578018081208209,
+          "phase": 0.0
+        },
+        {
+          "real": 0.305520632924942,
+          "imag": 0.5291772589866003,
+          "abs": 0.611041265849884,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3299999999999999,
+          "imag": 0.5715767664977296,
+          "abs": 0.66,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 11,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.54,
+          0.66
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 0.2700000000000001,
+          "imag": 0.4676537180435969,
+          "abs": 0.54,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3299999999999999,
+          "imag": 0.5715767664977296,
+          "abs": 0.66,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 12,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.54,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 0.2700000000000001,
+          "imag": 0.4676537180435969,
+          "abs": 0.54,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3599999999999999,
+          "imag": 0.6235382907247958,
+          "abs": 0.7199999999999999,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 13,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.66,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 0.33000000000000007,
+          "imag": 0.5715767664977295,
+          "abs": 0.66,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3599999999999999,
+          "imag": 0.6235382907247958,
+          "abs": 0.7199999999999999,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 14,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 3,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.54,
+          0.66,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.54,
+          "imag": 0.0,
+          "abs": 0.54,
+          "phase": 0.0
+        },
+        {
+          "real": 0.33000000000000007,
+          "imag": 0.5715767664977295,
+          "abs": 0.66,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3599999999999999,
+          "imag": 0.6235382907247958,
+          "abs": 0.7199999999999999,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 15,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.6
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.50709255283711,
+          "imag": 0.0,
+          "abs": 0.50709255283711,
+          "phase": 0.0
+        },
+        {
+          "real": 3.401407865318214e-17,
+          "imag": 0.5554920598635308,
+          "abs": 0.5554920598635308,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.6,
+          "imag": 7.347880794884119e-17,
+          "abs": 0.6,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 16,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.63
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 17,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.66
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.5578018081208209,
+          "imag": 0.0,
+          "abs": 0.5578018081208209,
+          "phase": 0.0
+        },
+        {
+          "real": 3.7415486518500363e-17,
+          "imag": 0.6110412658498839,
+          "abs": 0.6110412658498839,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.66,
+          "imag": 8.082668874372532e-17,
+          "abs": 0.66,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 18,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.54,
+          0.66
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 3.306546357697854e-17,
+          "imag": 0.54,
+          "abs": 0.54,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.66,
+          "imag": 8.082668874372532e-17,
+          "abs": 0.66,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 19,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.54,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 3.306546357697854e-17,
+          "imag": 0.54,
+          "abs": 0.54,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.72,
+          "imag": 8.817456953860943e-17,
+          "abs": 0.72,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 20,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.66,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 4.041334437186266e-17,
+          "imag": 0.66,
+          "abs": 0.66,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.72,
+          "imag": 8.817456953860943e-17,
+          "abs": 0.72,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 21,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.54,
+          0.66,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.54,
+          "imag": 0.0,
+          "abs": 0.54,
+          "phase": 0.0
+        },
+        {
+          "real": 4.041334437186266e-17,
+          "imag": 0.66,
+          "abs": 0.66,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.72,
+          "imag": 8.817456953860943e-17,
+          "abs": 0.72,
+          "phase": 3.141592653589793
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 22,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.6
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.50709255283711,
+          "imag": 0.0,
+          "abs": 0.50709255283711,
+          "phase": 0.0
+        },
+        {
+          "real": 0.27774602993176545,
+          "imag": 0.48107023544236377,
+          "abs": 0.5554920598635308,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.2999999999999999,
+          "imag": 0.5196152422706632,
+          "abs": 0.6,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 23,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.63
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 0.29163333142835374,
+          "imag": 0.505123747214482,
+          "abs": 0.5832666628567075,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3149999999999999,
+          "imag": 0.5455960043841964,
+          "abs": 0.63,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 24,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "rigid_intensity_scaled",
+      "model_parameters": {
+        "max_abs_alpha": 0.66
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.5578018081208209,
+          "imag": 0.0,
+          "abs": 0.5578018081208209,
+          "phase": 0.0
+        },
+        {
+          "real": 0.305520632924942,
+          "imag": 0.5291772589866003,
+          "abs": 0.611041265849884,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3299999999999999,
+          "imag": 0.5715767664977296,
+          "abs": 0.66,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 25,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.54,
+          0.66
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 0.2700000000000001,
+          "imag": 0.4676537180435969,
+          "abs": 0.54,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3299999999999999,
+          "imag": 0.5715767664977296,
+          "abs": 0.66,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 26,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.54,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 0.2700000000000001,
+          "imag": 0.4676537180435969,
+          "abs": 0.54,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3599999999999999,
+          "imag": 0.6235382907247958,
+          "abs": 0.7199999999999999,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 27,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.48,
+          0.66,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.48,
+          "imag": 0.0,
+          "abs": 0.48,
+          "phase": 0.0
+        },
+        {
+          "real": 0.33000000000000007,
+          "imag": 0.5715767664977295,
+          "abs": 0.66,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3599999999999999,
+          "imag": 0.6235382907247958,
+          "abs": 0.7199999999999999,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "case_id": 28,
+      "window": "100_120_140",
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "num_outputs": 4,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "phases": [
+        0.0,
+        1.0471975511965976,
+        2.0943951023931953
+      ],
+      "model_family": "free_monotone_radii",
+      "model_parameters": {
+        "radii": [
+          0.54,
+          0.66,
+          0.72
+        ]
+      },
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "alpha_values": [
+        {
+          "real": 0.54,
+          "imag": 0.0,
+          "abs": 0.54,
+          "phase": 0.0
+        },
+        {
+          "real": 0.33000000000000007,
+          "imag": 0.5715767664977295,
+          "abs": 0.66,
+          "phase": 1.0471975511965976
+        },
+        {
+          "real": -0.3599999999999999,
+          "imag": 0.6235382907247958,
+          "abs": 0.7199999999999999,
+          "phase": 2.0943951023931953
+        }
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    }
+  ]
+}

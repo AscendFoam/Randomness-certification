@@ -1,0 +1,57 @@
+{
+  "route": "route4_ex_external_probabilitymat_targeted_highmu_scan",
+  "cases": [
+    {
+      "name": "three_inputs_120_140_160_scale090",
+      "intensities": [
+        120,
+        140,
+        160
+      ],
+      "max_abs_alpha": 0.9,
+      "full_status": "optimal",
+      "full_H_min": 0.07918070857487841,
+      "full_p_guess": 0.9465950555486962,
+      "diagonal_status": "infeasible"
+    },
+    {
+      "name": "three_inputs_120_140_160_scale100",
+      "intensities": [
+        120,
+        140,
+        160
+      ],
+      "max_abs_alpha": 1.0,
+      "full_status": "optimal",
+      "full_H_min": 0.05193882337415516,
+      "full_p_guess": 0.9646390886641651,
+      "diagonal_status": "infeasible"
+    },
+    {
+      "name": "three_inputs_100_140_160_scale090",
+      "intensities": [
+        100,
+        140,
+        160
+      ],
+      "max_abs_alpha": 0.9,
+      "full_status": "optimal",
+      "full_H_min": 0.13841434221619558,
+      "full_p_guess": 0.9085171527234106,
+      "diagonal_status": "infeasible"
+    },
+    {
+      "name": "three_inputs_80_120_160_scale090",
+      "intensities": [
+        80,
+        120,
+        160
+      ],
+      "max_abs_alpha": 0.9,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null,
+      "diagonal_status": "infeasible"
+    }
+  ]
+}

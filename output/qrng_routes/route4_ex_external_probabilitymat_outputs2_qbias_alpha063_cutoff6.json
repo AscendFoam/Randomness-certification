@@ -1,0 +1,1229 @@
+{
+  "scan_mode": "q-grid",
+  "probability_path": "src/matlab/Probability.mat",
+  "variable_name": "Probability",
+  "row_indices": [
+    5,
+    6,
+    7
+  ],
+  "intensities": [
+    100.0,
+    120.0,
+    140.0
+  ],
+  "phase_pattern": "0_pi2_pi",
+  "phases": [
+    0.0,
+    1.5707963267948966,
+    3.141592653589793
+  ],
+  "cutoff": 6,
+  "num_outputs": 2,
+  "best": {
+    "case_id": 2,
+    "scan_mode": "q-grid",
+    "phase_pattern": "0_pi2_pi",
+    "phases": [
+      0.0,
+      1.5707963267948966,
+      3.141592653589793
+    ],
+    "max_abs_alpha": 0.63,
+    "cutoff": 6,
+    "num_outputs": 2,
+    "q_values": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "row_indices": [
+      5,
+      6,
+      7
+    ],
+    "intensities": [
+      100.0,
+      120.0,
+      140.0
+    ],
+    "distribution_only_H_min": 0.892724900930255,
+    "distribution_only_p_guess": 0.53859588,
+    "diagonal_status": "infeasible",
+    "diagonal_H_min": null,
+    "diagonal_p_guess": null,
+    "full_status": "optimal",
+    "full_H_min": 0.8732775800624346,
+    "full_p_guess": 0.5459052285067192,
+    "p_guess_abs_gap": null,
+    "H_min_abs_gap": null,
+    "alpha_values": [
+      {
+        "real": 0.5324471804789654,
+        "imag": 0.0,
+        "abs": 0.5324471804789654,
+        "phase": 0.0
+      },
+      {
+        "real": 3.5714782585841256e-17,
+        "imag": 0.5832666628567074,
+        "abs": 0.5832666628567074,
+        "phase": 1.5707963267948966
+      },
+      {
+        "real": -0.63,
+        "imag": 7.715274834628325e-17,
+        "abs": 0.63,
+        "phase": 3.141592653589793
+      }
+    ],
+    "input_offdiagonal_metrics": {
+      "per_input": [
+        {
+          "input_index": 0,
+          "fro_norm": 1.0000000000000002,
+          "offdiag_fro_norm": 0.6214993018121238,
+          "offdiag_over_fro": 0.6214993018121237,
+          "max_abs_offdiag": 0.4010091588032276
+        },
+        {
+          "input_index": 1,
+          "fro_norm": 1.0,
+          "offdiag_fro_norm": 0.6582215382567592,
+          "offdiag_over_fro": 0.6582215382567592,
+          "max_abs_offdiag": 0.4150695470607737
+        },
+        {
+          "input_index": 2,
+          "fro_norm": 0.9999999999999998,
+          "offdiag_fro_norm": 0.6883277787819976,
+          "offdiag_over_fro": 0.6883277787819977,
+          "max_abs_offdiag": 0.4236144340597492
+        }
+      ],
+      "max_offdiag_over_fro": 0.6883277787819977,
+      "mean_offdiag_over_fro": 0.6560162062836269,
+      "max_abs_offdiag": 0.4236144340597492
+    }
+  },
+  "cases": [
+    {
+      "case_id": 1,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.280549223795519,
+      "distribution_only_p_guess": 0.8232775416666667,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.2762208081239742,
+      "full_p_guess": 0.8257512719434361,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 2,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "distribution_only_p_guess": 0.53859588,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.8732775800624346,
+      "full_p_guess": 0.5459052285067192,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 3,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.10061994676687493,
+      "distribution_only_p_guess": 0.9326321399999999,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.10006751443980128,
+      "full_p_guess": 0.9329893289996689,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 4,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.0020145353099385857,
+      "distribution_only_p_guess": 0.998604605,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.0018469494841106262,
+      "full_p_guess": 0.9987206112889092,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 5,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "distribution_only_p_guess": 0.75210712625,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.40405349295055104,
+      "full_p_guess": 0.7557319422409698,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 6,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        1.0,
+        2.0,
+        1.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.23341977835095723,
+      "distribution_only_p_guess": 0.85061619125,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.23027553401784667,
+      "full_p_guess": 0.8524720663071791,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 7,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        1.0,
+        1.0,
+        2.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.20571422433745484,
+      "distribution_only_p_guess": 0.8671093075,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.20262730850581193,
+      "full_p_guess": 0.8689666363600598,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 8,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        3.0,
+        1.0,
+        1.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.49531884637415785,
+      "distribution_only_p_guess": 0.7094048770000001,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.48647982476827467,
+      "full_p_guess": 0.7137645599879228,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 9,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        1.0,
+        3.0,
+        1.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.20586385165931537,
+      "distribution_only_p_guess": 0.867019381,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.2034544650566049,
+      "full_p_guess": 0.8684685647551531,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 10,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        1.0,
+        1.0,
+        3.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.1626083289714196,
+      "distribution_only_p_guess": 0.893408367,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.1602044590638313,
+      "full_p_guess": 0.8948982367624574,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 11,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        5.0,
+        1.0,
+        1.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.598146088225999,
+      "distribution_only_p_guess": 0.6606023064285714,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.5868277397405723,
+      "full_p_guess": 0.6658053001657188,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 12,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        1.0,
+        5.0,
+        1.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.1750026638756698,
+      "distribution_only_p_guess": 0.8857658835714286,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.17325877096284892,
+      "full_p_guess": 0.886837222118125,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    },
+    {
+      "case_id": 13,
+      "scan_mode": "q-grid",
+      "phase_pattern": "0_pi2_pi",
+      "phases": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793
+      ],
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "q_values": [
+        1.0,
+        1.0,
+        5.0
+      ],
+      "row_indices": [
+        5,
+        6,
+        7
+      ],
+      "intensities": [
+        100.0,
+        120.0,
+        140.0
+      ],
+      "distribution_only_H_min": 0.11487169452117146,
+      "distribution_only_p_guess": 0.9234644350000001,
+      "diagonal_status": "infeasible",
+      "diagonal_H_min": null,
+      "diagonal_p_guess": null,
+      "full_status": "optimal",
+      "full_H_min": 0.11319812197911498,
+      "full_p_guess": 0.9245363049592151,
+      "p_guess_abs_gap": null,
+      "H_min_abs_gap": null,
+      "alpha_values": [
+        {
+          "real": 0.5324471804789654,
+          "imag": 0.0,
+          "abs": 0.5324471804789654,
+          "phase": 0.0
+        },
+        {
+          "real": 3.5714782585841256e-17,
+          "imag": 0.5832666628567074,
+          "abs": 0.5832666628567074,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": -0.63,
+          "imag": 7.715274834628325e-17,
+          "abs": 0.63,
+          "phase": 3.141592653589793
+        }
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6214993018121238,
+            "offdiag_over_fro": 0.6214993018121237,
+            "max_abs_offdiag": 0.4010091588032276
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6582215382567592,
+            "offdiag_over_fro": 0.6582215382567592,
+            "max_abs_offdiag": 0.4150695470607737
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 0.9999999999999998,
+            "offdiag_fro_norm": 0.6883277787819976,
+            "offdiag_over_fro": 0.6883277787819977,
+            "max_abs_offdiag": 0.4236144340597492
+          }
+        ],
+        "max_offdiag_over_fro": 0.6883277787819977,
+        "mean_offdiag_over_fro": 0.6560162062836269,
+        "max_abs_offdiag": 0.4236144340597492
+      }
+    }
+  ]
+}

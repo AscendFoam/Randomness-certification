@@ -1,0 +1,146 @@
+{
+  "rows": [
+    {
+      "index": 0,
+      "t": 0.0,
+      "radii": [
+        0.537958984375,
+        0.662041015625,
+        0.717958984375
+      ],
+      "probabilities": [
+        [
+          0.32673052,
+          0.328953185,
+          0.34431629499999994
+        ],
+        [
+          0.020149,
+          0.09780728,
+          0.88204372
+        ],
+        [
+          0.00019224499999999999,
+          0.003522365,
+          0.99628539
+        ]
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.6256893207556066,
+            "offdiag_over_fro": 0.6256893207556065,
+            "max_abs_offdiag": 0.40277701182257075
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7070500081390774,
+            "offdiag_over_fro": 0.7070500081390774,
+            "max_abs_offdiag": 0.4271076024385713
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7362440839114639,
+            "offdiag_over_fro": 0.7362440839114639,
+            "max_abs_offdiag": 0.42878864270875694
+          }
+        ],
+        "max_offdiag_over_fro": 0.7362440839114639,
+        "mean_offdiag_over_fro": 0.6896611376020493,
+        "max_abs_offdiag": 0.42878864270875694
+      },
+      "distribution_only_H_min": 1.5381936358517396,
+      "scs": {
+        "status": null,
+        "solver": null,
+        "H_min": null,
+        "p_guess": null,
+        "error": null,
+        "error_message": null
+      },
+      "mosek": {
+        "status": "optimal",
+        "solver": "MOSEK",
+        "H_min": 1.5384598585291962,
+        "p_guess": 0.3442527636601483,
+        "error": null,
+        "error_message": null
+      }
+    },
+    {
+      "index": 1,
+      "t": 1.0,
+      "radii": [
+        0.53794921875,
+        0.66205078125,
+        0.71794921875
+      ],
+      "probabilities": [
+        [
+          0.32673052,
+          0.328953185,
+          0.34431629499999994
+        ],
+        [
+          0.020149,
+          0.09780728,
+          0.88204372
+        ],
+        [
+          0.00019224499999999999,
+          0.003522365,
+          0.99628539
+        ]
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.6256819421857701,
+            "offdiag_over_fro": 0.6256819421857701,
+            "max_abs_offdiag": 0.40277393200594164
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7070554857440016,
+            "offdiag_over_fro": 0.7070554857440016,
+            "max_abs_offdiag": 0.4271083802950147
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7362393514478076,
+            "offdiag_over_fro": 0.7362393514478075,
+            "max_abs_offdiag": 0.42878882193513346
+          }
+        ],
+        "max_offdiag_over_fro": 0.7362393514478075,
+        "mean_offdiag_over_fro": 0.689658926459193,
+        "max_abs_offdiag": 0.42878882193513346
+      },
+      "distribution_only_H_min": 1.5381936358517396,
+      "scs": {
+        "status": null,
+        "solver": null,
+        "H_min": null,
+        "p_guess": null,
+        "error": null,
+        "error_message": null
+      },
+      "mosek": {
+        "status": null,
+        "solver": null,
+        "H_min": null,
+        "p_guess": null,
+        "error": "RuntimeError",
+        "error_message": "All solvers failed: MOSEK: Solver 'MOSEK' failed. Try another solver, or solve with verbose=True for more information."
+      }
+    }
+  ]
+}

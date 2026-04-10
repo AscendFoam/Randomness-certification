@@ -1,0 +1,48 @@
+{
+  "route": "route4_phaseinsensitive_diagonal_projection_invariance_check",
+  "seed": 7,
+  "num_trials": 6,
+  "cases": [
+    {
+      "name": "default_like_three_inputs_four_outputs",
+      "selected_mu_list": [
+        100,
+        120,
+        140
+      ],
+      "q_selected": [
+        0.25,
+        0.25,
+        0.5
+      ],
+      "num_outputs": 4,
+      "cutoff": 16,
+      "num_trials": 6,
+      "num_strategies": 256,
+      "max_stats_gap": 0.0,
+      "max_objective_gap": 0.0,
+      "max_completeness_residual": 4.440892098500626e-16,
+      "min_operator_eigenvalue": 6.0583736926268325e-06
+    },
+    {
+      "name": "low_intensity_two_inputs_two_outputs",
+      "selected_mu_list": [
+        0,
+        20
+      ],
+      "q_selected": [
+        0.5,
+        0.5
+      ],
+      "num_outputs": 2,
+      "cutoff": 24,
+      "num_trials": 6,
+      "num_strategies": 8,
+      "max_stats_gap": 0.0,
+      "max_objective_gap": 0.0,
+      "max_completeness_residual": 2.220446049250313e-16,
+      "min_operator_eigenvalue": 0.012174394520706512
+    }
+  ],
+  "conclusion": "For randomly generated non-diagonal PSD operator families that preserve POVM completeness, all route4 statistics and route4-style objective values are unchanged after diagonal projection."
+}

@@ -9,10 +9,14 @@ from .phaseinsensitive import (
     DEFAULT_Q,
     DEFAULT_SELECTED_MU,
     FULL_MU,
+    compare_route4_primal_full,
     compare_route4_primal_dual,
     result_to_json,
+    run_route4_diagonal_projection_invariance_check,
     run_route4_dual,
+    run_route4_nondiagonal_relaxation_check,
     run_route4_primal,
+    solve_phaseinsensitive_full_primal,
     search_route4_triplets,
     sweep_route4_outputs,
 )
@@ -22,7 +26,17 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Standalone runner for QRNG route 4.")
     parser.add_argument(
         "--mode",
-        choices=["dual-single", "primal-single", "primal-dual-compare", "output-sweep", "subset-search"],
+        choices=[
+            "dual-single",
+            "primal-single",
+            "full-primal-single",
+            "primal-dual-compare",
+            "primal-full-compare",
+            "output-sweep",
+            "subset-search",
+            "nondiagonal-check",
+            "diagonal-projection-check",
+        ],
         default="dual-single",
     )
     parser.add_argument("--solver", type=str, default=None)
@@ -38,6 +52,9 @@ def main() -> None:
     parser.add_argument("--certify-top-k", type=int, default=3)
     parser.add_argument("--full-mu", nargs="+", type=int, default=list(FULL_MU))
     parser.add_argument("--max-primal-variables", type=int, default=3_000_000)
+    parser.add_argument("--max-hermitian-scalar-count", type=int, default=400_000)
+    parser.add_argument("--seed", type=int, default=7)
+    parser.add_argument("--num-trials", type=int, default=4)
     args = parser.parse_args()
 
     prob_floor = None if args.prob_floor <= 0 else args.prob_floor
@@ -65,6 +82,23 @@ def main() -> None:
             verbose=args.verbose,
             max_primal_variables=args.max_primal_variables,
         )
+    elif args.mode == "full-primal-single":
+        from .phaseinsensitive import prepare_phaseinsensitive_instance
+
+        instance = prepare_phaseinsensitive_instance(
+            num_outputs=args.num_outputs,
+            selected_mu_list=args.selected_mu,
+            q_selected=args.q_values,
+            cutoff=args.cutoff,
+            prob_floor=prob_floor,
+            shift=args.shift,
+        )
+        result = solve_phaseinsensitive_full_primal(
+            instance,
+            preferred_solver=args.solver,
+            verbose=args.verbose,
+            max_hermitian_scalar_count=args.max_hermitian_scalar_count,
+        )
     elif args.mode == "primal-dual-compare":
         result = compare_route4_primal_dual(
             num_outputs=args.num_outputs,
@@ -77,6 +111,19 @@ def main() -> None:
             verbose=args.verbose,
             max_primal_variables=args.max_primal_variables,
         )
+    elif args.mode == "primal-full-compare":
+        result = compare_route4_primal_full(
+            num_outputs=args.num_outputs,
+            selected_mu_list=args.selected_mu,
+            q_selected=args.q_values,
+            cutoff=args.cutoff,
+            prob_floor=prob_floor,
+            shift=args.shift,
+            preferred_solver=args.solver,
+            verbose=args.verbose,
+            max_primal_variables=args.max_primal_variables,
+            max_hermitian_scalar_count=args.max_hermitian_scalar_count,
+        )
     elif args.mode == "output-sweep":
         result = sweep_route4_outputs(
             output_values=args.output_values,
@@ -88,7 +135,7 @@ def main() -> None:
             preferred_solver=args.solver,
             verbose=args.verbose,
         )
-    else:
+    elif args.mode == "subset-search":
         result = search_route4_triplets(
             num_outputs=args.num_outputs,
             subset_size=args.subset_size,
@@ -100,7 +147,18 @@ def main() -> None:
             verbose=args.verbose,
             full_mu=args.full_mu,
         )
-
+    elif args.mode == "diagonal-projection-check":
+        result = run_route4_diagonal_projection_invariance_check(
+            seed=args.seed,
+            num_trials=args.num_trials,
+        )
+    else:
+        result = run_route4_nondiagonal_relaxation_check(
+            preferred_solver=args.solver,
+            verbose=args.verbose,
+            max_primal_variables=args.max_primal_variables,
+            max_hermitian_scalar_count=args.max_hermitian_scalar_count,
+        )
     print(result_to_json(result))
 
 

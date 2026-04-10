@@ -1,0 +1,275 @@
+{
+  "results": [
+    {
+      "family": "3out",
+      "candidate_index": 1,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "3out",
+      "candidate_index": 1,
+      "edges": [
+        0,
+        121,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.5381936358517396,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "3out",
+      "candidate_index": 2,
+      "edges": [
+        0,
+        120,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.490826206654697,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "3out",
+      "candidate_index": 2,
+      "edges": [
+        0,
+        120,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.490826206654697,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "3out",
+      "candidate_index": 3,
+      "edges": [
+        0,
+        122,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.4890144713380107,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "3out",
+      "candidate_index": 3,
+      "edges": [
+        0,
+        122,
+        132,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.4890144713380107,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "4out",
+      "candidate_index": 1,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "4out",
+      "candidate_index": 1,
+      "edges": [
+        0,
+        118,
+        127,
+        136,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.924261168881506,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "4out",
+      "candidate_index": 2,
+      "edges": [
+        0,
+        117,
+        126,
+        135,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.9068675848061267,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "4out",
+      "candidate_index": 2,
+      "edges": [
+        0,
+        117,
+        126,
+        135,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.9068675848061267,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "4out",
+      "candidate_index": 3,
+      "edges": [
+        0,
+        118,
+        126,
+        135,
+        256
+      ],
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.9068675848061267,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "family": "4out",
+      "candidate_index": 3,
+      "edges": [
+        0,
+        118,
+        126,
+        135,
+        256
+      ],
+      "phase_pattern": "0_pi3_2pi3",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 1.9068675848061267,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    }
+  ],
+  "best": null
+}

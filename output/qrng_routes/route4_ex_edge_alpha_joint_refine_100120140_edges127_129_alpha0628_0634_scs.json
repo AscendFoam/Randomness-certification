@@ -1,0 +1,1108 @@
+{
+  "best": {
+    "max_abs_alpha": 0.63,
+    "edge": 128,
+    "edges": [
+      0,
+      128,
+      256
+    ],
+    "q_label": "bias100",
+    "q_values": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "distribution_only_H_min": 0.892724900930255,
+    "full_status": "optimal",
+    "full_H_min": 0.8732775800624346,
+    "full_p_guess": 0.5459052285067192
+  },
+  "top15": [
+    {
+      "max_abs_alpha": 0.63,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8732775800624346,
+      "full_p_guess": 0.5459052285067192
+    },
+    {
+      "max_abs_alpha": 0.631,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8555937337313487,
+      "full_p_guess": 0.5526378445883812
+    },
+    {
+      "max_abs_alpha": 0.628,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.8514096758387146,
+      "full_p_guess": 0.554242913502714
+    },
+    {
+      "max_abs_alpha": 0.632,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8402529648386388,
+      "full_p_guess": 0.5585456240182038
+    },
+    {
+      "max_abs_alpha": 0.629,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.83759358663604,
+      "full_p_guess": 0.5595761633154344
+    },
+    {
+      "max_abs_alpha": 0.633,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8265274646920813,
+      "full_p_guess": 0.5638848687147295
+    },
+    {
+      "max_abs_alpha": 0.63,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.8250308386201571,
+      "full_p_guess": 0.5644701363283369
+    },
+    {
+      "max_abs_alpha": 0.634,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8138785820837217,
+      "full_p_guess": 0.5688504866553389
+    },
+    {
+      "max_abs_alpha": 0.631,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.8135599184287569,
+      "full_p_guess": 0.568976148691523
+    },
+    {
+      "max_abs_alpha": 0.632,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.8027996249215715,
+      "full_p_guess": 0.5732357037103029
+    },
+    {
+      "max_abs_alpha": 0.633,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.7928724259085376,
+      "full_p_guess": 0.5771937463721336
+    },
+    {
+      "max_abs_alpha": 0.634,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.7834365893402496,
+      "full_p_guess": 0.580981210230211
+    },
+    {
+      "max_abs_alpha": 0.63,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal",
+      "full_H_min": 0.40405349295055104,
+      "full_p_guess": 0.7557319422409698
+    },
+    {
+      "max_abs_alpha": 0.631,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal",
+      "full_H_min": 0.3976640264431087,
+      "full_p_guess": 0.7590863812762636
+    },
+    {
+      "max_abs_alpha": 0.632,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal",
+      "full_H_min": 0.3920453356366487,
+      "full_p_guess": 0.7620484679777882
+    }
+  ],
+  "rows": [
+    {
+      "max_abs_alpha": 0.628,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.8514096758387146,
+      "full_p_guess": 0.554242913502714
+    },
+    {
+      "max_abs_alpha": 0.628,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.4346078135054384,
+      "full_status": "optimal",
+      "full_H_min": 0.39161330540492584,
+      "full_p_guess": 0.7622767055936297
+    },
+    {
+      "max_abs_alpha": 0.628,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.628,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.628,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.8126349084533154,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.628,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.38716388665654855,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.629,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.83759358663604,
+      "full_p_guess": 0.5595761633154344
+    },
+    {
+      "max_abs_alpha": 0.629,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.4346078135054384,
+      "full_status": "optimal",
+      "full_H_min": 0.3865614098492846,
+      "full_p_guess": 0.7649506543526156
+    },
+    {
+      "max_abs_alpha": 0.629,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.629,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal_inaccurate",
+      "full_H_min": null,
+      "full_p_guess": -1.0657933773544488
+    },
+    {
+      "max_abs_alpha": 0.629,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.8126349084533154,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.629,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.38716388665654855,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.63,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.8250308386201571,
+      "full_p_guess": 0.5644701363283369
+    },
+    {
+      "max_abs_alpha": 0.63,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.4346078135054384,
+      "full_status": "optimal",
+      "full_H_min": 0.38195591172190513,
+      "full_p_guess": 0.7673964990225505
+    },
+    {
+      "max_abs_alpha": 0.63,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8732775800624346,
+      "full_p_guess": 0.5459052285067192
+    },
+    {
+      "max_abs_alpha": 0.63,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal",
+      "full_H_min": 0.40405349295055104,
+      "full_p_guess": 0.7557319422409698
+    },
+    {
+      "max_abs_alpha": 0.63,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.8126349084533154,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.63,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.38716388665654855,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.631,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.8135599184287569,
+      "full_p_guess": 0.568976148691523
+    },
+    {
+      "max_abs_alpha": 0.631,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.4346078135054384,
+      "full_status": "optimal",
+      "full_H_min": 0.37770761969713723,
+      "full_p_guess": 0.769659575472996
+    },
+    {
+      "max_abs_alpha": 0.631,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8555937337313487,
+      "full_p_guess": 0.5526378445883812
+    },
+    {
+      "max_abs_alpha": 0.631,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal",
+      "full_H_min": 0.3976640264431087,
+      "full_p_guess": 0.7590863812762636
+    },
+    {
+      "max_abs_alpha": 0.631,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.8126349084533154,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.631,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.38716388665654855,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.632,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.8027996249215715,
+      "full_p_guess": 0.5732357037103029
+    },
+    {
+      "max_abs_alpha": 0.632,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.4346078135054384,
+      "full_status": "optimal",
+      "full_H_min": 0.3737386546308944,
+      "full_p_guess": 0.7717798834147571
+    },
+    {
+      "max_abs_alpha": 0.632,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8402529648386388,
+      "full_p_guess": 0.5585456240182038
+    },
+    {
+      "max_abs_alpha": 0.632,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal",
+      "full_H_min": 0.3920453356366487,
+      "full_p_guess": 0.7620484679777882
+    },
+    {
+      "max_abs_alpha": 0.632,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.8126349084533154,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.632,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.38716388665654855,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.633,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.7928724259085376,
+      "full_p_guess": 0.5771937463721336
+    },
+    {
+      "max_abs_alpha": 0.633,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.4346078135054384,
+      "full_status": "optimal",
+      "full_H_min": 0.37002647282440876,
+      "full_p_guess": 0.7737682983303256
+    },
+    {
+      "max_abs_alpha": 0.633,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8265274646920813,
+      "full_p_guess": 0.5638848687147295
+    },
+    {
+      "max_abs_alpha": 0.633,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal",
+      "full_H_min": 0.386963501650195,
+      "full_p_guess": 0.7647374855825
+    },
+    {
+      "max_abs_alpha": 0.633,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.8126349084533154,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.633,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.38716388665654855,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.634,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.9730757361555473,
+      "full_status": "optimal",
+      "full_H_min": 0.7834365893402496,
+      "full_p_guess": 0.580981210230211
+    },
+    {
+      "max_abs_alpha": 0.634,
+      "edge": 127,
+      "edges": [
+        0,
+        127,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.4346078135054384,
+      "full_status": "optimal",
+      "full_H_min": 0.36646192696322577,
+      "full_p_guess": 0.7756824538863114
+    },
+    {
+      "max_abs_alpha": 0.634,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.892724900930255,
+      "full_status": "optimal",
+      "full_H_min": 0.8138785820837217,
+      "full_p_guess": 0.5688504866553389
+    },
+    {
+      "max_abs_alpha": 0.634,
+      "edge": 128,
+      "edges": [
+        0,
+        128,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.41098992832698467,
+      "full_status": "optimal",
+      "full_H_min": 0.3822830719519235,
+      "full_p_guess": 0.7672224961019559
+    },
+    {
+      "max_abs_alpha": 0.634,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias100",
+      "q_values": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "distribution_only_H_min": 0.8126349084533154,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    },
+    {
+      "max_abs_alpha": 0.634,
+      "edge": 129,
+      "edges": [
+        0,
+        129,
+        256
+      ],
+      "q_label": "bias211",
+      "q_values": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "distribution_only_H_min": 0.38716388665654855,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null
+    }
+  ]
+}

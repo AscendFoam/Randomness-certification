@@ -1,0 +1,92 @@
+{
+  "rows": [
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.62,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "infeasible",
+      "full_H_min": null,
+      "full_p_guess": null,
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning("
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.2762208081239742,
+      "full_p_guess": 0.8257512719434361,
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning("
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.64,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.24916127499270668,
+      "full_p_guess": 0.8413854208181266,
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning("
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.65,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.23255196559219882,
+      "full_p_guess": 0.8511280094940379,
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning("
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.66,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.2198303267638821,
+      "full_p_guess": 0.8586664169905186,
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning("
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.67,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.20938208683563098,
+      "full_p_guess": 0.8649075960347273,
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning("
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.68,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.200444508208904,
+      "full_p_guess": 0.8702823796171753,
+      "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning("
+    }
+  ],
+  "best": {
+    "phase_pattern": "0_pi2_pi",
+    "max_abs_alpha": 0.63,
+    "cutoff": 6,
+    "num_outputs": 2,
+    "distribution_only_H_min": 0.280549223795519,
+    "full_status": "optimal",
+    "full_H_min": 0.2762208081239742,
+    "full_p_guess": 0.8257512719434361,
+    "stderr_tail": "/opt/miniconda3/lib/python3.13/site-packages/cvxpy/reductions/solvers/solving_chain_utils.py:41: UserWarning: The problem has an expression with dimension greater than 2. Defaulting to the SCIPY backend for canonicalization.\n  warnings.warn(UserWarning("
+  }
+}

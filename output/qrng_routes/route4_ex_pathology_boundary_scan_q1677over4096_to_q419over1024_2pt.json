@@ -1,0 +1,146 @@
+{
+  "rows": [
+    {
+      "index": 0,
+      "t": 0.0,
+      "radii": [
+        0.53795654296875,
+        0.66204345703125,
+        0.71795654296875
+      ],
+      "probabilities": [
+        [
+          0.32673052,
+          0.328953185,
+          0.34431629499999994
+        ],
+        [
+          0.020149,
+          0.09780728,
+          0.88204372
+        ],
+        [
+          0.00019224499999999999,
+          0.003522365,
+          0.99628539
+        ]
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999997,
+            "offdiag_fro_norm": 0.6256874761281555,
+            "offdiag_over_fro": 0.6256874761281557,
+            "max_abs_offdiag": 0.4027762418858503
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7070513775531423,
+            "offdiag_over_fro": 0.7070513775531423,
+            "max_abs_offdiag": 0.42710779691889217
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7362429008071031,
+            "offdiag_over_fro": 0.736242900807103,
+            "max_abs_offdiag": 0.42878868753043503
+          }
+        ],
+        "max_offdiag_over_fro": 0.736242900807103,
+        "mean_offdiag_over_fro": 0.689660584829467,
+        "max_abs_offdiag": 0.42878868753043503
+      },
+      "distribution_only_H_min": 1.5381936358517396,
+      "scs": {
+        "status": null,
+        "solver": null,
+        "H_min": null,
+        "p_guess": null,
+        "error": null,
+        "error_message": null
+      },
+      "mosek": {
+        "status": "optimal",
+        "solver": "MOSEK",
+        "H_min": 1.5405178076383077,
+        "p_guess": 0.34376205037931273,
+        "error": null,
+        "error_message": null
+      }
+    },
+    {
+      "index": 1,
+      "t": 1.0,
+      "radii": [
+        0.5379541015625,
+        0.6620458984375,
+        0.7179541015625
+      ],
+      "probabilities": [
+        [
+          0.32673052,
+          0.328953185,
+          0.34431629499999994
+        ],
+        [
+          0.020149,
+          0.09780728,
+          0.88204372
+        ],
+        [
+          0.00019224499999999999,
+          0.003522365,
+          0.99628539
+        ]
+      ],
+      "input_offdiagonal_metrics": {
+        "per_input": [
+          {
+            "input_index": 0,
+            "fro_norm": 0.9999999999999999,
+            "offdiag_fro_norm": 0.6256856314906992,
+            "offdiag_over_fro": 0.6256856314906993,
+            "max_abs_offdiag": 0.40277547193750535
+          },
+          {
+            "input_index": 1,
+            "fro_norm": 1.0,
+            "offdiag_fro_norm": 0.7070527469586512,
+            "offdiag_over_fro": 0.7070527469586512,
+            "max_abs_offdiag": 0.42710799138840644
+          },
+          {
+            "input_index": 2,
+            "fro_norm": 1.0000000000000002,
+            "offdiag_fro_norm": 0.7362417176950401,
+            "offdiag_over_fro": 0.73624171769504,
+            "max_abs_offdiag": 0.428788732342057
+          }
+        ],
+        "max_offdiag_over_fro": 0.73624171769504,
+        "mean_offdiag_over_fro": 0.6896600320481302,
+        "max_abs_offdiag": 0.428788732342057
+      },
+      "distribution_only_H_min": 1.5381936358517396,
+      "scs": {
+        "status": null,
+        "solver": null,
+        "H_min": null,
+        "p_guess": null,
+        "error": null,
+        "error_message": null
+      },
+      "mosek": {
+        "status": "optimal",
+        "solver": "MOSEK",
+        "H_min": 1.5439508969460896,
+        "p_guess": 0.3429449943025369,
+        "error": null,
+        "error_message": null
+      }
+    }
+  ]
+}

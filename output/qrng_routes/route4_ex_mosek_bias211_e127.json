@@ -1,0 +1,390 @@
+{
+  "route": "route4_ex_external_diagonal_full_compare",
+  "instance": {
+    "input_model": "exact_truncated_coherent_states",
+    "probability_model": "external_probability_table",
+    "alpha_values": [
+      {
+        "real": 0.5324471804789654,
+        "imag": 0.0,
+        "abs": 0.5324471804789654,
+        "phase": 0.0
+      },
+      {
+        "real": 3.5714782585841256e-17,
+        "imag": 0.5832666628567074,
+        "abs": 0.5832666628567074,
+        "phase": 1.5707963267948966
+      },
+      {
+        "real": -0.63,
+        "imag": 7.715274834628325e-17,
+        "abs": 0.63,
+        "phase": 3.141592653589793
+      }
+    ],
+    "q_selected": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "num_inputs": 3,
+    "num_outputs": 2,
+    "cutoff": 6,
+    "prob_floor": 1e-12,
+    "regularized_entries": 0,
+    "raw_num_bins": 256,
+    "raw_row_sums_before_normalization": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "distribution_only_p_guess_raw": 0.7398948625,
+    "distribution_only_H_min_raw": 0.4346078135054384,
+    "distribution_only_p_guess": 0.7398948625,
+    "distribution_only_H_min": 0.4346078135054384,
+    "input_offdiagonal_metrics": {
+      "per_input": [
+        {
+          "input_index": 0,
+          "fro_norm": 0.9999999999999999,
+          "offdiag_fro_norm": 0.6214993018121235,
+          "offdiag_over_fro": 0.6214993018121237,
+          "max_abs_offdiag": 0.4010091588032274
+        },
+        {
+          "input_index": 1,
+          "fro_norm": 1.0,
+          "offdiag_fro_norm": 0.6582215382567591,
+          "offdiag_over_fro": 0.6582215382567591,
+          "max_abs_offdiag": 0.4150695470607737
+        },
+        {
+          "input_index": 2,
+          "fro_norm": 0.9999999999999998,
+          "offdiag_fro_norm": 0.6883277787819976,
+          "offdiag_over_fro": 0.6883277787819977,
+          "max_abs_offdiag": 0.4236144340597492
+        }
+      ],
+      "max_offdiag_over_fro": 0.6883277787819977,
+      "mean_offdiag_over_fro": 0.6560162062836268,
+      "max_abs_offdiag": 0.4236144340597492
+    },
+    "probabilities_raw": [
+      [
+        0.5094188550000001,
+        0.490581145
+      ],
+      [
+        0.058171150000000005,
+        0.94182885
+      ],
+      [
+        0.00108711,
+        0.99891289
+      ]
+    ],
+    "probabilities": [
+      [
+        0.5094188550000001,
+        0.490581145
+      ],
+      [
+        0.058171150000000005,
+        0.94182885
+      ],
+      [
+        0.00108711,
+        0.99891289
+      ]
+    ],
+    "probe_alpha": null,
+    "displacement_alpha": null,
+    "detection_efficiency": null,
+    "dark_count_mean": null,
+    "coarse_grain_edges": [
+      0,
+      127,
+      256
+    ],
+    "external_probability_path": "src/matlab/Probability.mat",
+    "external_variable_name": "Probability",
+    "external_row_indices": [
+      5,
+      6,
+      7
+    ],
+    "external_table_shape": [
+      9,
+      256
+    ],
+    "external_table_already_coarse": false
+  },
+  "diagonal_primal": {
+    "route": "route4_ex_diagonal_primal",
+    "solver": "MOSEK",
+    "status": "infeasible",
+    "p_guess": null,
+    "H_min": null,
+    "measurement_constraint": "Fock_diagonal_only",
+    "num_strategies": 16,
+    "variable_count": 192,
+    "normalization_constraints": 80,
+    "statistics_constraints": 6,
+    "input_model": "exact_truncated_coherent_states",
+    "probability_model": "external_probability_table",
+    "alpha_values": [
+      {
+        "real": 0.5324471804789654,
+        "imag": 0.0,
+        "abs": 0.5324471804789654,
+        "phase": 0.0
+      },
+      {
+        "real": 3.5714782585841256e-17,
+        "imag": 0.5832666628567074,
+        "abs": 0.5832666628567074,
+        "phase": 1.5707963267948966
+      },
+      {
+        "real": -0.63,
+        "imag": 7.715274834628325e-17,
+        "abs": 0.63,
+        "phase": 3.141592653589793
+      }
+    ],
+    "q_selected": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "num_inputs": 3,
+    "num_outputs": 2,
+    "cutoff": 6,
+    "prob_floor": 1e-12,
+    "regularized_entries": 0,
+    "raw_num_bins": 256,
+    "raw_row_sums_before_normalization": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "distribution_only_p_guess_raw": 0.7398948625,
+    "distribution_only_H_min_raw": 0.4346078135054384,
+    "distribution_only_p_guess": 0.7398948625,
+    "distribution_only_H_min": 0.4346078135054384,
+    "input_offdiagonal_metrics": {
+      "per_input": [
+        {
+          "input_index": 0,
+          "fro_norm": 0.9999999999999999,
+          "offdiag_fro_norm": 0.6214993018121235,
+          "offdiag_over_fro": 0.6214993018121237,
+          "max_abs_offdiag": 0.4010091588032274
+        },
+        {
+          "input_index": 1,
+          "fro_norm": 1.0,
+          "offdiag_fro_norm": 0.6582215382567591,
+          "offdiag_over_fro": 0.6582215382567591,
+          "max_abs_offdiag": 0.4150695470607737
+        },
+        {
+          "input_index": 2,
+          "fro_norm": 0.9999999999999998,
+          "offdiag_fro_norm": 0.6883277787819976,
+          "offdiag_over_fro": 0.6883277787819977,
+          "max_abs_offdiag": 0.4236144340597492
+        }
+      ],
+      "max_offdiag_over_fro": 0.6883277787819977,
+      "mean_offdiag_over_fro": 0.6560162062836268,
+      "max_abs_offdiag": 0.4236144340597492
+    },
+    "probabilities_raw": [
+      [
+        0.5094188550000001,
+        0.490581145
+      ],
+      [
+        0.058171150000000005,
+        0.94182885
+      ],
+      [
+        0.00108711,
+        0.99891289
+      ]
+    ],
+    "probabilities": [
+      [
+        0.5094188550000001,
+        0.490581145
+      ],
+      [
+        0.058171150000000005,
+        0.94182885
+      ],
+      [
+        0.00108711,
+        0.99891289
+      ]
+    ],
+    "probe_alpha": null,
+    "displacement_alpha": null,
+    "detection_efficiency": null,
+    "dark_count_mean": null,
+    "coarse_grain_edges": [
+      0,
+      127,
+      256
+    ],
+    "external_probability_path": "src/matlab/Probability.mat",
+    "external_variable_name": "Probability",
+    "external_row_indices": [
+      5,
+      6,
+      7
+    ],
+    "external_table_shape": [
+      9,
+      256
+    ],
+    "external_table_already_coarse": false
+  },
+  "full_primal": {
+    "route": "route4_ex_full_primal",
+    "solver": "MOSEK",
+    "status": "optimal",
+    "p_guess": 0.7674213350732904,
+    "H_min": 0.38190922103791014,
+    "measurement_constraint": "general_Hermitian_PSD",
+    "num_strategies": 16,
+    "num_operator_variables": 32,
+    "hermitian_scalar_count": 1152,
+    "normalization_constraints": 16,
+    "statistics_constraints": 6,
+    "psd_constraints": 32,
+    "input_model": "exact_truncated_coherent_states",
+    "probability_model": "external_probability_table",
+    "alpha_values": [
+      {
+        "real": 0.5324471804789654,
+        "imag": 0.0,
+        "abs": 0.5324471804789654,
+        "phase": 0.0
+      },
+      {
+        "real": 3.5714782585841256e-17,
+        "imag": 0.5832666628567074,
+        "abs": 0.5832666628567074,
+        "phase": 1.5707963267948966
+      },
+      {
+        "real": -0.63,
+        "imag": 7.715274834628325e-17,
+        "abs": 0.63,
+        "phase": 3.141592653589793
+      }
+    ],
+    "q_selected": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "num_inputs": 3,
+    "num_outputs": 2,
+    "cutoff": 6,
+    "prob_floor": 1e-12,
+    "regularized_entries": 0,
+    "raw_num_bins": 256,
+    "raw_row_sums_before_normalization": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "distribution_only_p_guess_raw": 0.7398948625,
+    "distribution_only_H_min_raw": 0.4346078135054384,
+    "distribution_only_p_guess": 0.7398948625,
+    "distribution_only_H_min": 0.4346078135054384,
+    "input_offdiagonal_metrics": {
+      "per_input": [
+        {
+          "input_index": 0,
+          "fro_norm": 0.9999999999999999,
+          "offdiag_fro_norm": 0.6214993018121235,
+          "offdiag_over_fro": 0.6214993018121237,
+          "max_abs_offdiag": 0.4010091588032274
+        },
+        {
+          "input_index": 1,
+          "fro_norm": 1.0,
+          "offdiag_fro_norm": 0.6582215382567591,
+          "offdiag_over_fro": 0.6582215382567591,
+          "max_abs_offdiag": 0.4150695470607737
+        },
+        {
+          "input_index": 2,
+          "fro_norm": 0.9999999999999998,
+          "offdiag_fro_norm": 0.6883277787819976,
+          "offdiag_over_fro": 0.6883277787819977,
+          "max_abs_offdiag": 0.4236144340597492
+        }
+      ],
+      "max_offdiag_over_fro": 0.6883277787819977,
+      "mean_offdiag_over_fro": 0.6560162062836268,
+      "max_abs_offdiag": 0.4236144340597492
+    },
+    "probabilities_raw": [
+      [
+        0.5094188550000001,
+        0.490581145
+      ],
+      [
+        0.058171150000000005,
+        0.94182885
+      ],
+      [
+        0.00108711,
+        0.99891289
+      ]
+    ],
+    "probabilities": [
+      [
+        0.5094188550000001,
+        0.490581145
+      ],
+      [
+        0.058171150000000005,
+        0.94182885
+      ],
+      [
+        0.00108711,
+        0.99891289
+      ]
+    ],
+    "probe_alpha": null,
+    "displacement_alpha": null,
+    "detection_efficiency": null,
+    "dark_count_mean": null,
+    "coarse_grain_edges": [
+      0,
+      127,
+      256
+    ],
+    "external_probability_path": "src/matlab/Probability.mat",
+    "external_variable_name": "Probability",
+    "external_row_indices": [
+      5,
+      6,
+      7
+    ],
+    "external_table_shape": [
+      9,
+      256
+    ],
+    "external_table_already_coarse": false
+  },
+  "p_guess_abs_gap": null,
+  "H_min_abs_gap": null
+}

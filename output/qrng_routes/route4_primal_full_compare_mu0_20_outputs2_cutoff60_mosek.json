@@ -1,0 +1,142 @@
+{
+  "route": "route4_phaseinsensitive_primal_full_compare",
+  "instance": {
+    "selected_mu_list": [
+      0,
+      20
+    ],
+    "q_selected": [
+      0.5,
+      0.5
+    ],
+    "num_inputs": 2,
+    "num_outputs": 2,
+    "cutoff": 60,
+    "shift": 0,
+    "prob_floor": 1e-12,
+    "regularized_entries": 2,
+    "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+    "edges": [
+      0,
+      128,
+      256
+    ],
+    "block_widths": [
+      128,
+      128
+    ],
+    "row_sums_raw": [
+      1.0,
+      1.0
+    ],
+    "mixed_zero_columns_raw": [],
+    "all_zero_columns_raw": [
+      1
+    ],
+    "has_mixed_zero_column_pathology": false,
+    "distribution_only_p_guess_raw": 1.0,
+    "distribution_only_H_min_raw": -0.0,
+    "distribution_only_p_guess": 0.9999999999989999,
+    "distribution_only_H_min": 1.4428232973189604e-12
+  },
+  "diagonal_primal": {
+    "route": "route4_phaseinsensitive_primal",
+    "solver": "MOSEK",
+    "status": "optimal",
+    "p_guess": 1.0000000032932743,
+    "H_min": -4.751190521805492e-09,
+    "num_strategies": 8,
+    "variable_count": 960,
+    "normalization_constraints": 472,
+    "statistics_constraints": 4,
+    "selected_mu_list": [
+      0,
+      20
+    ],
+    "q_selected": [
+      0.5,
+      0.5
+    ],
+    "num_inputs": 2,
+    "num_outputs": 2,
+    "cutoff": 60,
+    "shift": 0,
+    "prob_floor": 1e-12,
+    "regularized_entries": 2,
+    "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+    "edges": [
+      0,
+      128,
+      256
+    ],
+    "block_widths": [
+      128,
+      128
+    ],
+    "row_sums_raw": [
+      1.0,
+      1.0
+    ],
+    "mixed_zero_columns_raw": [],
+    "all_zero_columns_raw": [
+      1
+    ],
+    "has_mixed_zero_column_pathology": false,
+    "distribution_only_p_guess_raw": 1.0,
+    "distribution_only_H_min_raw": -0.0,
+    "distribution_only_p_guess": 0.9999999999989999,
+    "distribution_only_H_min": 1.4428232973189604e-12
+  },
+  "full_primal": {
+    "route": "route4_phaseinsensitive_full_primal",
+    "solver": "MOSEK",
+    "status": "optimal",
+    "p_guess": 0.9999979476803695,
+    "H_min": 2.9608743915199358e-06,
+    "num_strategies": 8,
+    "num_operator_variables": 16,
+    "hermitian_scalar_count": 57600,
+    "normalization_constraints": 8,
+    "statistics_constraints": 4,
+    "psd_constraints": 16,
+    "selected_mu_list": [
+      0,
+      20
+    ],
+    "q_selected": [
+      0.5,
+      0.5
+    ],
+    "num_inputs": 2,
+    "num_outputs": 2,
+    "cutoff": 60,
+    "shift": 0,
+    "prob_floor": 1e-12,
+    "regularized_entries": 2,
+    "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+    "edges": [
+      0,
+      128,
+      256
+    ],
+    "block_widths": [
+      128,
+      128
+    ],
+    "row_sums_raw": [
+      1.0,
+      1.0
+    ],
+    "mixed_zero_columns_raw": [],
+    "all_zero_columns_raw": [
+      1
+    ],
+    "has_mixed_zero_column_pathology": false,
+    "distribution_only_p_guess_raw": 1.0,
+    "distribution_only_H_min_raw": -0.0,
+    "distribution_only_p_guess": 0.9999999999989999,
+    "distribution_only_H_min": 1.4428232973189604e-12
+  },
+  "p_guess_abs_gap": 2.0556129047832883e-06,
+  "H_min_abs_gap": 2.9656255820417412e-06
+}

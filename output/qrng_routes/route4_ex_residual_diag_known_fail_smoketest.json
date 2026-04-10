@@ -1,0 +1,74 @@
+{
+  "radii": [
+    0.53795166015625,
+    0.66204833984375,
+    0.71795166015625
+  ],
+  "alpha_values": [
+    {
+      "real": 0.53795166015625,
+      "imag": 0.0,
+      "abs": 0.53795166015625
+    },
+    {
+      "real": 4.0538769013523375e-17,
+      "imag": 0.66204833984375,
+      "abs": 0.66204833984375
+    },
+    {
+      "real": -0.71795166015625,
+      "imag": 8.792372025528799e-17,
+      "abs": 0.71795166015625
+    }
+  ],
+  "row_indices": [
+    5,
+    6,
+    7
+  ],
+  "edges": [
+    0,
+    121,
+    132,
+    256
+  ],
+  "solver": "MOSEK",
+  "status": null,
+  "p_guess": null,
+  "H_min": null,
+  "distribution_only_p_guess": 0.34431629499999994,
+  "distribution_only_H_min": 1.5381936358517396,
+  "regularized_entries": 0,
+  "input_offdiagonal_metrics": {
+    "per_input": [
+      {
+        "input_index": 0,
+        "fro_norm": 0.9999999999999998,
+        "offdiag_fro_norm": 0.6256837868432373,
+        "offdiag_over_fro": 0.6256837868432374,
+        "max_abs_offdiag": 0.4027747019775358
+      },
+      {
+        "input_index": 1,
+        "fro_norm": 0.9999999999999997,
+        "offdiag_fro_norm": 0.707054116355604,
+        "offdiag_over_fro": 0.7070541163556042,
+        "max_abs_offdiag": 0.4271081858471137
+      },
+      {
+        "input_index": 2,
+        "fro_norm": 1.0,
+        "offdiag_fro_norm": 0.7362405345752748,
+        "offdiag_over_fro": 0.7362405345752748,
+        "max_abs_offdiag": 0.4287887771436231
+      }
+    ],
+    "max_offdiag_over_fro": 0.7362405345752748,
+    "mean_offdiag_over_fro": 0.6896594792580388,
+    "max_abs_offdiag": 0.4287887771436231
+  },
+  "error": "RuntimeError",
+  "error_message": "All solvers failed: MOSEK: Solver 'MOSEK' failed. Try another solver, or solve with verbose=True for more information.",
+  "residual_summary": null,
+  "measurement_direct_abs_matrix": null
+}

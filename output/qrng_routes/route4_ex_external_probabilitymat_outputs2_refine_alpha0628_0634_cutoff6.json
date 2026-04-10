@@ -1,0 +1,78 @@
+{
+  "rows": [
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.628,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "error": "TimeoutExpired"
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.629,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "error": "TimeoutExpired"
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.63,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.2762208081239742,
+      "full_p_guess": 0.8257512719434361
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.631,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.2723241825385062,
+      "full_p_guess": 0.827984587148686
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.632,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.2688896916199441,
+      "full_p_guess": 0.8299580417082786
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.633,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.2657881986054989,
+      "full_p_guess": 0.8317441973945856
+    },
+    {
+      "phase_pattern": "0_pi2_pi",
+      "max_abs_alpha": 0.634,
+      "cutoff": 6,
+      "num_outputs": 2,
+      "distribution_only_H_min": 0.280549223795519,
+      "full_status": "optimal",
+      "full_H_min": 0.26294208137502656,
+      "full_p_guess": 0.8333866637383158
+    }
+  ],
+  "best": {
+    "phase_pattern": "0_pi2_pi",
+    "max_abs_alpha": 0.63,
+    "cutoff": 6,
+    "num_outputs": 2,
+    "distribution_only_H_min": 0.280549223795519,
+    "full_status": "optimal",
+    "full_H_min": 0.2762208081239742,
+    "full_p_guess": 0.8257512719434361
+  }
+}
