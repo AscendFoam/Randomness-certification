@@ -1,0 +1,57 @@
+{
+  "route": "route4_strict_nondiagonal_prepare_instance",
+  "instance": {
+    "selected_mu_list": [
+      100,
+      120,
+      140
+    ],
+    "q_selected": [
+      0.25,
+      0.25,
+      0.5
+    ],
+    "cutoff": 280,
+    "num_outputs": 4,
+    "edges": [
+      0,
+      64,
+      128,
+      192,
+      256
+    ],
+    "alpha_values": [
+      {
+        "real": 10.0,
+        "imag": 0.0,
+        "abs": 10.0,
+        "phase": 0.0
+      },
+      {
+        "real": 10.954451150103322,
+        "imag": 0.0,
+        "abs": 10.954451150103322,
+        "phase": 0.0
+      },
+      {
+        "real": 11.832159566199232,
+        "imag": 0.0,
+        "abs": 11.832159566199232,
+        "phase": 0.0
+      }
+    ],
+    "phase_values": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_photon_numbers": [
+      100.0,
+      120.0,
+      140.0
+    ],
+    "support_dimension": 3,
+    "rho_diag_reference_linf_gap": 6.276229536084088e-15,
+    "distribution_only_p_guess": 0.8315645224993031
+  }
+}

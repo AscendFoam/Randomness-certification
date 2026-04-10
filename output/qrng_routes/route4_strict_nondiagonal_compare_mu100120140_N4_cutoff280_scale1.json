@@ -1,0 +1,401 @@
+{
+  "route": "route4_strict_nondiagonal_compare",
+  "instance": {
+    "selected_mu_list": [
+      100,
+      120,
+      140
+    ],
+    "q_selected": [
+      0.25,
+      0.25,
+      0.5
+    ],
+    "num_inputs": 3,
+    "num_outputs": 4,
+    "cutoff": 280,
+    "shift": 0,
+    "prob_floor": 1e-12,
+    "regularized_entries": 2,
+    "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+    "edges": [
+      0,
+      64,
+      128,
+      192,
+      256
+    ],
+    "block_widths": [
+      64,
+      64,
+      64,
+      64
+    ],
+    "row_sums_raw": [
+      1.0,
+      1.0000000000000002,
+      1.0
+    ],
+    "mixed_zero_columns_raw": [
+      0
+    ],
+    "all_zero_columns_raw": [],
+    "distribution_only_p_guess_raw": 0.8315645225,
+    "distribution_only_H_min_raw": 0.26609988587954336,
+    "distribution_only_p_guess": 0.8315645224993031,
+    "distribution_only_H_min": 0.2660998858807524,
+    "alpha_values": [
+      {
+        "real": 10.0,
+        "imag": 0.0,
+        "abs": 10.0,
+        "phase": 0.0
+      },
+      {
+        "real": 10.954451150103322,
+        "imag": 0.0,
+        "abs": 10.954451150103322,
+        "phase": 0.0
+      },
+      {
+        "real": 11.832159566199232,
+        "imag": 0.0,
+        "abs": 11.832159566199232,
+        "phase": 0.0
+      }
+    ],
+    "phase_values": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_photon_numbers": [
+      100.0,
+      120.0,
+      140.0
+    ],
+    "mean_photons_per_mu_label": 1.0,
+    "support_dimension": 3,
+    "support_tol": 1e-09,
+    "rho_diag_reference_linf_gap": 6.276229536084088e-15,
+    "input_offdiagonal_metrics_full": {
+      "per_input": [
+        {
+          "input_index": 0,
+          "fro_norm": 0.9999999999999986,
+          "offdiag_fro_norm": 0.9857853924921414,
+          "offdiag_over_fro": 0.9857853924921428,
+          "max_abs_offdiag": 0.03986099680914712
+        },
+        {
+          "input_index": 1,
+          "fro_norm": 0.9999999999999978,
+          "offdiag_fro_norm": 0.9870334050379003,
+          "offdiag_over_fro": 0.9870334050379025,
+          "max_abs_offdiag": 0.03639299938468838
+        },
+        {
+          "input_index": 2,
+          "fro_norm": 0.9999999999999973,
+          "offdiag_fro_norm": 0.9880020109912309,
+          "offdiag_over_fro": 0.9880020109912335,
+          "max_abs_offdiag": 0.033696713063369785
+        }
+      ],
+      "max_offdiag_over_fro": 0.9880020109912335,
+      "mean_offdiag_over_fro": 0.9869402695070929,
+      "max_abs_offdiag": 0.03986099680914712
+    },
+    "gram_matrix_abs": [
+      [
+        0.9999999999999999,
+        0.6341381164586393,
+        0.18667160330243943
+      ],
+      [
+        0.6341381164586393,
+        1.0,
+        0.6803240624925385
+      ],
+      [
+        0.18667160330243943,
+        0.6803240624925385,
+        0.9999999999999999
+      ]
+    ],
+    "probabilities_raw": [
+      [
+        2e-08,
+        0.5385958599999999,
+        0.461395615,
+        8.504999999999999e-06
+      ],
+      [
+        0.0,
+        0.06736786,
+        0.9306208600000001,
+        0.00201128
+      ],
+      [
+        0.0,
+        0.001395395,
+        0.9285206850000001,
+        0.07008392
+      ]
+    ],
+    "probabilities": [
+      [
+        2e-08,
+        0.5385958599999999,
+        0.461395615,
+        8.504999999999999e-06
+      ],
+      [
+        9.99999999999e-13,
+        0.06736785999993262,
+        0.9306208599990694,
+        0.0020112799999979884
+      ],
+      [
+        9.99999999999e-13,
+        0.0013953949999986044,
+        0.9285206849990715,
+        0.0700839199999299
+      ]
+    ]
+  },
+  "reference_phaseinsensitive_primal": {
+    "route": "route4_phaseinsensitive_primal",
+    "solver": "SCS",
+    "status": "optimal",
+    "p_guess": 0.8947763902393401,
+    "H_min": 0.1604009052471434,
+    "num_strategies": 256,
+    "variable_count": 286720,
+    "normalization_constraints": 71424,
+    "statistics_constraints": 12,
+    "selected_mu_list": [
+      100,
+      120,
+      140
+    ],
+    "q_selected": [
+      0.25,
+      0.25,
+      0.5
+    ],
+    "num_inputs": 3,
+    "num_outputs": 4,
+    "cutoff": 280,
+    "shift": 0,
+    "prob_floor": 1e-12,
+    "regularized_entries": 2,
+    "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+    "edges": [
+      0,
+      64,
+      128,
+      192,
+      256
+    ],
+    "block_widths": [
+      64,
+      64,
+      64,
+      64
+    ],
+    "row_sums_raw": [
+      1.0,
+      1.0000000000000002,
+      1.0
+    ],
+    "mixed_zero_columns_raw": [
+      0
+    ],
+    "all_zero_columns_raw": [],
+    "has_mixed_zero_column_pathology": true,
+    "distribution_only_p_guess_raw": 0.8315645225,
+    "distribution_only_H_min_raw": 0.26609988587954336,
+    "distribution_only_p_guess": 0.8315645224993031,
+    "distribution_only_H_min": 0.2660998858807524
+  },
+  "strict_nondiagonal_full_primal": {
+    "route": "route4_strict_nondiagonal_full_primal",
+    "solver": "SCS",
+    "status": "optimal_inaccurate",
+    "p_guess": 0.9481785423193665,
+    "H_min": 0.07676935025136031,
+    "measurement_constraint": "general_Hermitian_PSD",
+    "input_model": "fixed_truncated_coherent_states_on_support_subspace",
+    "num_strategies": 256,
+    "num_operator_variables": 1024,
+    "hermitian_scalar_count": 9216,
+    "normalization_constraints": 256,
+    "statistics_constraints": 12,
+    "psd_constraints": 1024,
+    "selected_mu_list": [
+      100,
+      120,
+      140
+    ],
+    "q_selected": [
+      0.25,
+      0.25,
+      0.5
+    ],
+    "num_inputs": 3,
+    "num_outputs": 4,
+    "cutoff": 280,
+    "shift": 0,
+    "prob_floor": 1e-12,
+    "regularized_entries": 2,
+    "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+    "edges": [
+      0,
+      64,
+      128,
+      192,
+      256
+    ],
+    "block_widths": [
+      64,
+      64,
+      64,
+      64
+    ],
+    "row_sums_raw": [
+      1.0,
+      1.0000000000000002,
+      1.0
+    ],
+    "mixed_zero_columns_raw": [
+      0
+    ],
+    "all_zero_columns_raw": [],
+    "distribution_only_p_guess_raw": 0.8315645225,
+    "distribution_only_H_min_raw": 0.26609988587954336,
+    "distribution_only_p_guess": 0.8315645224993031,
+    "distribution_only_H_min": 0.2660998858807524,
+    "alpha_values": [
+      {
+        "real": 10.0,
+        "imag": 0.0,
+        "abs": 10.0,
+        "phase": 0.0
+      },
+      {
+        "real": 10.954451150103322,
+        "imag": 0.0,
+        "abs": 10.954451150103322,
+        "phase": 0.0
+      },
+      {
+        "real": 11.832159566199232,
+        "imag": 0.0,
+        "abs": 11.832159566199232,
+        "phase": 0.0
+      }
+    ],
+    "phase_values": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_photon_numbers": [
+      100.0,
+      120.0,
+      140.0
+    ],
+    "mean_photons_per_mu_label": 1.0,
+    "support_dimension": 3,
+    "support_tol": 1e-09,
+    "rho_diag_reference_linf_gap": 6.276229536084088e-15,
+    "input_offdiagonal_metrics_full": {
+      "per_input": [
+        {
+          "input_index": 0,
+          "fro_norm": 0.9999999999999986,
+          "offdiag_fro_norm": 0.9857853924921414,
+          "offdiag_over_fro": 0.9857853924921428,
+          "max_abs_offdiag": 0.03986099680914712
+        },
+        {
+          "input_index": 1,
+          "fro_norm": 0.9999999999999978,
+          "offdiag_fro_norm": 0.9870334050379003,
+          "offdiag_over_fro": 0.9870334050379025,
+          "max_abs_offdiag": 0.03639299938468838
+        },
+        {
+          "input_index": 2,
+          "fro_norm": 0.9999999999999973,
+          "offdiag_fro_norm": 0.9880020109912309,
+          "offdiag_over_fro": 0.9880020109912335,
+          "max_abs_offdiag": 0.033696713063369785
+        }
+      ],
+      "max_offdiag_over_fro": 0.9880020109912335,
+      "mean_offdiag_over_fro": 0.9869402695070929,
+      "max_abs_offdiag": 0.03986099680914712
+    },
+    "gram_matrix_abs": [
+      [
+        0.9999999999999999,
+        0.6341381164586393,
+        0.18667160330243943
+      ],
+      [
+        0.6341381164586393,
+        1.0,
+        0.6803240624925385
+      ],
+      [
+        0.18667160330243943,
+        0.6803240624925385,
+        0.9999999999999999
+      ]
+    ],
+    "probabilities_raw": [
+      [
+        2e-08,
+        0.5385958599999999,
+        0.461395615,
+        8.504999999999999e-06
+      ],
+      [
+        0.0,
+        0.06736786,
+        0.9306208600000001,
+        0.00201128
+      ],
+      [
+        0.0,
+        0.001395395,
+        0.9285206850000001,
+        0.07008392
+      ]
+    ],
+    "probabilities": [
+      [
+        2e-08,
+        0.5385958599999999,
+        0.461395615,
+        8.504999999999999e-06
+      ],
+      [
+        9.99999999999e-13,
+        0.06736785999993262,
+        0.9306208599990694,
+        0.0020112799999979884
+      ],
+      [
+        9.99999999999e-13,
+        0.0013953949999986044,
+        0.9285206849990715,
+        0.0700839199999299
+      ]
+    ]
+  },
+  "p_guess_abs_gap": 0.05340215208002641,
+  "H_min_gap_strict_minus_reference": -0.08363155499578309
+}
