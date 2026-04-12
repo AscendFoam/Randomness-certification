@@ -2,7 +2,7 @@
 
 ## 摘要
 
-本文档从“理论论文”的写法出发，对以下**三条路线**分别对应的三个 Matlab 脚本进行统一的数学化说明(按最终结果由低到高排序)：
+本文档从“理论论文”的写法出发，对以下**三条路线**分别对应的三个 Matlab 脚本进行统一的数学化说明：
 
 - [`guessprobprimal_phaseinsensitive.m`(原始)](../src/matlab/guessprobprimal_phaseinsensitive.m)
 - [`guessprobprimal_route4_ex_constrained.m`(保守拓展)](../src/matlab/guessprobprimal_route4_ex_constrained.m)
@@ -11,8 +11,14 @@
 文档的目标不是逐句复述代码，而是将这三个脚本背后的优化问题、统计模型、输入态模型、粗粒化方法、策略索引结构以及最小熵计算方式写成公式化的形式，并解释脚本中每个主要变量的数学意义。整体上：
 
 1. 原始 `guessprobprimal_phaseinsensitive.m` 描述的是一个**相位不敏感、Fock 对角、离散输出**的 primal SDP；
-2. `guessprobprimal_route4_ex_constrained.m` 则在保留同一份 `Probability.mat` 与同一 primal 骨架的前提下，把 trusted input 从“仅使用对角 Poisson 分布”升级为“固定非对角截断相干态”，并把主问题从 diagonal primal 升级为 full primal。
+2. `guessprobprimal_route4_ex_constrained.m` 在保留同一份 `Probability.mat` 与同一 primal 骨架的前提下，把 trusted input 从“仅使用对角 Poisson 分布”升级为“固定非对角截断相干态”，并把主问题从 diagonal primal 升级为 full primal。
 3. `guessprobprimal_route4_ex.m` 进一步把 `route4-ex` 的 Python 主线统一压缩成 Matlab 单文件版，使同一套 non-diagonal trusted-input 模型可以对接三类概率后端：`toy`、`apdlike` 与 `external`。
+
+但按当前导师已确认的实验口径，这三条路线的**优先级**已经明确分层：
+
+1. 原始 `route4` 仍是正式实验主线，因为它直接使用实验标定的 \(\mu=20,40,\dots,160\)，并且其对角 POVM 假设就是原 Matlab 模型本身的一部分；
+2. `route4-ex-constrained` 与一般 `route4-ex` 仍然保留在本文档中，主要作为“如果 trusted-input 模型被放宽到非对角 coherent states，会发生什么”的探索性参考；
+3. 因而本文档后面的结果解读应以“原始 route4 的正式值”为主，以 `route4-ex` 家族的高值为辅证或对照，而不再把后者当作当前实验主线结论。
 
 为避免把“实验标签”和“理论参数”混为一谈，本文档默认遵循一个原则：
 
@@ -110,8 +116,8 @@ $$
 
 原始脚本对应的核心假设是：
 
-1. 输入态在理论上只通过其 **Fock 对角部分** 进入优化；
-2. 测量被视为**相位不敏感**，因此只需要考虑 Fock 对角测量元。
+1. SDP 中真正进入约束的输入模型只保留 **Fock 对角部分**；
+2. 优化变量本身被定义为 **Fock 对角 POVM 元向量**，因此统计约束天然只涉及对角项。
 
 脚本中首先构造
 
@@ -150,9 +156,44 @@ $$
 
 如果实验上希望把标签 `100,120,140` 理解为 `1.00,1.20,1.40`，则那属于**额外缩放约定**；当前脚本本身并没有做这一步除以 100 的变换。
 
-### 2.1.2 为什么可以只保留对角部分
+### 2.1.2 为什么程序里只保留对角部分
 
-原始脚本的物理思想是：当输入态 \(\rho_x\) 本身已经 Fock 对角时，任何测量算符 \(M\) 在目标函数中只通过其对角部分出现，因为
+这里需要把“实验态”和“原始 route4 的建模态”区分开来。
+
+按导师当前确认，实验上发送的测试态仍然是**固定相位相干态**
+
+$$
+\lvert \sqrt{\mu_x}\rangle,
+$$
+
+并没有额外做相位随机化或相位平均。原始 Matlab 脚本之所以最终只保留
+\(\rho_x^{\mathrm{diag}}\)，不是因为代码里又显式模拟了一次相位平均，而是因为这份
+route4 模型直接把 POVM 变量定义成了 Fock 基下的对角向量
+\(m_{c,\lambda}(n)\)。在这种建模下，统计约束只会看到输入态的对角部分。
+
+如果把实验固定相位 coherent state 写成
+
+$$
+\rho_x = \lvert \sqrt{\mu_x}\rangle\langle \sqrt{\mu_x}\rvert,
+$$
+
+那么原始 route4 真正使用的是
+
+$$
+\rho_x^{\mathrm{diag}}=\Delta(\rho_x)
+=\sum_{n=0}^{M-1}\langle n\vert \rho_x\vert n\rangle\,\vert n\rangle\langle n\vert.
+$$
+
+由于 coherent state 的对角元正好是 Poisson 分布，所以
+
+$$
+\langle n\vert \rho_x\vert n\rangle
+= e^{-\mu_x}\frac{\mu_x^n}{n!},
+$$
+
+这就回到了脚本中的 Poisson 对角输入。
+
+因此，原始脚本的程序逻辑更准确地应理解为：当优化变量已经被限定为 Fock 对角 POVM 元时，任何测量算符 \(M\) 在目标函数中只通过其对角部分出现，因为
 
 $$
 \mathrm{Tr}(\rho_x M)=
@@ -1476,8 +1517,9 @@ $$
 
 第二种是**Python 扩展实现口径**。在 Python 版 route4 中，等覆盖 coarse-graining
 不是通过固定 `block_size=round(256/N)` 实现，而是通过严格覆盖 256 个 raw bins 的边界构造，
-因此允许 `N=20` 这类非 2 幂输出数。在这层口径下，目前最好 formal 点同样来自
-[`../output/qrng_routes/route4_targeted_scan_pair_140_160_v1.json`](../output/qrng_routes/route4_targeted_scan_pair_140_160_v1.json)：
+因此允许 `N=20` 这类非 2 幂输出数，也允许在保持 contiguous 的前提下对边界做局部精修。
+在这层口径下，目前最好 formal 点来自
+[`../output/qrng_routes/route4_local_refine_pair_140_160_N20_edges156_167_177_189_201_mosek.json`](../output/qrng_routes/route4_local_refine_pair_140_160_N20_edges156_167_177_189_201_mosek.json)：
 
 $$
 \texttt{selected\_mu\_list}=[140,160],\qquad
@@ -1486,10 +1528,16 @@ M=280,\qquad
 N=20,
 $$
 
+并采用边界
+
+$$
+[0,12,25,38,51,64,76,89,102,115,128,140,156,167,177,189,201,217,230,243,256].
+$$
+
 对应
 
 $$
-H_{\min}\approx 0.5549870213014914.
+H_{\min}\approx 0.5626365641390757.
 $$
 
 因此，若强调“与原始 Matlab route4 完全同口径”，应把
@@ -1498,10 +1546,10 @@ $$
 H_{\min}\approx 0.5273
 $$
 
-视为当前最好值；若允许采用 Python 版更一般的精确覆盖 coarse-graining，则可把
+视为当前最好值；若允许采用 Python 版更一般的精确覆盖/局部精修 coarse-graining，则可把
 
 $$
-H_{\min}\approx 0.5550
+H_{\min}\approx 0.5626
 $$
 
 视为扩展实现下的最好值。
@@ -1511,7 +1559,8 @@ $$
 1. 先在 [`../output/qrng_routes/route4_summary.json`](../output/qrng_routes/route4_summary.json) 中做 `distribution-only` 粗筛，定位哪些输入窗口和输出数更值得正式认证；
 2. 再围绕高光强窗口做 formal primal/dual 复核，发现两输入 `[140,160]` 和三输入 `[120,140,160]` 是最值得继续压榨的区域；
 3. 然后把输出数从 \(N=12\) 推到 \(N=16\)、再推到 \(N=20\)，检查 formal `H_min` 是否随离散输出数增长；
-4. 最后再围绕这些窗口测试偏置 \(q\)。
+4. 再围绕这些窗口测试偏置 \(q\)；
+5. 最后在 `[140,160]` 的 `N=20` 高输出主线上做局部 contiguous 边界精修。
 
 已经落盘的两输入定向扫描显示出很清楚的趋势：
 
@@ -1527,7 +1576,13 @@ $$
 N=20 \Rightarrow H_{\min}^{\max}\approx 0.5550.
 $$
 
-这说明在原始 route4 的 phase-insensitive / diagonal 框架里，增大输出数 \(N\) 的确仍有帮助。
+而在这条 `N=20` 主线上继续做局部边界精修后，又得到
+
+$$
+H_{\min}\approx 0.5626.
+$$
+
+这说明在原始 route4 的 phase-insensitive / diagonal 框架里，增大输出数 \(N\) 的确仍有帮助，而在高输出主线附近继续做局部 contiguous 边界精修也仍有可见收益。
 但另一方面，偏置 \(q\) 并没有像 route4-ex 那样成为主要增益来源。相反，在
 `[140,160]` 这条两输入高光强主线上，当前最好的 formal 点始终是均匀权重
 
@@ -1538,7 +1593,7 @@ $$
 如果采用 Python 扩展 coarse-graining 口径，则在 \(N=20\) 时：
 
 $$
-q=[0.5,0.5] \Rightarrow H_{\min}\approx 0.5550,
+q=[0.5,0.5],\ \text{等覆盖} \Rightarrow H_{\min}\approx 0.5550,
 $$
 
 $$
@@ -1549,7 +1604,19 @@ $$
 q=[0.02,0.98] \Rightarrow H_{\min}\approx 0.5098.
 $$
 
-这说明对原始 route4 而言，生成分布偏置并没有带来 formal 认证上的净收益。
+如果进一步允许局部 contiguous 边界精修，则在同样的均匀权重
+
+$$
+q=[0.5,0.5]
+$$
+
+下还能提升到
+
+$$
+H_{\min}\approx 0.5626365641.
+$$
+
+这说明对原始 route4 而言，生成分布偏置并没有带来 formal 认证上的净收益；更有效的仍然是高输出数与局部边界精修。
 
 若只看严格 Matlab 兼容口径，则最应拿来汇报的仍是
 
@@ -1559,25 +1626,52 @@ $$
 
 对于三输入窗口 `[120,140,160]`，定向扫描文件
 [`../output/qrng_routes/route4_targeted_scan_triple_120_140_160_v1.json`](../output/qrng_routes/route4_targeted_scan_triple_120_140_160_v1.json)
-截至本文档更新时仍在继续落盘，目前已完成的 \(N=12\) 四个点里，最好者为
+在当前仓库里只完成了 `5/12` 个点；其中已完成部分的最好 formal 点是
 
 $$
-q=\left[\frac13,\frac13,\frac13\right],
-\qquad
-H_{\min}\approx 0.4585660416,
+q=\left[\frac13,\frac13,\frac13\right],\qquad N=16,\qquad
+H_{\min}\approx 0.5250017629.
 $$
 
-暂时也没有显示出“更偏向最高光强输入会显著抬高 formal 值”的趋势。
-
-因此，原始 route4 目前的阶段性判断可以概括为：
+此外，本文档这次又补做了一轮**原始 route4 的 contiguous coarse-graining 定向搜索**。对两输入窗口
+`[140,160]`、均匀权重 `q=[0.5,0.5]`、`N=3`，新结果文件
+[`../output/qrng_routes/route4_contiguous_search_pair_140_160_N3_q0505_mosek.json`](../output/qrng_routes/route4_contiguous_search_pair_140_160_N3_q0505_mosek.json)
+给出的最好 formal 点为
 
 $$
-\text{两输入高光强窗口} + \text{更大 } N
+\texttt{edges}=[0,167,192,256],\qquad H_{\min}\approx 0.4507985265.
 $$
 
-仍是最有效的推进方向，而单纯偏置 \(q\) 并不是主要增长杆。
+继续把输出数提高到 `N=4` 后，文件
+[`../output/qrng_routes/route4_contiguous_search_pair_140_160_N4_q0505_mosek.json`](../output/qrng_routes/route4_contiguous_search_pair_140_160_N4_q0505_mosek.json)
+给出的最好 formal 点变为
 
-## 6.2 `route4-ex-constrained` 的主结果与搜索口径
+$$
+\texttt{edges}=[0,165,181,196,256],\qquad H_{\min}\approx 0.5317613267.
+$$
+
+这说明 contiguous coarse-graining 在原始 route4 中**并非完全无效**：在 `[140,160]` 两输入窗口上，`N=4`
+的最优连续分箱已经超过了 Matlab 兼容等宽口径下的
+
+$$
+N=16,\qquad H_{\min}\approx 0.5272804348,
+$$
+
+但仍然没有超过后续在 `N=20` 高输出主线上做局部精修后得到的新最好点
+
+$$
+ N=20,\qquad H_{\min}\approx 0.5626365641.
+$$
+
+因此，原始 route4 目前更稳妥的阶段性判断可以概括为：
+
+$$
+\text{两输入高光强窗口} + \text{较大 } N + \text{必要时局部连续分箱精修}
+$$
+
+仍是最有效的推进方向；而单纯偏置 \(q\) 并不是主要增长杆。更细地说，contiguous 分箱既能在 `N=4` 上带来中等提升，也能在 `N=20` 高输出主线上通过局部精修继续抬高 formal 值。
+
+## 6.2 `route4-ex-constrained` 的当前定位（探索性参考）
 
 对 constrained Matlab 脚本，在默认参数
 
@@ -1596,282 +1690,159 @@ $$
 下，你本机 Matlab 的输出为
 
 $$
-\texttt{Full primal status}=\texttt{Solved},
+\texttt{Full primal status}=\texttt{Solved},\qquad
+H_{\min}\approx 1.227498940472,
 $$
 
-$$
-\texttt{Full primal } H_{\min}\approx 1.227498940472,
-$$
-
-$$
-\texttt{Diagonal primal status}=\texttt{Infeasible}.
-$$
-
-这与 Python/MOSEK 主线结果
-
-$$
-H_{\min}\approx 1.227500864253
-$$
-
-之间只有约 \(10^{-6}\) 量级的差别，可视为正常的数值误差。
-
-与之对应的 Python 结果文件包括：
+且 diagonal primal 为 infeasible。对应的 Python 结果文件包括：
 
 - [`../output/qrng_routes/route4_ex_constrained_baseline_compare.json`](../output/qrng_routes/route4_ex_constrained_baseline_compare.json)
 - [`../output/qrng_routes/route4_ex_constrained_matlab_style_compare.json`](../output/qrng_routes/route4_ex_constrained_matlab_style_compare.json)
-- [`../output/qrng_routes/route4_ex_mosek_verify_3out_free_r054_066_072_q100.json`](../output/qrng_routes/route4_ex_mosek_verify_3out_free_r054_066_072_q100.json)
 
-其中都给出了同一条核心结论：
+这些结果本身没有错，但按当前导师确认的实验口径，它们的地位应当重新解释：
 
-$$
-\text{full primal optimal},\qquad
-H_{\min}\approx 1.2275,
-$$
+1. 它们说明“一旦 trusted input 改成固定的 non-diagonal 截断 coherent states，full primal 的 formal 值可以明显升高”；
+2. 但它们**不能直接替代**原始 route4 的正式实验主线，因为其 SDP 中使用的 trusted state 已不再是原 Matlab route4 那条“实验真实 \(\mu_x\) + 对角 POVM 变量”的建模口径；
+3. 因而 `route4-ex-constrained` 更适合作为探索性参考、对照样例和 Matlab 友好演示脚本，而不是当前阶段的正式实验结论。
 
-而对照用的 diagonal primal 则是 infeasible。
+## 6.3 一般 `route4-ex` 的当前定位（探索性参考）
 
-这条结果的理论含义是：一旦 trusted input 被替换为固定的 non-diagonal 截断相干态，
-即便仍然使用同一份 `Probability.mat` 和同一组 coarse-grained 输出边界，原始 route4 那种
-“只优化对角测量元”的表达已经不足以兼容实验概率；必须使用 full primal 才能得到可行的正式结果。
-
-从搜索思路上看，`route4-ex-constrained` 并不是一条“重新做大范围参数搜索”的路线。
-它更准确的定位是：
-
-1. 先由更一般的 route4-ex 外部概率搜索确定一个有效窗口；
-2. 再把这个窗口冻结成一条便于 Matlab 对照和导师逐项核查的核心切片；
-3. 最后用这一切片验证“non-diagonal trusted input + external probability + full primal”
-   这条模型链条是否稳定成立。
-
-因此，`route4-ex-constrained` 的价值主要不在于“追求最高值”，而在于：
-
-$$
-\text{把 route4-ex 的核心机制压缩成一条最容易核对的固定主线。}
-$$
-
-## 6.3 一般 `route4-ex` 的当前最好结果与搜索思路
-
-对新的 general route4-ex Matlab 脚本，如果保持其默认配置
-
-$$
-\texttt{instance\_mode}=\texttt{external},\qquad
-\texttt{solve\_mode}=\texttt{compare},
-$$
-
-并继续使用同一组
+一般 `route4-ex` Matlab 脚本和 Python 主线给出的最高稳定点来自
+[`../output/qrng_routes/route4_ex_pathology_boundary_scan_q419over1024_to_q105over256_2pt.json`](../output/qrng_routes/route4_ex_pathology_boundary_scan_q419over1024_to_q105over256_2pt.json)
+与
+[`../output/qrng_routes/route4_ex_residual_diag_q419over1024.json`](../output/qrng_routes/route4_ex_residual_diag_q419over1024.json)，
+对应
 
 $$
 \texttt{selected\_mu\_list}=[100,120,140],\qquad
-\texttt{q\_selected}=[1,0,0],
-$$
-
-$$
-\texttt{external\_custom\_edges}=[0,121,132,256],\qquad
-\alpha=[0.54,\,0.66 i,\,-0.72],\qquad
-M=6,\qquad
-N=3,
-$$
-
-那么它在理论上应当复现与 constrained 脚本同一条 `external + full primal` 主线；
-差别只在于：
-
-1. 它额外保留了 `toy` 与 `apdlike` 两类概率后端；
-2. 它把 `diagonal/full/compare` 统一成了一个顶层切换接口；
-3. 它把 coarse-graining 的等覆盖和自定义边界都纳入了同一脚本。
-
-换句话说，`guessprobprimal_route4_ex.m` 的默认 external 配置，不是另一套
-新结果口径，而是对 constrained 主线的一个更一般的 Matlab 包装。
-
-不过，真正推动 route4-ex 达到当前最高值的，并不是这个固定默认点，而是后续在
-Python 主线里完成的多轮局部精修。当前已正式确认的最强点来自
-[`../output/qrng_routes/route4_ex_pathology_boundary_scan_q419over1024_to_q105over256_2pt.json`](../output/qrng_routes/route4_ex_pathology_boundary_scan_q419over1024_to_q105over256_2pt.json)
-与
-[`../output/qrng_routes/route4_ex_residual_diag_q419over1024.json`](../output/qrng_routes/route4_ex_residual_diag_q419over1024.json)：
-
-$$
-\texttt{selected\_mu\_list}=[100,120,140],
-$$
-
-$$
 \texttt{custom\_edges}=[0,121,132,256],
 $$
 
 $$
-q=[1,0,0],
+q=[1,0,0],\qquad
+\theta=\left(0,\frac{\pi}{2},\pi\right),
 $$
 
 $$
-\theta = \left(0,\frac{\pi}{2},\pi\right),
+r=[0.5379541015625,\ 0.6620458984375,\ 0.7179541015625],
 $$
 
-$$
-r = [0.5379541015625,\ 0.6620458984375,\ 0.7179541015625],
-$$
+从而
 
 $$
 \alpha = [0.5379541015625,\ 0.6620458984375 i,\ -0.7179541015625],
-$$
-
-对应
-
-$$
+\qquad
 H_{\min}\approx 1.5439508969460896.
 $$
 
-邻近的稳定旁证点
-[`../output/qrng_routes/route4_ex_residual_diag_q209over512.json`](../output/qrng_routes/route4_ex_residual_diag_q209over512.json)
-则给出
+这条结果仍然很有研究价值，因为它清楚显示出：如果 trusted input 的非对角结构能够被正式纳入 SDP，formal 熵确实有显著上升空间。但在当前导师已明确要求“正式主线必须回到实验真实 \(\mu\) 输入与原 route4 口径”的前提下，这个 `1.54395` 应当被表述为：
 
 $$
-H_{\min}\approx 1.5384598585291962,
+\text{探索性高值 / 方向性证据，而不是当前实验主线正式值。}
 $$
 
-并具有同样量级的非对角强度与很小的约束残差。因此目前 route4-ex 的主结果不是“孤立幸运点”，而是一小段非常窄但数值上仍然干净的稳定前沿。
+同理，`route4_strict_nondiagonal` 这条控制线的结果
+[`../output/qrng_routes/route4_strict_nondiagonal_compare_mu100120140_N4_cutoff280_scale1.json`](../output/qrng_routes/route4_strict_nondiagonal_compare_mu100120140_N4_cutoff280_scale1.json)
+也值得一并记下：在真实 `\mu=[100,120,140]`、小规模 full primal 对照里，去掉对角限制后得到的 formal 值反而更低，这与导师“去掉对角约束不会带来更高最小熵”的判断是一致的。
 
-如果把 route4-ex 的推进过程按方法论拆开，大致经历了以下阶段：
+## 6.4 当前应如何并列汇报这些结果
 
-1. 先在 `external` 模式下做小窗口可行性试探，确认 `Probability.mat` 驱动的外部概率表确实能与 non-diagonal trusted coherent inputs 一起进入 full primal；
-2. 再比较 `2/3/4` 输出边界族，发现 `3` 输出边界
+更稳妥的汇报方式不是再把三条路线按“值的大小”直接排成主次，而是按**正式主线**与**探索性参考**分开说：
 
-$$
-[0,121,132,256]
-$$
+| 类别 | 路线 | 当前代表性结果 | 说明 | 主要来源 |
+|---|---|---:|---|---|
+| 正式主线 | 原始 `route4`（Matlab 兼容口径） | `H_min ≈ 0.527280` | `selected_mu_list=[140,160]`, `q=[0.5,0.5]`, `M=280`, `N=16` | [`../output/qrng_routes/route4_targeted_scan_pair_140_160_v1.json`](../output/qrng_routes/route4_targeted_scan_pair_140_160_v1.json) |
+| 主线扩展参考 | 原始 `route4`（Python 精确覆盖等分箱口径） | `H_min ≈ 0.554987` | `N=20` 等覆盖分箱的已知强点 | [`../output/qrng_routes/route4_targeted_scan_pair_140_160_v1.json`](../output/qrng_routes/route4_targeted_scan_pair_140_160_v1.json) |
+| 主线当前最优 | 原始 `route4`（MOSEK 局部精修口径） | `H_min ≈ 0.562637` | `[140,160]` 上把 `N=20` 主线边界局部改为 `[...140,156,167,177,189,201,...]` 后得到的新最好点 | [`../output/qrng_routes/route4_local_refine_pair_140_160_N20_edges156_167_177_189_201_mosek.json`](../output/qrng_routes/route4_local_refine_pair_140_160_N20_edges156_167_177_189_201_mosek.json) |
+| 主线局部增强 | 原始 `route4`（MOSEK contiguous, `N=4`） | `H_min ≈ 0.531761` | `[140,160]` 上的最优连续分箱边界为 `[0,165,181,196,256]`，已略高于 Matlab 兼容等宽主线 | [`../output/qrng_routes/route4_contiguous_search_pair_140_160_N4_q0505_mosek.json`](../output/qrng_routes/route4_contiguous_search_pair_140_160_N4_q0505_mosek.json) |
+| 探索性参考 | `route4-ex-constrained` | `H_min ≈ 1.227501` | 展示 non-diagonal trusted input + full primal 的增益 | [`../output/qrng_routes/route4_ex_constrained_baseline_compare.json`](../output/qrng_routes/route4_ex_constrained_baseline_compare.json) |
+| 探索性参考 | 一般 `route4-ex` | `H_min ≈ 1.543951` | 展示边界/相位/半径/\(q\) 联合优化后的高值前沿 | [`../output/qrng_routes/route4_ex_pathology_boundary_scan_q419over1024_to_q105over256_2pt.json`](../output/qrng_routes/route4_ex_pathology_boundary_scan_q419over1024_to_q105over256_2pt.json) |
+| 控制线 | `route4_strict_nondiagonal` | `H_min ≈ 0.0768` | 小规模对照中，去掉对角限制并未抬高 formal 值 | [`../output/qrng_routes/route4_strict_nondiagonal_compare_mu100120140_N4_cutoff280_scale1.json`](../output/qrng_routes/route4_strict_nondiagonal_compare_mu100120140_N4_cutoff280_scale1.json) |
 
-比更粗或更细的分法更容易维持 formal feasibility；
-3. 然后比较相位图样，发现
+这种表述的优点是：既保留了 `route4-ex` 家族对理论空间的启发性，又不会把它们误说成已经满足当前实验主线要求的正式认证结果。
 
-$$
-\left(0,\frac{\pi}{2},\pi\right)
-$$
+## 6.5 这一阶段结果对后续工作的反向说明
 
-这一组相位更有利于把三个 trusted 输入拉开；
-4. 再把输入权重偏向
+把上述结果连同导师最新反馈一起看，当前最重要的结论有四条。
 
-$$
-q=[1,0,0],
-$$
-
-使 guessing probability 的目标函数主要聚焦到最有利的那个生成输入上；
-5. 在此基础上，从固定半径推进到 `free_monotone_radii` 局部精修，即在保持
+第一，原始 route4 的正式主线已经重新收敛到非常清楚的一组条件：
 
 $$
-0 < r_1 \le r_2 \le r_3
+\text{实验真实 }\mu_x \;+\; \text{固定相位测试态} \;+\; \text{原始对角 POVM 建模}.
 $$
 
-的前提下连续微调三组半径；
-6. 最后使用病态边界扫描与残差体检，确认高值点没有明显约束失控。
+这里“只用 \(\rho_x^{\mathrm{diag}}\)”应被理解为 route4 的建模选择，而不是再去猜测实验端是否做了额外相位平均。
 
-这里特别值得强调的是：route4-ex 的主增益并不是简单来自“输出数增加”，也不是简单来自“光强更大”，而是来自以下三件事的协同：
-
-$$
-\text{非对角 trusted inputs}
-\;+\;
-\text{更合适的 coarse-graining 边界}
-\;+\;
-\text{生成轮权重偏置 } q.
-$$
-
-当前最高稳定点的 `input_offdiagonal_metrics` 还表明，这组 trusted input 的非对角成分并不弱。
-在
-[`../output/qrng_routes/route4_ex_residual_diag_q419over1024.json`](../output/qrng_routes/route4_ex_residual_diag_q419over1024.json)
-中，最大的
+第二，原始 route4 仍然有可继续优化的空间，但目前看来主要来自以下几类原生参数：
 
 $$
-R_{\mathrm{off}}(\rho_x)
-\approx 0.73624,
+(\text{输入窗口},\ q,\ N,\ \text{contiguous coarse-graining}).
 $$
 
-说明 full primal 确实在利用 substantial 的非对角结构，而不是只在对角近似附近微调。
+其中最有效的方向依然是高光强两输入窗口与较大的输出数 \(N\)；偏置 \(q\) 目前没有显示出稳定净增益。
 
-与此同时，该点的残差量级仍然保持在
-
-$$
-10^{-9}\sim 10^{-10}
-$$
-
-附近，因此可以作为当前阶段的正式主结果，而不只是探索性高值。
-
-## 6.4 三条路线当前最好结果的并列比较
-
-为方便后续汇报，可把三条路线当前已确认的最好 formal 结果总结为下表。
-
-| 路线 | 当前最好 formal 点 | \(H_{\min}\) | 主要来源 |
-|---|---|---:|---|
-| 原始 `route4`（Matlab 兼容口径） | `selected_mu_list=[140,160]`, `q=[0.5,0.5]`, `M=280`, `N=16` | `0.527280` | [`../output/qrng_routes/route4_targeted_scan_pair_140_160_v1.json`](../output/qrng_routes/route4_targeted_scan_pair_140_160_v1.json) |
-| 原始 `route4`（Python 扩展口径） | `selected_mu_list=[140,160]`, `q=[0.5,0.5]`, `M=280`, `N=20` | `0.554987` | [`../output/qrng_routes/route4_targeted_scan_pair_140_160_v1.json`](../output/qrng_routes/route4_targeted_scan_pair_140_160_v1.json) |
-| `route4-ex-constrained` | `selected_mu_list=[100,120,140]`, `q=[1,0,0]`, `custom_edges=[0,121,132,256]`, `alpha=[0.54,0.66i,-0.72]`, `M=6`, `N=3` | `1.227501` | [`../output/qrng_routes/route4_ex_constrained_baseline_compare.json`](../output/qrng_routes/route4_ex_constrained_baseline_compare.json) |
-| 一般 `route4-ex` | `selected_mu_list=[100,120,140]`, `q=[1,0,0]`, `custom_edges=[0,121,132,256]`, `phase=(0,\pi/2,\pi)`, `free_monotone_radii=[0.5379541,0.6620459,0.7179541]`, `M=6`, `N=3` | `1.543951` | [`../output/qrng_routes/route4_ex_pathology_boundary_scan_q419over1024_to_q105over256_2pt.json`](../output/qrng_routes/route4_ex_pathology_boundary_scan_q419over1024_to_q105over256_2pt.json) |
-
-从这张表可以直观看出三条路线的层级关系：
-
-1. 原始 route4 无论按 Matlab 兼容口径还是 Python 扩展口径，仍保持最强的 phase-insensitive / diagonal 约束，因此结果最低；
-2. `route4-ex-constrained` 通过 fixed non-diagonal trusted inputs 把 formal 值从约 `0.55` 抬到约 `1.23`；
-3. 一般 `route4-ex` 再通过联合优化边界、相位、半径与 \(q\)，把 formal 值继续推到约 `1.54`。
-
-## 6.5 这一阶段结果对理论模型的反向说明
-
-把这些结果反过来读，其实也能得到三条重要的理论结论。
-
-第一，原始 route4 的瓶颈并不只是“参数没扫够”，而更像是：
+第三，这次新加的 contiguous coarse-graining 搜索给出了一个更细的结论：在
+[`../output/qrng_routes/route4_contiguous_search_pair_140_160_N3_q0505_mosek.json`](../output/qrng_routes/route4_contiguous_search_pair_140_160_N3_q0505_mosek.json)
+中，两输入 `[140,160]`、`q=[0.5,0.5]`、`N=3` 的 exhaustive contiguous 搜索最好 formal 点只有
 
 $$
-\text{对角输入模型} + \text{对角测量表达}
+\texttt{edges}=[0,167,192,256],\qquad H_{\min}\approx 0.4507985265.
 $$
 
-本身限制了它能利用的统计结构。因此即便把 \(N\) 从 \(12\) 推到 \(20\)，Python 扩展口径下目前最好 formal 结果也只到约 `0.555`；若坚持原始 Matlab 兼容口径，则最好值为约 `0.527`。
-
-第二，`route4-ex-constrained` 的结果说明，只要 trusted input 改成 non-diagonal coherent states，full primal 就能显著释放认证能力；
-而 diagonal primal 在同一实例上直接 infeasible，也从反面说明“去掉非对角信息之后，这一实例已经无法被原 route4 模型解释”。
-
-第三，一般 `route4-ex` 的进一步提升说明：在 non-diagonal trusted-input 框架内，真正值得搜索的不是单一参数，而是
+但当输出数增加到 `N=4` 时，
+[`../output/qrng_routes/route4_contiguous_search_pair_140_160_N4_q0505_mosek.json`](../output/qrng_routes/route4_contiguous_search_pair_140_160_N4_q0505_mosek.json)
+给出的最好 formal 点已经上升到
 
 $$
-(\alpha,\ \mathcal B,\ q)
+\texttt{edges}=[0,165,181,196,256],\qquad H_{\min}\approx 0.5317613267.
 $$
 
-这三个层面的联合兼容性。也正因为如此，route4-ex 的最好结果并不是沿着原始 route4 的单一参数轴外推得到的，而是来自一套更细的联合搜索流程。
+而三输入 `[120,140,160]`、均匀权重、`N=3` 的对应文件
+[`../output/qrng_routes/route4_contiguous_search_triple_120_140_160_N3_equal_mosek.json`](../output/qrng_routes/route4_contiguous_search_triple_120_140_160_N3_equal_mosek.json)
+给出的最好 formal 点只有
+
+$$
+\texttt{edges}=[0,148,190,256],\qquad H_{\min}\approx 0.3552963032.
+$$
+
+在此基础上，我们又围绕 `[140,160]` 的 `N=20` 主线做了一轮局部边界精修，并在
+[`../output/qrng_routes/route4_local_refine_pair_140_160_N20_edges156_167_177_189_201_mosek.json`](../output/qrng_routes/route4_local_refine_pair_140_160_N20_edges156_167_177_189_201_mosek.json)
+中得到
+
+$$
+\texttt{edges}=[0,12,25,38,51,64,76,89,102,115,128,140,156,167,177,189,201,217,230,243,256],
+$$
+
+$$
+H_{\min}\approx 0.5626365641.
+$$
+
+因此 contiguous 分箱不仅是**允许尝试且确实能带来收益的 refinement**，而且在高输出主线上已经进一步改写了原始 route4 的当前最好 formal 结果。
+
+第四，`route4-ex` 家族与 strict-nondiagonal 控制线仍有保留价值，但其角色已经改变：
+
+1. `route4-ex` 继续告诉我们“如果 future model 允许 non-diagonal trusted inputs，formal 熵的上限可能显著抬高”；
+2. `route4_strict_nondiagonal` 则提醒我们“对原始 route4 主线来说，简单去掉 POVM 对角限制并不是一条自然的增益方向”；
+3. 因而当前最现实的开发顺序应是：先把原始 route4 的可调量扫干净，再决定是否需要把 `route4-ex` 重新收缩到更贴实验的辅助版本。
 
 ---
 
 ## 7. 总结
 
-从理论上看，这三份 Matlab 脚本可视为同一问题族的三个层级：
+从当前已经确认的代码、结果和导师反馈来看，这三份 Matlab 脚本仍然可以看成同一问题族的三个表达层级，但它们在项目中的地位已经不再对等：
 
 1. [`guessprobprimal_phaseinsensitive.m`](../src/matlab/guessprobprimal_phaseinsensitive.m)
-   给出最保守、最贴 phase-insensitive/Fock-diagonal 假设的 primal SDP；
+   是当前**正式实验主线**，因为它直接对应实验真实 \(\mu\) 与原 route4 的对角 POVM 建模；
 2. [`guessprobprimal_route4_ex_constrained.m`](../src/matlab/guessprobprimal_route4_ex_constrained.m)
-   给出一条固定参数的 non-diagonal trusted-input external 主线；
+   是一条便于核对的**探索性固定切片**；
 3. [`guessprobprimal_route4_ex.m`](../src/matlab/guessprobprimal_route4_ex.m)
-   则把 route4-ex 的核心建模接口泛化成同一份 Matlab 单文件，实现
-   `toy / apdlike / external` 三后端与 `diagonal / full / compare` 三求解模式的统一。
+   则是一个更一般的**探索性接口封装**，便于系统研究 non-diagonal trusted-input 模型的潜力。
 
-从程序骨架上看，它们仍然共享以下结构：
+若只讨论当前可以作为正式主线汇报的结果，则最关键的两句应是：
 
-1. 都以离散输出概率 \(p(c|x)\) 为认证约束；
-2. 都通过 `LambdaIndices` 枚举离散策略；
-3. 都把 primal SDP 的最优值解释为 \(p_{\mathrm{guess}}\)；
-4. 都最终输出
+1. 原始 route4 的当前最好 formal 结果，按 Matlab 兼容口径为约 `0.5273 bit`；若允许 Python 侧的 contiguous 局部精修，则当前已提升到约 `0.5626 bit`。
+2. 其中 `N=20` 等覆盖主线约为 `0.5550 bit`，而 `N=4` 的全量 contiguous 搜索也给出了约 `0.5318 bit` 的中层增强结果。
 
-$$
-H_{\min} = -\log_2 p_{\mathrm{guess}}.
-$$
+若再补一句对探索线的交代，则更合适的说法是：
 
-因此，如果导师想把 general route4-ex Matlab 脚本理解为
-
-> “在原 route4 / constrained route4-ex 语法风格上，对 route4-ex Python 主线所做的一次统一封装”
-
-这是准确的；但如果把它理解为“又引入了全新的一套安全模型”，则并不准确。
-
-从现阶段结果看，这三条路线也给出了一个很清楚的层级结论：
-
-1. 原始 route4 若按 Matlab 兼容口径，则当前最好 formal 结果约为 `0.5273 bit`；若按 Python 扩展口径，则约为 `0.5550 bit`；
-2. `route4-ex-constrained` 在固定 Matlab 友好切片上可稳定达到约 `1.2275 bit`；
-3. 一般 `route4-ex` 在完成边界、半径、相位与 \(q\) 的联合精修后，当前最好正式结果约为 `1.54395 bit`。
-
-因此，若这份文档被用于导师讨论，比较稳妥的理解方式是：
-
-$$
-\text{route4} \subset \text{route4-ex-constrained} \subset \text{general route4-ex 的可表达实例族},
-$$
-
-其中越往右，模型表达能力越强、可搜索空间越大、能够利用的 non-diagonal 结构也越充分；
-但与此同时，也越需要把“实验概率入口”“trusted-input 假设”“coarse-graining 规则”和“正式求解结果”分别说清楚。
+> `route4-ex` 家族说明了非对角 trusted-input 模型的潜在上限，但在当前导师确认的实验要求下，它们应作为探索性参考，而不是正式主线结果。

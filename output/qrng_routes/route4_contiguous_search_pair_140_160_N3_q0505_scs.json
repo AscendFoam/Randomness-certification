@@ -1,0 +1,523 @@
+{
+  "route": "route4_phaseinsensitive_contiguous_search",
+  "selected_mu_list": [
+    140,
+    160
+  ],
+  "q_selected": [
+    0.5,
+    0.5
+  ],
+  "num_outputs": 3,
+  "cutoff": 280,
+  "prob_floor": 1e-12,
+  "shift": 0,
+  "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+  "num_raw_bins": 256,
+  "total_candidates": 32385,
+  "evaluated_candidates": 32385,
+  "min_bin_width": 1,
+  "certify_top_k": 5,
+  "record_top_k": 10,
+  "best_distribution_only": {
+    "edges": [
+      0,
+      168,
+      192,
+      256
+    ],
+    "block_widths": [
+      168,
+      24,
+      64
+    ],
+    "distribution_only_p_guess_raw": 0.47249221750000003,
+    "distribution_only_H_min_raw": 1.0816375282343345,
+    "distribution_only_p_guess": 0.4724922174999999,
+    "distribution_only_H_min": 1.081637528234335,
+    "regularized_entries": 0,
+    "mixed_zero_columns_raw": [],
+    "all_zero_columns_raw": []
+  },
+  "top_distribution_only": [
+    {
+      "edges": [
+        0,
+        168,
+        192,
+        256
+      ],
+      "block_widths": [
+        168,
+        24,
+        64
+      ],
+      "distribution_only_p_guess_raw": 0.47249221750000003,
+      "distribution_only_H_min_raw": 1.0816375282343345,
+      "distribution_only_p_guess": 0.4724922174999999,
+      "distribution_only_H_min": 1.081637528234335,
+      "regularized_entries": 0,
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": []
+    },
+    {
+      "edges": [
+        0,
+        168,
+        191,
+        256
+      ],
+      "block_widths": [
+        168,
+        23,
+        65
+      ],
+      "distribution_only_p_guess_raw": 0.4754779175,
+      "distribution_only_H_min_raw": 1.0725497549645577,
+      "distribution_only_p_guess": 0.4754779174999999,
+      "distribution_only_H_min": 1.0725497549645582,
+      "regularized_entries": 0,
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": []
+    },
+    {
+      "edges": [
+        0,
+        167,
+        191,
+        256
+      ],
+      "block_widths": [
+        167,
+        24,
+        65
+      ],
+      "distribution_only_p_guess_raw": 0.4785591375,
+      "distribution_only_H_min_raw": 1.0632308794628835,
+      "distribution_only_p_guess": 0.47855913749999995,
+      "distribution_only_H_min": 1.0632308794628837,
+      "regularized_entries": 0,
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": []
+    },
+    {
+      "edges": [
+        0,
+        169,
+        192,
+        256
+      ],
+      "block_widths": [
+        169,
+        23,
+        64
+      ],
+      "distribution_only_p_guess_raw": 0.4812247075,
+      "distribution_only_H_min_raw": 1.0552173782407102,
+      "distribution_only_p_guess": 0.4812247074999999,
+      "distribution_only_H_min": 1.0552173782407106,
+      "regularized_entries": 0,
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": []
+    },
+    {
+      "edges": [
+        0,
+        167,
+        192,
+        256
+      ],
+      "block_widths": [
+        167,
+        25,
+        64
+      ],
+      "distribution_only_p_guess_raw": 0.484208585,
+      "distribution_only_H_min_raw": 1.0462994363949412,
+      "distribution_only_p_guess": 0.48420858499999997,
+      "distribution_only_H_min": 1.0462994363949412,
+      "regularized_entries": 0,
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": []
+    },
+    {
+      "edges": [
+        0,
+        168,
+        193,
+        256
+      ],
+      "block_widths": [
+        168,
+        25,
+        63
+      ],
+      "distribution_only_p_guess_raw": 0.485174585,
+      "distribution_only_H_min_raw": 1.0434241154404627,
+      "distribution_only_p_guess": 0.485174585,
+      "distribution_only_H_min": 1.0434241154404627,
+      "regularized_entries": 0,
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": []
+    },
+    {
+      "edges": [
+        0,
+        167,
+        190,
+        256
+      ],
+      "block_widths": [
+        167,
+        23,
+        66
+      ],
+      "distribution_only_p_guess_raw": 0.4866540225,
+      "distribution_only_H_min_raw": 1.0390316149998093,
+      "distribution_only_p_guess": 0.48665402249999995,
+      "distribution_only_H_min": 1.0390316149998096,
+      "regularized_entries": 0,
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": []
+    },
+    {
+      "edges": [
+        0,
+        168,
+        190,
+        256
+      ],
+      "block_widths": [
+        168,
+        22,
+        66
+      ],
+      "distribution_only_p_guess_raw": 0.4883894325,
+      "distribution_only_H_min_raw": 1.0338961104604536,
+      "distribution_only_p_guess": 0.4883894324999999,
+      "distribution_only_H_min": 1.033896110460454,
+      "regularized_entries": 0,
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": []
+    },
+    {
+      "edges": [
+        0,
+        169,
+        191,
+        256
+      ],
+      "block_widths": [
+        169,
+        22,
+        65
+      ],
+      "distribution_only_p_guess_raw": 0.48919013749999996,
+      "distribution_only_H_min_raw": 1.0315327767196714,
+      "distribution_only_p_guess": 0.48919013749999996,
+      "distribution_only_H_min": 1.0315327767196714,
+      "regularized_entries": 0,
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": []
+    },
+    {
+      "edges": [
+        0,
+        170,
+        192,
+        256
+      ],
+      "block_widths": [
+        170,
+        22,
+        64
+      ],
+      "distribution_only_p_guess_raw": 0.4908207025,
+      "distribution_only_H_min_raw": 1.0267319926587908,
+      "distribution_only_p_guess": 0.49082070249999993,
+      "distribution_only_H_min": 1.026731992658791,
+      "regularized_entries": 0,
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": []
+    }
+  ],
+  "certified": [
+    {
+      "route": "route4_phaseinsensitive_dual",
+      "solver": "SCS",
+      "status": "optimal",
+      "p_guess": 0.734876201690476,
+      "H_min": 0.4444268629659162,
+      "num_guess_functions": 9,
+      "selected_mu_list": [
+        140,
+        160
+      ],
+      "q_selected": [
+        0.5,
+        0.5
+      ],
+      "num_inputs": 2,
+      "num_outputs": 3,
+      "cutoff": 280,
+      "shift": 0,
+      "prob_floor": 1e-12,
+      "regularized_entries": 0,
+      "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+      "edges": [
+        0,
+        168,
+        192,
+        256
+      ],
+      "block_widths": [
+        168,
+        24,
+        64
+      ],
+      "row_sums_raw": [
+        0.9999999999999999,
+        1.0
+      ],
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": [],
+      "has_mixed_zero_column_pathology": false,
+      "distribution_only_p_guess_raw": 0.4724922174999999,
+      "distribution_only_H_min_raw": 1.081637528234335,
+      "distribution_only_p_guess": 0.4724922175,
+      "distribution_only_H_min": 1.0816375282343347,
+      "distribution_screening_rank": 1
+    },
+    {
+      "route": "route4_phaseinsensitive_dual",
+      "solver": "SCS",
+      "status": "optimal",
+      "p_guess": 0.7366299663466636,
+      "H_min": 0.4409880071523436,
+      "num_guess_functions": 9,
+      "selected_mu_list": [
+        140,
+        160
+      ],
+      "q_selected": [
+        0.5,
+        0.5
+      ],
+      "num_inputs": 2,
+      "num_outputs": 3,
+      "cutoff": 280,
+      "shift": 0,
+      "prob_floor": 1e-12,
+      "regularized_entries": 0,
+      "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+      "edges": [
+        0,
+        168,
+        191,
+        256
+      ],
+      "block_widths": [
+        168,
+        23,
+        65
+      ],
+      "row_sums_raw": [
+        0.9999999999999999,
+        1.0
+      ],
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": [],
+      "has_mixed_zero_column_pathology": false,
+      "distribution_only_p_guess_raw": 0.47547791749999996,
+      "distribution_only_H_min_raw": 1.072549754964558,
+      "distribution_only_p_guess": 0.4754779175,
+      "distribution_only_H_min": 1.0725497549645577,
+      "distribution_screening_rank": 2
+    },
+    {
+      "route": "route4_phaseinsensitive_dual",
+      "solver": "SCS",
+      "status": "optimal",
+      "p_guess": 0.7327204495700322,
+      "H_min": 0.44866521432455264,
+      "num_guess_functions": 9,
+      "selected_mu_list": [
+        140,
+        160
+      ],
+      "q_selected": [
+        0.5,
+        0.5
+      ],
+      "num_inputs": 2,
+      "num_outputs": 3,
+      "cutoff": 280,
+      "shift": 0,
+      "prob_floor": 1e-12,
+      "regularized_entries": 0,
+      "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+      "edges": [
+        0,
+        167,
+        191,
+        256
+      ],
+      "block_widths": [
+        167,
+        24,
+        65
+      ],
+      "row_sums_raw": [
+        1.0,
+        1.0
+      ],
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": [],
+      "has_mixed_zero_column_pathology": false,
+      "distribution_only_p_guess_raw": 0.4785591375,
+      "distribution_only_H_min_raw": 1.0632308794628835,
+      "distribution_only_p_guess": 0.4785591375,
+      "distribution_only_H_min": 1.0632308794628835,
+      "distribution_screening_rank": 3
+    },
+    {
+      "route": "route4_phaseinsensitive_dual",
+      "solver": "SCS",
+      "status": "optimal",
+      "p_guess": 0.7384400557779742,
+      "H_min": 0.4374472825525282,
+      "num_guess_functions": 9,
+      "selected_mu_list": [
+        140,
+        160
+      ],
+      "q_selected": [
+        0.5,
+        0.5
+      ],
+      "num_inputs": 2,
+      "num_outputs": 3,
+      "cutoff": 280,
+      "shift": 0,
+      "prob_floor": 1e-12,
+      "regularized_entries": 0,
+      "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+      "edges": [
+        0,
+        169,
+        192,
+        256
+      ],
+      "block_widths": [
+        169,
+        23,
+        64
+      ],
+      "row_sums_raw": [
+        0.9999999999999999,
+        1.0
+      ],
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": [],
+      "has_mixed_zero_column_pathology": false,
+      "distribution_only_p_guess_raw": 0.48122470749999996,
+      "distribution_only_H_min_raw": 1.0552173782407104,
+      "distribution_only_p_guess": 0.4812247075,
+      "distribution_only_H_min": 1.0552173782407102,
+      "distribution_screening_rank": 4
+    },
+    {
+      "route": "route4_phaseinsensitive_dual",
+      "solver": "SCS",
+      "status": "optimal",
+      "p_guess": 0.7316084262837008,
+      "H_min": 0.45085640349714956,
+      "num_guess_functions": 9,
+      "selected_mu_list": [
+        140,
+        160
+      ],
+      "q_selected": [
+        0.5,
+        0.5
+      ],
+      "num_inputs": 2,
+      "num_outputs": 3,
+      "cutoff": 280,
+      "shift": 0,
+      "prob_floor": 1e-12,
+      "regularized_entries": 0,
+      "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+      "edges": [
+        0,
+        167,
+        192,
+        256
+      ],
+      "block_widths": [
+        167,
+        25,
+        64
+      ],
+      "row_sums_raw": [
+        1.0,
+        1.0
+      ],
+      "mixed_zero_columns_raw": [],
+      "all_zero_columns_raw": [],
+      "has_mixed_zero_column_pathology": false,
+      "distribution_only_p_guess_raw": 0.484208585,
+      "distribution_only_H_min_raw": 1.0462994363949412,
+      "distribution_only_p_guess": 0.484208585,
+      "distribution_only_H_min": 1.0462994363949412,
+      "distribution_screening_rank": 5
+    }
+  ],
+  "best_certified": {
+    "route": "route4_phaseinsensitive_dual",
+    "solver": "SCS",
+    "status": "optimal",
+    "p_guess": 0.7316084262837008,
+    "H_min": 0.45085640349714956,
+    "num_guess_functions": 9,
+    "selected_mu_list": [
+      140,
+      160
+    ],
+    "q_selected": [
+      0.5,
+      0.5
+    ],
+    "num_inputs": 2,
+    "num_outputs": 3,
+    "cutoff": 280,
+    "shift": 0,
+    "prob_floor": 1e-12,
+    "regularized_entries": 0,
+    "probability_path": "/Users/qinchaoyang/Desktop/PC/codes/local/quantum/Randomness-certification/src/matlab/Probability.mat",
+    "edges": [
+      0,
+      167,
+      192,
+      256
+    ],
+    "block_widths": [
+      167,
+      25,
+      64
+    ],
+    "row_sums_raw": [
+      1.0,
+      1.0
+    ],
+    "mixed_zero_columns_raw": [],
+    "all_zero_columns_raw": [],
+    "has_mixed_zero_column_pathology": false,
+    "distribution_only_p_guess_raw": 0.484208585,
+    "distribution_only_H_min_raw": 1.0462994363949412,
+    "distribution_only_p_guess": 0.484208585,
+    "distribution_only_H_min": 1.0462994363949412,
+    "distribution_screening_rank": 5
+  },
+  "elapsed_seconds": 17.626965045928955
+}

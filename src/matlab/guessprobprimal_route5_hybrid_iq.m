@@ -602,7 +602,7 @@ function [best_result, scan] = certify_target_inputs_route5(states, probabilitie
 % 对若干 target inputs 做正式 SDP 认证，并返回最佳结果与完整扫描。
     scan = struct([]);
     raw_h = -log2(max(max(probabilities, [], 2), 1e-15));
-    best_result = [];
+    best_result = empty_target_result_route5();
 
     for idx = 1:length(target_indices)
         target_index_one_based = target_indices(idx);
@@ -614,9 +614,15 @@ function [best_result, scan] = certify_target_inputs_route5(states, probabilitie
             local_alphas(labels(target_index_one_based, 2) + 1)]);
         current.raw_H_min = raw_h(target_index_one_based);
         current.raw_p_guess = max(probabilities(target_index_one_based, :));
+        current = normalize_target_result_route5(current);
 
-        scan(idx) = current; %#ok<AGROW>
-        if isempty(best_result)
+        if isempty(scan)
+            scan = current;
+        else
+            scan(end + 1) = current; %#ok<AGROW>
+        end
+
+        if isempty(best_result.H_min)
             best_result = current;
         elseif ~isempty(current.H_min) && (isempty(best_result.H_min) || current.H_min > best_result.H_min)
             best_result = current;
@@ -632,60 +638,95 @@ function result_struct = solve_single_device_guessing_route5(states, probabiliti
     identity_matrix = eye(dimension);
     num_operator_variables = num_outputs * num_outputs;
 
-    try_set_cvx_solver_route5(preferred_solver);
-
-    if verbose_solver
-        cvx_begin
-    else
-        cvx_begin quiet
-    end
-        variable M_ops(dimension, dimension, num_operator_variables) hermitian semidefinite
-        variable p_e(num_outputs) nonnegative
-
-        rho_star = states{target_input_one_based};
-        expression objective_value
-        objective_value = 0;
-        for c_idx = 1:num_outputs
-            op_idx = operator_index_route5(c_idx, c_idx, num_outputs);
-            objective_value = objective_value + real(trace(M_ops(:, :, op_idx) * rho_star));
-        end
-        maximize(objective_value)
-        subject to
-            for s_idx = 1:num_inputs
-                rho_s = states{s_idx};
-                for c_idx = 1:num_outputs
-                    expression stats_sum
-                    stats_sum = 0;
-                    for e_idx = 1:num_outputs
-                        op_idx = operator_index_route5(c_idx, e_idx, num_outputs);
-                        stats_sum = stats_sum + real(trace(M_ops(:, :, op_idx) * rho_s));
-                    end
-                    stats_sum == probabilities(s_idx, c_idx);
-                end
-            end
-
-            for e_idx = 1:num_outputs
-                expression complete_sum(dimension, dimension)
-                complete_sum = zeros(dimension, dimension);
-                for c_idx = 1:num_outputs
-                    op_idx = operator_index_route5(c_idx, e_idx, num_outputs);
-                    complete_sum = complete_sum + M_ops(:, :, op_idx);
-                end
-                complete_sum == p_e(e_idx) * identity_matrix;
-            end
-
-            sum(p_e) == 1;
-    cvx_end
-
-    result_struct = struct();
+    result_struct = empty_target_result_route5();
     result_struct.solver = preferred_solver;
-    result_struct.status = cvx_status;
-    if is_cvx_solved_route5(cvx_status) && isfinite(cvx_optval) && cvx_optval > 0
-        result_struct.p_guess = cvx_optval;
-        result_struct.H_min = -log2(cvx_optval);
-    else
+
+    try
+        try_set_cvx_solver_route5(preferred_solver);
+
+        if verbose_solver
+            cvx_begin
+        else
+            cvx_begin quiet
+        end
+            variable M_ops(dimension, dimension, num_operator_variables) hermitian semidefinite
+            variable p_e(num_outputs) nonnegative
+
+            rho_star = states{target_input_one_based};
+            expression objective_value
+            objective_value = 0;
+            for c_idx = 1:num_outputs
+                op_idx = operator_index_route5(c_idx, c_idx, num_outputs);
+                objective_value = objective_value + real(trace(M_ops(:, :, op_idx) * rho_star));
+            end
+            maximize(objective_value)
+            subject to
+                for s_idx = 1:num_inputs
+                    rho_s = states{s_idx};
+                    for c_idx = 1:num_outputs
+                        expression stats_sum
+                        stats_sum = 0;
+                        for e_idx = 1:num_outputs
+                            op_idx = operator_index_route5(c_idx, e_idx, num_outputs);
+                            stats_sum = stats_sum + real(trace(M_ops(:, :, op_idx) * rho_s));
+                        end
+                        stats_sum == probabilities(s_idx, c_idx);
+                    end
+                end
+
+                for e_idx = 1:num_outputs
+                    expression complete_sum(dimension, dimension)
+                    complete_sum = zeros(dimension, dimension);
+                    for c_idx = 1:num_outputs
+                        op_idx = operator_index_route5(c_idx, e_idx, num_outputs);
+                        complete_sum = complete_sum + M_ops(:, :, op_idx);
+                    end
+                    complete_sum == p_e(e_idx) * identity_matrix;
+                end
+
+                sum(p_e) == 1;
+        cvx_end
+
+        result_struct.status = cvx_status;
+        if is_cvx_solved_route5(cvx_status) && isfinite(cvx_optval) && cvx_optval > 0
+            result_struct.p_guess = cvx_optval;
+            result_struct.H_min = -log2(cvx_optval);
+        else
+            result_struct.p_guess = [];
+            result_struct.H_min = [];
+        end
+    catch solve_err
+        result_struct.status = 'ERROR';
+        result_struct.error_message = solve_err.message;
         result_struct.p_guess = [];
         result_struct.H_min = [];
+    end
+end
+
+function result_struct = empty_target_result_route5()
+% 构造一个字段固定、顺序固定的 target 结果结构体。
+    result_struct = struct( ...
+        'solver', [], ...
+        'status', [], ...
+        'error_message', [], ...
+        'p_guess', [], ...
+        'H_min', [], ...
+        'target_index', [], ...
+        'target_input', [], ...
+        'target_alphas', struct([]), ...
+        'raw_H_min', [], ...
+        'raw_p_guess', []);
+end
+
+function normalized = normalize_target_result_route5(input_struct)
+% 把 target 结果规范化成固定字段顺序，避免 Matlab struct array 拼接报错。
+    normalized = empty_target_result_route5();
+    field_names = fieldnames(normalized);
+    for idx = 1:length(field_names)
+        field_name = field_names{idx};
+        if isfield(input_struct, field_name)
+            normalized.(field_name) = input_struct.(field_name);
+        end
     end
 end
 

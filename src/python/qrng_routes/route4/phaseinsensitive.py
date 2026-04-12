@@ -44,6 +44,7 @@ from __future__ import annotations
 import json
 import warnings
 from itertools import combinations, product as iterproduct
+from math import comb
 from pathlib import Path
 from typing import Any
 
@@ -225,7 +226,45 @@ def build_equal_cover_edges(num_raw_bins: int, num_outputs: int) -> np.ndarray:
     return edges
 
 
-def coarse_grain_row(probabilities_256: np.ndarray, num_outputs: int) -> tuple[np.ndarray, np.ndarray]:
+def validate_custom_edges(
+    custom_edges: list[int] | tuple[int, ...] | np.ndarray,
+    num_raw_bins: int,
+) -> np.ndarray:
+    """
+    校验用户给定的连续粗粒化边界
+    ============================
+
+    参数
+    ----
+    custom_edges : list[int] | tuple[int, ...] | np.ndarray
+        用户显式指定的边界数组，必须从0开始、以 num_raw_bins 结束，
+        且中间边界严格递增。
+
+    num_raw_bins : int
+        原始输出bin总数。
+
+    返回
+    ----
+    edges : np.ndarray
+        通过校验后的整型边界数组。
+    """
+    edges = np.asarray(custom_edges, dtype=int).reshape(-1)
+    if edges.size < 2:
+        raise ValueError("custom_edges must contain at least two endpoints.")
+    if int(edges[0]) != 0 or int(edges[-1]) != num_raw_bins:
+        raise ValueError(
+            f"custom_edges must start at 0 and end at {num_raw_bins}, got {edges.tolist()}."
+        )
+    if np.any(np.diff(edges) <= 0):
+        raise ValueError(f"custom_edges must be strictly increasing, got {edges.tolist()}.")
+    return edges
+
+
+def coarse_grain_row(
+    probabilities_256: np.ndarray,
+    num_outputs: int | None = None,
+    custom_edges: list[int] | tuple[int, ...] | np.ndarray | None = None,
+) -> tuple[np.ndarray, np.ndarray]:
     """
     将单行原始概率分布粗粒化为较少的输出区间
     =========================================
@@ -243,8 +282,11 @@ def coarse_grain_row(probabilities_256: np.ndarray, num_outputs: int) -> tuple[n
         原始概率分布（一维数组，长度通常为256）
         probabilities_256[i] = 探测器输出落在第i个bin的概率
 
-    num_outputs : int
-        粗粒化后的区间数
+    num_outputs : int | None
+        粗粒化后的区间数。当 custom_edges 为 None 时必须提供。
+
+    custom_edges : list[int] | tuple[int, ...] | np.ndarray | None
+        若提供，则直接使用这组连续边界；此时 num_outputs 会被忽略。
 
     返回
     ----
@@ -262,7 +304,13 @@ def coarse_grain_row(probabilities_256: np.ndarray, num_outputs: int) -> tuple[n
     >>> # coarse ≈ [0.25, 0.25, 0.25, 0.25]
     """
     raw = np.asarray(probabilities_256, dtype=float).reshape(-1)
-    edges = build_equal_cover_edges(raw.size, num_outputs)
+    if custom_edges is not None:
+        edges = validate_custom_edges(custom_edges, raw.size)
+    else:
+        if num_outputs is None:
+            raise ValueError("num_outputs must be provided when custom_edges is None.")
+        edges = build_equal_cover_edges(raw.size, num_outputs)
+    num_outputs = int(edges.size - 1)
     coarse = np.array([raw[edges[k] : edges[k + 1]].sum() for k in range(num_outputs)], dtype=float)
     return coarse, edges
 
@@ -423,6 +471,7 @@ def prepare_phaseinsensitive_instance(
     shift: int = DEFAULT_SHIFT,
     probability_path: str | Path | None = None,
     full_mu: list[int] | tuple[int, ...] = FULL_MU,
+    custom_edges: list[int] | tuple[int, ...] | np.ndarray | None = None,
 ) -> dict[str, Any]:
     """
     准备相位不敏感SDP/LP问题的共享数据实例
@@ -469,6 +518,9 @@ def prepare_phaseinsensitive_instance(
     full_mu : list[int] | tuple[int, ...]
         全部可用的光强设置列表
 
+    custom_edges : list[int] | tuple[int, ...] | np.ndarray | None
+        若提供，则直接使用这组连续边界做 coarse-graining，并覆盖 num_outputs。
+
     返回
     ----
     instance : dict[str, Any]
@@ -514,11 +566,23 @@ def prepare_phaseinsensitive_instance(
     if probability_table.shape[0] <= max(full_mu_list.index(mu) + shift for mu in selected_mu):
         raise ValueError("Probability table does not contain the requested shifted rows.")
 
-    raw_probabilities = np.zeros((len(selected_mu), num_outputs), dtype=float)
+    num_raw_bins = int(probability_table.shape[1])
+    validated_edges = (
+        validate_custom_edges(custom_edges, num_raw_bins) if custom_edges is not None else None
+    )
+    effective_num_outputs = (
+        int(validated_edges.size - 1) if validated_edges is not None else int(num_outputs)
+    )
+
+    raw_probabilities = np.zeros((len(selected_mu), effective_num_outputs), dtype=float)
     edges: np.ndarray | None = None
     selected_indices = [full_mu_list.index(mu) for mu in selected_mu]
     for row_idx, full_idx in enumerate(selected_indices):
-        coarse, row_edges = coarse_grain_row(probability_table[full_idx + shift, :], num_outputs)
+        coarse, row_edges = coarse_grain_row(
+            probability_table[full_idx + shift, :],
+            num_outputs=effective_num_outputs if validated_edges is None else None,
+            custom_edges=validated_edges,
+        )
         raw_probabilities[row_idx, :] = coarse
         if edges is None:
             edges = row_edges
@@ -536,11 +600,13 @@ def prepare_phaseinsensitive_instance(
     rho_diag = build_coherent_diagonals(selected_mu, cutoff)
     mixed_zero_columns = [
         int(column)
-        for column in range(num_outputs)
+        for column in range(effective_num_outputs)
         if np.any(raw_probabilities[:, column] == 0.0) and np.any(raw_probabilities[:, column] > 0.0)
     ]
     all_zero_columns = [
-        int(column) for column in range(num_outputs) if np.all(raw_probabilities[:, column] == 0.0)
+        int(column)
+        for column in range(effective_num_outputs)
+        if np.all(raw_probabilities[:, column] == 0.0)
     ]
 
     return {
@@ -548,7 +614,7 @@ def prepare_phaseinsensitive_instance(
         "q_selected": q,
         "cutoff": cutoff,
         "num_inputs": len(selected_mu),
-        "num_outputs": num_outputs,
+        "num_outputs": effective_num_outputs,
         "shift": shift,
         "probability_path": str(
             Path(probability_path) if probability_path is not None else _default_probability_path()
@@ -1172,6 +1238,7 @@ def run_route4_dual(
     preferred_solver: str | None = None,
     verbose: bool = False,
     probability_path: str | Path | None = None,
+    custom_edges: list[int] | tuple[int, ...] | np.ndarray | None = None,
 ) -> dict[str, Any]:
     """
     Route 4 对偶求解的一站式入口
@@ -1224,6 +1291,7 @@ def run_route4_dual(
         prob_floor=prob_floor,
         shift=shift,
         probability_path=probability_path,
+        custom_edges=custom_edges,
     )
     return solve_phaseinsensitive_dual(
         instance,
@@ -1243,6 +1311,7 @@ def run_route4_primal(
     verbose: bool = False,
     probability_path: str | Path | None = None,
     max_primal_variables: int | None = 3_000_000,
+    custom_edges: list[int] | tuple[int, ...] | np.ndarray | None = None,
 ) -> dict[str, Any]:
     """
     Route 4 原始求解的一站式入口
@@ -1298,6 +1367,7 @@ def run_route4_primal(
         prob_floor=prob_floor,
         shift=shift,
         probability_path=probability_path,
+        custom_edges=custom_edges,
     )
     return solve_phaseinsensitive_primal(
         instance,
@@ -1318,6 +1388,7 @@ def compare_route4_primal_dual(
     verbose: bool = False,
     probability_path: str | Path | None = None,
     max_primal_variables: int | None = 3_000_000,
+    custom_edges: list[int] | tuple[int, ...] | np.ndarray | None = None,
 ) -> dict[str, Any]:
     """
     对比对偶和原始问题的求解结果
@@ -1354,6 +1425,7 @@ def compare_route4_primal_dual(
         prob_floor=prob_floor,
         shift=shift,
         probability_path=probability_path,
+        custom_edges=custom_edges,
     )
     return {
         "route": "route4_phaseinsensitive_compare",
@@ -1384,6 +1456,7 @@ def compare_route4_primal_full(
     probability_path: str | Path | None = None,
     max_primal_variables: int | None = 3_000_000,
     max_hermitian_scalar_count: int | None = 400_000,
+    custom_edges: list[int] | tuple[int, ...] | np.ndarray | None = None,
 ) -> dict[str, Any]:
     """
     比较对角原始问题和全矩阵原始问题的结果
@@ -1423,6 +1496,7 @@ def compare_route4_primal_full(
         prob_floor=prob_floor,
         shift=shift,
         probability_path=probability_path,
+        custom_edges=custom_edges,
     )
     diagonal_primal = solve_phaseinsensitive_primal(
         instance,
@@ -1973,4 +2047,182 @@ def search_route4_triplets(
         "best_distribution_only": candidates[0] if candidates else None,
         "top_distribution_only": candidates[: min(len(candidates), max(certify_top_k, 5))],
         "certified": certified,
+    }
+
+
+def search_route4_contiguous_edges(
+    num_outputs: int,
+    selected_mu_list: list[int] | tuple[int, ...],
+    q_selected: list[float] | tuple[float, ...],
+    cutoff: int = DEFAULT_CUTOFF,
+    prob_floor: float | None = DEFAULT_PROB_FLOOR,
+    shift: int = DEFAULT_SHIFT,
+    preferred_solver: str | None = None,
+    verbose: bool = False,
+    probability_path: str | Path | None = None,
+    full_mu: list[int] | tuple[int, ...] = FULL_MU,
+    certify_top_k: int = 5,
+    record_top_k: int = 10,
+    min_bin_width: int = 1,
+) -> dict[str, Any]:
+    """
+    在固定输入窗口上搜索 contiguous coarse-graining
+    ================================================
+
+    说明
+    ----
+    该函数保持原始 route4 的物理主线不变：
+    - 输入仍取实验真实的 μ；
+    - trusted state 仍只使用 Fock 对角分布；
+    - 正式认证仍调用 route4 对偶问题。
+
+    新增的唯一自由度是把 256 个原始 bin 按任意连续边界合并，
+    先用 distribution-only 指标筛选，再对前若干候选做 formal 认证。
+    """
+    if num_outputs <= 0:
+        raise ValueError("num_outputs must be positive.")
+    if min_bin_width <= 0:
+        raise ValueError("min_bin_width must be positive.")
+
+    selected_mu = list(selected_mu_list)
+    full_mu_list = list(full_mu)
+    if len(selected_mu) == 0:
+        raise ValueError("At least one input state is required.")
+    if any(mu not in full_mu_list for mu in selected_mu):
+        raise ValueError(f"selected_mu_list must be a subset of {full_mu_list}.")
+
+    q = np.asarray(q_selected, dtype=float).reshape(-1)
+    if q.size != len(selected_mu):
+        raise ValueError("q_selected must have the same length as selected_mu_list.")
+    if np.any(q < 0):
+        raise ValueError("q_selected must be non-negative.")
+    if float(q.sum()) <= 0.0:
+        raise ValueError("q_selected must sum to a positive value.")
+    q = q / q.sum()
+
+    probability_table = load_probability_data(probability_path)
+    selected_indices = [full_mu_list.index(mu) + shift for mu in selected_mu]
+    if probability_table.shape[0] <= max(selected_indices):
+        raise ValueError("Probability table does not contain the requested shifted rows.")
+    raw_rows = np.asarray(probability_table[selected_indices, :], dtype=float)
+    num_raw_bins = int(raw_rows.shape[1])
+    if num_outputs > num_raw_bins:
+        raise ValueError(
+            f"num_outputs={num_outputs} exceeds the available raw bins ({num_raw_bins})."
+        )
+
+    prefix = np.concatenate(
+        [np.zeros((raw_rows.shape[0], 1), dtype=float), np.cumsum(raw_rows, axis=1)],
+        axis=1,
+    )
+    total_candidates = int(comb(num_raw_bins - 1, num_outputs - 1))
+    keep_top_k = max(int(certify_top_k), int(record_top_k), 1)
+    ranked_candidates: list[dict[str, Any]] = []
+    evaluated_candidates = 0
+
+    def maybe_keep_candidate(candidate: dict[str, Any]) -> None:
+        if len(ranked_candidates) < keep_top_k:
+            ranked_candidates.append(candidate)
+            return
+        worst_index = max(
+            range(len(ranked_candidates)),
+            key=lambda idx: ranked_candidates[idx]["distribution_only_p_guess"],
+        )
+        if (
+            candidate["distribution_only_p_guess"]
+            < ranked_candidates[worst_index]["distribution_only_p_guess"]
+        ):
+            ranked_candidates[worst_index] = candidate
+
+    boundary_iter = [tuple()] if num_outputs == 1 else combinations(range(1, num_raw_bins), num_outputs - 1)
+    for boundaries in boundary_iter:
+        edges = np.array((0, *boundaries, num_raw_bins), dtype=int)
+        block_widths = np.diff(edges)
+        if int(block_widths.min()) < min_bin_width:
+            continue
+        evaluated_candidates += 1
+
+        coarse_raw = prefix[:, edges[1:]] - prefix[:, edges[:-1]]
+        raw_p_guess = float(distribution_only_guessing_probability(coarse_raw, q))
+
+        regularized_probabilities = coarse_raw.copy()
+        regularized_entries = 0
+        if prob_floor is not None and prob_floor > 0:
+            regularized_entries = int((regularized_probabilities == 0.0).sum())
+            regularized_probabilities = np.maximum(regularized_probabilities, prob_floor)
+            regularized_probabilities = regularized_probabilities / regularized_probabilities.sum(
+                axis=1, keepdims=True
+            )
+        p_guess = float(distribution_only_guessing_probability(regularized_probabilities, q))
+
+        maybe_keep_candidate(
+            {
+                "edges": edges.tolist(),
+                "block_widths": block_widths.tolist(),
+                "distribution_only_p_guess_raw": raw_p_guess,
+                "distribution_only_H_min_raw": float(-np.log2(raw_p_guess)),
+                "distribution_only_p_guess": p_guess,
+                "distribution_only_H_min": float(-np.log2(p_guess)),
+                "regularized_entries": regularized_entries,
+                "mixed_zero_columns_raw": [
+                    int(column)
+                    for column in range(num_outputs)
+                    if np.any(coarse_raw[:, column] == 0.0)
+                    and np.any(coarse_raw[:, column] > 0.0)
+                ],
+                "all_zero_columns_raw": [
+                    int(column)
+                    for column in range(num_outputs)
+                    if np.all(coarse_raw[:, column] == 0.0)
+                ],
+            }
+        )
+
+    ranked_candidates.sort(key=lambda item: item["distribution_only_p_guess"])
+
+    certified: list[dict[str, Any]] = []
+    for rank, candidate in enumerate(ranked_candidates[: max(certify_top_k, 0)], start=1):
+        result = run_route4_dual(
+            num_outputs=num_outputs,
+            selected_mu_list=selected_mu,
+            q_selected=q.tolist(),
+            cutoff=cutoff,
+            prob_floor=prob_floor,
+            shift=shift,
+            preferred_solver=preferred_solver,
+            verbose=verbose,
+            probability_path=probability_path,
+            custom_edges=candidate["edges"],
+        )
+        result["distribution_screening_rank"] = rank
+        certified.append(result)
+
+    solved_certified = [
+        item
+        for item in certified
+        if item.get("status") in ("optimal", "optimal_inaccurate") and item.get("H_min") is not None
+    ]
+    best_certified = max(solved_certified, key=lambda item: float(item["H_min"]), default=None)
+
+    return {
+        "route": "route4_phaseinsensitive_contiguous_search",
+        "selected_mu_list": selected_mu,
+        "q_selected": q.tolist(),
+        "num_outputs": int(num_outputs),
+        "cutoff": int(cutoff),
+        "prob_floor": None if prob_floor is None else float(prob_floor),
+        "shift": int(shift),
+        "probability_path": str(
+            Path(probability_path) if probability_path is not None else _default_probability_path()
+        ),
+        "num_raw_bins": num_raw_bins,
+        "total_candidates": total_candidates,
+        "evaluated_candidates": evaluated_candidates,
+        "min_bin_width": int(min_bin_width),
+        "certify_top_k": int(certify_top_k),
+        "record_top_k": int(record_top_k),
+        "best_distribution_only": ranked_candidates[0] if ranked_candidates else None,
+        "top_distribution_only": ranked_candidates,
+        "certified": certified,
+        "best_certified": best_certified,
     }
