@@ -1,0 +1,419 @@
+{
+  "route": "route5_fixed_partition_radius_search",
+  "cutoff": 4,
+  "phase_values": [
+    0.0,
+    0.7853981633974483,
+    1.5707963267948966,
+    2.356194490192345,
+    3.141592653589793,
+    3.9269908169872414,
+    4.71238898038469,
+    5.497787143782138
+  ],
+  "num_x_bins": 6,
+  "num_p_bins": 2,
+  "quadrature_range": 1.8,
+  "boundary_gamma": 1.0,
+  "num_quadrature_nodes": 12,
+  "max_inputs": 3,
+  "solver": "MOSEK",
+  "results": [
+    {
+      "candidate_key": "r0.0000_0.9000_1.2750",
+      "radii": [
+        0.0,
+        0.9,
+        1.275
+      ],
+      "output_json": "output/qrng_routes/route5_fixed_partition_radius_search_v1/r0.0000_0.9000_1.2750.json",
+      "H_min": 2.153766799097433,
+      "p_guess": 0.224725103855485,
+      "status": "optimal",
+      "solver": "MOSEK",
+      "target_input": [
+        11,
+        3
+      ],
+      "raw_best_H_min": 3.111712745279317,
+      "raw_best_target": [
+        11,
+        3
+      ],
+      "num_inputs_certified": 3,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "num_local_states": 17,
+      "local_rank": 4,
+      "operator_span_rank": 169
+    },
+    {
+      "candidate_key": "r0.0000_0.9000_1.2500",
+      "radii": [
+        0.0,
+        0.9,
+        1.25
+      ],
+      "output_json": "output/qrng_routes/route5_fixed_partition_radius_search_v1/r0.0000_0.9000_1.2500.json",
+      "H_min": 2.1495134691986792,
+      "p_guess": 0.22538861231912297,
+      "status": "optimal",
+      "solver": "MOSEK",
+      "target_input": [
+        15,
+        7
+      ],
+      "raw_best_H_min": 3.108135921076669,
+      "raw_best_target": [
+        11,
+        3
+      ],
+      "num_inputs_certified": 3,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "num_local_states": 17,
+      "local_rank": 4,
+      "operator_span_rank": 169
+    },
+    {
+      "candidate_key": "r0.0000_0.8750_1.3000",
+      "radii": [
+        0.0,
+        0.875,
+        1.3
+      ],
+      "output_json": "output/qrng_routes/route5_fixed_partition_radius_search_v1/r0.0000_0.8750_1.3000.json",
+      "H_min": 2.146709259126236,
+      "p_guess": 0.2258271330403259,
+      "status": "optimal",
+      "solver": "MOSEK",
+      "target_input": [
+        11,
+        3
+      ],
+      "raw_best_H_min": 3.0583543484907527,
+      "raw_best_target": [
+        11,
+        3
+      ],
+      "num_inputs_certified": 3,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "num_local_states": 17,
+      "local_rank": 4,
+      "operator_span_rank": 169
+    },
+    {
+      "candidate_key": "r0.0000_0.8750_1.2750",
+      "radii": [
+        0.0,
+        0.875,
+        1.275
+      ],
+      "output_json": "output/qrng_routes/route5_fixed_partition_radius_search_v1/r0.0000_0.8750_1.2750.json",
+      "H_min": 2.146084268553878,
+      "p_guess": 0.22592498490864985,
+      "status": "optimal",
+      "solver": "MOSEK",
+      "target_input": [
+        15,
+        7
+      ],
+      "raw_best_H_min": 3.053488631107438,
+      "raw_best_target": [
+        11,
+        3
+      ],
+      "num_inputs_certified": 3,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "num_local_states": 17,
+      "local_rank": 4,
+      "operator_span_rank": 169
+    },
+    {
+      "candidate_key": "r0.0000_0.8750_1.2500",
+      "radii": [
+        0.0,
+        0.875,
+        1.25
+      ],
+      "output_json": "output/qrng_routes/route5_fixed_partition_radius_search_v1/r0.0000_0.8750_1.2500.json",
+      "H_min": 2.1365443274050686,
+      "p_guess": 0.22742388302574296,
+      "status": "optimal",
+      "solver": "MOSEK",
+      "target_input": [
+        15,
+        7
+      ],
+      "raw_best_H_min": 3.0495085366432986,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "num_inputs_certified": 3,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "num_local_states": 17,
+      "local_rank": 4,
+      "operator_span_rank": 169
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.2750",
+      "radii": [
+        0.0,
+        0.85,
+        1.275
+      ],
+      "output_json": "output/qrng_routes/route5_fixed_partition_radius_search_v1/r0.0000_0.8500_1.2750.json",
+      "H_min": 2.1349228938770364,
+      "p_guess": 0.22767962661349567,
+      "status": "optimal",
+      "solver": "MOSEK",
+      "target_input": [
+        15,
+        7
+      ],
+      "raw_best_H_min": 2.9965374331774703,
+      "raw_best_target": [
+        11,
+        3
+      ],
+      "num_inputs_certified": 3,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "num_local_states": 17,
+      "local_rank": 4,
+      "operator_span_rank": 169
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.3000",
+      "radii": [
+        0.0,
+        0.85,
+        1.3
+      ],
+      "output_json": "output/qrng_routes/route5_fixed_partition_radius_search_v1/r0.0000_0.8500_1.3000.json",
+      "H_min": 2.1318479656242024,
+      "p_guess": 0.22816541544217203,
+      "status": "optimal",
+      "solver": "MOSEK",
+      "target_input": [
+        15,
+        7
+      ],
+      "raw_best_H_min": 3.0017788431197774,
+      "raw_best_target": [
+        11,
+        3
+      ],
+      "num_inputs_certified": 3,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "num_local_states": 17,
+      "local_rank": 4,
+      "operator_span_rank": 169
+    },
+    {
+      "candidate_key": "r0.0000_0.8500_1.2500",
+      "radii": [
+        0.0,
+        0.85,
+        1.25
+      ],
+      "output_json": "output/qrng_routes/route5_fixed_partition_radius_search_v1/r0.0000_0.8500_1.2500.json",
+      "H_min": 2.1163917150350056,
+      "p_guess": 0.23062299678851195,
+      "status": "optimal",
+      "solver": "MOSEK",
+      "target_input": [
+        15,
+        7
+      ],
+      "raw_best_H_min": 2.992180490733788,
+      "raw_best_target": [
+        11,
+        3
+      ],
+      "num_inputs_certified": 3,
+      "num_x_bins": 6,
+      "num_p_bins": 2,
+      "quadrature_range": 1.8,
+      "boundary_gamma": 1.0,
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "num_local_states": 17,
+      "local_rank": 4,
+      "operator_span_rank": 169
+    }
+  ],
+  "best_result": {
+    "candidate_key": "r0.0000_0.9000_1.2750",
+    "radii": [
+      0.0,
+      0.9,
+      1.275
+    ],
+    "output_json": "output/qrng_routes/route5_fixed_partition_radius_search_v1/r0.0000_0.9000_1.2750.json",
+    "H_min": 2.153766799097433,
+    "p_guess": 0.224725103855485,
+    "status": "optimal",
+    "solver": "MOSEK",
+    "target_input": [
+      11,
+      3
+    ],
+    "raw_best_H_min": 3.111712745279317,
+    "raw_best_target": [
+      11,
+      3
+    ],
+    "num_inputs_certified": 3,
+    "num_x_bins": 6,
+    "num_p_bins": 2,
+    "quadrature_range": 1.8,
+    "boundary_gamma": 1.0,
+    "x_bounds": [
+      -Infinity,
+      -1.2000000000000002,
+      -0.6000000000000001,
+      0.0,
+      0.5999999999999999,
+      1.1999999999999997,
+      Infinity
+    ],
+    "p_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ],
+    "num_local_states": 17,
+    "local_rank": 4,
+    "operator_span_rank": 169
+  }
+}
