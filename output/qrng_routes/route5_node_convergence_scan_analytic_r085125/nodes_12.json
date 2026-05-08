@@ -1,0 +1,239 @@
+{
+  "num_quadrature_nodes": 12,
+  "effective_num_quadrature_nodes": null,
+  "probability_elapsed_seconds": 0.03386762500000007,
+  "formal_elapsed_seconds": 3191.768685583,
+  "raw_best_H_min": 2.727723323081048,
+  "raw_best_target_index": 0,
+  "raw_best_target": [
+    0,
+    0
+  ],
+  "raw_top_targets": [
+    {
+      "target_index": 0,
+      "target_input": [
+        0,
+        0
+      ],
+      "raw_H_min": 2.727723323081048
+    },
+    {
+      "target_index": 214,
+      "target_input": [
+        12,
+        10
+      ],
+      "raw_H_min": 2.727723323081048
+    },
+    {
+      "target_index": 198,
+      "target_input": [
+        11,
+        11
+      ],
+      "raw_H_min": 2.727723323081048
+    },
+    {
+      "target_index": 38,
+      "target_input": [
+        2,
+        4
+      ],
+      "raw_H_min": 2.727723323081048
+    },
+    {
+      "target_index": 182,
+      "target_input": [
+        10,
+        12
+      ],
+      "raw_H_min": 2.727723323081048
+    },
+    {
+      "target_index": 86,
+      "target_input": [
+        5,
+        1
+      ],
+      "raw_H_min": 2.727723323081048
+    },
+    {
+      "target_index": 230,
+      "target_input": [
+        13,
+        9
+      ],
+      "raw_H_min": 2.727723323081048
+    },
+    {
+      "target_index": 166,
+      "target_input": [
+        9,
+        13
+      ],
+      "raw_H_min": 2.727723323081048
+    }
+  ],
+  "row_sum_min": 0.9999999999999997,
+  "row_sum_max": 1.0000000000000002,
+  "probability_min": 4.178776447094634e-08,
+  "probability_max": 0.8109083106317858,
+  "best_target_index": 0,
+  "best_target_input": [
+    0,
+    0
+  ],
+  "status": "infeasible",
+  "solver": "MOSEK",
+  "p_guess": -Infinity,
+  "H_min": null,
+  "num_inputs_certified": 3,
+  "target_scan": [
+    {
+      "solver": "MOSEK",
+      "status": "infeasible",
+      "p_guess": -Infinity,
+      "H_min": null,
+      "target_index": 0,
+      "target_input": [
+        0,
+        0
+      ],
+      "target_alphas": [
+        {
+          "real": 0.0,
+          "imag": 0.0,
+          "abs": 0.0,
+          "phase": 0.0
+        },
+        {
+          "real": 0.0,
+          "imag": 0.0,
+          "abs": 0.0,
+          "phase": 0.0
+        }
+      ],
+      "raw_H_min": 2.727723323081048,
+      "raw_p_guess": 0.15096402271198148
+    },
+    {
+      "solver": "MOSEK",
+      "status": "infeasible",
+      "p_guess": -Infinity,
+      "H_min": null,
+      "target_index": 214,
+      "target_input": [
+        12,
+        10
+      ],
+      "target_alphas": [
+        {
+          "real": -0.8838834764831843,
+          "imag": 0.8838834764831844,
+          "abs": 1.25,
+          "phase": 2.356194490192345
+        },
+        {
+          "real": 0.8838834764831844,
+          "imag": 0.8838834764831843,
+          "abs": 1.25,
+          "phase": 0.7853981633974483
+        }
+      ],
+      "raw_H_min": 2.727723323081048,
+      "raw_p_guess": 0.1509640227119815
+    },
+    {
+      "solver": "MOSEK",
+      "status": "infeasible",
+      "p_guess": -Infinity,
+      "H_min": null,
+      "target_index": 198,
+      "target_input": [
+        11,
+        11
+      ],
+      "target_alphas": [
+        {
+          "real": 7.654042494670958e-17,
+          "imag": 1.25,
+          "abs": 1.25,
+          "phase": 1.5707963267948966
+        },
+        {
+          "real": 7.654042494670958e-17,
+          "imag": 1.25,
+          "abs": 1.25,
+          "phase": 1.5707963267948966
+        }
+      ],
+      "raw_H_min": 2.727723323081048,
+      "raw_p_guess": 0.1509640227119815
+    }
+  ],
+  "output_labels": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      1
+    ]
+  ],
+  "x_bounds": [
+    -Infinity,
+    -1.2000000000000002,
+    -0.6000000000000001,
+    0.0,
+    0.5999999999999999,
+    1.1999999999999997,
+    Infinity
+  ],
+  "p_bounds": [
+    -Infinity,
+    0.0,
+    Infinity
+  ]
+}

@@ -1,0 +1,528 @@
+{
+  "route": "route5_num_quadrature_nodes_convergence_scan",
+  "cutoff": 4,
+  "radius_values": [
+    0.0,
+    0.85,
+    1.25
+  ],
+  "phase_values": [
+    0.0,
+    0.7853981633974483,
+    1.5707963267948966,
+    2.356194490192345,
+    3.141592653589793,
+    3.9269908169872414,
+    4.71238898038469,
+    5.497787143782138
+  ],
+  "num_local_states": 17,
+  "num_inputs": 289,
+  "num_x_bins": 6,
+  "num_p_bins": 2,
+  "num_outputs": 12,
+  "quadrature_range": 1.8,
+  "boundary_gamma": 1.0,
+  "x_bounds": [
+    -Infinity,
+    -1.2000000000000002,
+    -0.6000000000000001,
+    0.0,
+    0.5999999999999999,
+    1.1999999999999997,
+    Infinity
+  ],
+  "p_bounds": [
+    -Infinity,
+    0.0,
+    Infinity
+  ],
+  "max_inputs": 3,
+  "top_raw_k": 8,
+  "local_rank": 4,
+  "local_operator_span_rank": 13,
+  "local_operator_space_dim": 16,
+  "joint_dim": 16,
+  "operator_span_rank": 169,
+  "operator_space_dim": 256,
+  "results": [
+    {
+      "num_quadrature_nodes": 20,
+      "probability_elapsed_seconds": 0.19320408299999947,
+      "formal_elapsed_seconds": 2930.0295145,
+      "raw_best_H_min": 3.34342813774649,
+      "raw_best_target_index": 262,
+      "raw_best_target": [
+        15,
+        7
+      ],
+      "raw_top_targets": [
+        {
+          "target_index": 262,
+          "target_input": [
+            15,
+            7
+          ],
+          "raw_H_min": 3.34342813774649
+        },
+        {
+          "target_index": 190,
+          "target_input": [
+            11,
+            3
+          ],
+          "raw_H_min": 3.34342813774649
+        },
+        {
+          "target_index": 126,
+          "target_input": [
+            7,
+            7
+          ],
+          "raw_H_min": 3.2066350892163373
+        },
+        {
+          "target_index": 54,
+          "target_input": [
+            3,
+            3
+          ],
+          "raw_H_min": 3.2066350892163364
+        },
+        {
+          "target_index": 0,
+          "target_input": [
+            0,
+            0
+          ],
+          "raw_H_min": 2.939022597481001
+        },
+        {
+          "target_index": 142,
+          "target_input": [
+            8,
+            6
+          ],
+          "raw_H_min": 2.927120454260196
+        },
+        {
+          "target_index": 70,
+          "target_input": [
+            4,
+            2
+          ],
+          "raw_H_min": 2.927120454260195
+        },
+        {
+          "target_index": 110,
+          "target_input": [
+            6,
+            8
+          ],
+          "raw_H_min": 2.9271204542601943
+        }
+      ],
+      "row_sum_min": 0.9999999999999994,
+      "row_sum_max": 1.0000000000000018,
+      "probability_min": 0.000534182478619681,
+      "probability_max": 0.7046470769540286,
+      "best_target_index": 262,
+      "best_target_input": [
+        15,
+        7
+      ],
+      "status": "optimal",
+      "solver": "MOSEK",
+      "p_guess": 0.2912055454304635,
+      "H_min": 1.7798902658313394,
+      "num_inputs_certified": 3,
+      "target_scan": [
+        {
+          "solver": "MOSEK",
+          "status": "optimal",
+          "p_guess": 0.2912055454304635,
+          "H_min": 1.7798902658313394,
+          "target_index": 262,
+          "target_input": [
+            15,
+            7
+          ],
+          "target_alphas": [
+            {
+              "real": -2.296212748401287e-16,
+              "imag": -1.25,
+              "abs": 1.25,
+              "phase": -1.5707963267948968
+            },
+            {
+              "real": -1.5614246689128752e-16,
+              "imag": -0.85,
+              "abs": 0.85,
+              "phase": -1.5707963267948968
+            }
+          ],
+          "raw_H_min": 3.34342813774649,
+          "raw_p_guess": 0.0985207801480959
+        },
+        {
+          "solver": "MOSEK",
+          "status": "optimal",
+          "p_guess": 0.2912055617018167,
+          "H_min": 1.7798901852195506,
+          "target_index": 190,
+          "target_input": [
+            11,
+            3
+          ],
+          "target_alphas": [
+            {
+              "real": 7.654042494670958e-17,
+              "imag": 1.25,
+              "abs": 1.25,
+              "phase": 1.5707963267948966
+            },
+            {
+              "real": 5.204748896376251e-17,
+              "imag": 0.85,
+              "abs": 0.85,
+              "phase": 1.5707963267948966
+            }
+          ],
+          "raw_H_min": 3.34342813774649,
+          "raw_p_guess": 0.0985207801480959
+        },
+        {
+          "solver": "MOSEK",
+          "status": "optimal",
+          "p_guess": 0.3183443722057831,
+          "H_min": 1.6513398348671968,
+          "target_index": 126,
+          "target_input": [
+            7,
+            7
+          ],
+          "target_alphas": [
+            {
+              "real": -1.5614246689128752e-16,
+              "imag": -0.85,
+              "abs": 0.85,
+              "phase": -1.5707963267948968
+            },
+            {
+              "real": -1.5614246689128752e-16,
+              "imag": -0.85,
+              "abs": 0.85,
+              "phase": -1.5707963267948968
+            }
+          ],
+          "raw_H_min": 3.2066350892163373,
+          "raw_p_guess": 0.10831950158218673
+        }
+      ],
+      "output_labels": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "x_bounds": [
+        -Infinity,
+        -1.2000000000000002,
+        -0.6000000000000001,
+        0.0,
+        0.5999999999999999,
+        1.1999999999999997,
+        Infinity
+      ],
+      "p_bounds": [
+        -Infinity,
+        0.0,
+        Infinity
+      ],
+      "output_json": "output/qrng_routes/route5_node_convergence_scan_probe20/nodes_20.json"
+    }
+  ],
+  "best_formal_result": {
+    "num_quadrature_nodes": 20,
+    "probability_elapsed_seconds": 0.19320408299999947,
+    "formal_elapsed_seconds": 2930.0295145,
+    "raw_best_H_min": 3.34342813774649,
+    "raw_best_target_index": 262,
+    "raw_best_target": [
+      15,
+      7
+    ],
+    "raw_top_targets": [
+      {
+        "target_index": 262,
+        "target_input": [
+          15,
+          7
+        ],
+        "raw_H_min": 3.34342813774649
+      },
+      {
+        "target_index": 190,
+        "target_input": [
+          11,
+          3
+        ],
+        "raw_H_min": 3.34342813774649
+      },
+      {
+        "target_index": 126,
+        "target_input": [
+          7,
+          7
+        ],
+        "raw_H_min": 3.2066350892163373
+      },
+      {
+        "target_index": 54,
+        "target_input": [
+          3,
+          3
+        ],
+        "raw_H_min": 3.2066350892163364
+      },
+      {
+        "target_index": 0,
+        "target_input": [
+          0,
+          0
+        ],
+        "raw_H_min": 2.939022597481001
+      },
+      {
+        "target_index": 142,
+        "target_input": [
+          8,
+          6
+        ],
+        "raw_H_min": 2.927120454260196
+      },
+      {
+        "target_index": 70,
+        "target_input": [
+          4,
+          2
+        ],
+        "raw_H_min": 2.927120454260195
+      },
+      {
+        "target_index": 110,
+        "target_input": [
+          6,
+          8
+        ],
+        "raw_H_min": 2.9271204542601943
+      }
+    ],
+    "row_sum_min": 0.9999999999999994,
+    "row_sum_max": 1.0000000000000018,
+    "probability_min": 0.000534182478619681,
+    "probability_max": 0.7046470769540286,
+    "best_target_index": 262,
+    "best_target_input": [
+      15,
+      7
+    ],
+    "status": "optimal",
+    "solver": "MOSEK",
+    "p_guess": 0.2912055454304635,
+    "H_min": 1.7798902658313394,
+    "num_inputs_certified": 3,
+    "target_scan": [
+      {
+        "solver": "MOSEK",
+        "status": "optimal",
+        "p_guess": 0.2912055454304635,
+        "H_min": 1.7798902658313394,
+        "target_index": 262,
+        "target_input": [
+          15,
+          7
+        ],
+        "target_alphas": [
+          {
+            "real": -2.296212748401287e-16,
+            "imag": -1.25,
+            "abs": 1.25,
+            "phase": -1.5707963267948968
+          },
+          {
+            "real": -1.5614246689128752e-16,
+            "imag": -0.85,
+            "abs": 0.85,
+            "phase": -1.5707963267948968
+          }
+        ],
+        "raw_H_min": 3.34342813774649,
+        "raw_p_guess": 0.0985207801480959
+      },
+      {
+        "solver": "MOSEK",
+        "status": "optimal",
+        "p_guess": 0.2912055617018167,
+        "H_min": 1.7798901852195506,
+        "target_index": 190,
+        "target_input": [
+          11,
+          3
+        ],
+        "target_alphas": [
+          {
+            "real": 7.654042494670958e-17,
+            "imag": 1.25,
+            "abs": 1.25,
+            "phase": 1.5707963267948966
+          },
+          {
+            "real": 5.204748896376251e-17,
+            "imag": 0.85,
+            "abs": 0.85,
+            "phase": 1.5707963267948966
+          }
+        ],
+        "raw_H_min": 3.34342813774649,
+        "raw_p_guess": 0.0985207801480959
+      },
+      {
+        "solver": "MOSEK",
+        "status": "optimal",
+        "p_guess": 0.3183443722057831,
+        "H_min": 1.6513398348671968,
+        "target_index": 126,
+        "target_input": [
+          7,
+          7
+        ],
+        "target_alphas": [
+          {
+            "real": -1.5614246689128752e-16,
+            "imag": -0.85,
+            "abs": 0.85,
+            "phase": -1.5707963267948968
+          },
+          {
+            "real": -1.5614246689128752e-16,
+            "imag": -0.85,
+            "abs": 0.85,
+            "phase": -1.5707963267948968
+          }
+        ],
+        "raw_H_min": 3.2066350892163373,
+        "raw_p_guess": 0.10831950158218673
+      }
+    ],
+    "output_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ]
+    ],
+    "x_bounds": [
+      -Infinity,
+      -1.2000000000000002,
+      -0.6000000000000001,
+      0.0,
+      0.5999999999999999,
+      1.1999999999999997,
+      Infinity
+    ],
+    "p_bounds": [
+      -Infinity,
+      0.0,
+      Infinity
+    ],
+    "output_json": "output/qrng_routes/route5_node_convergence_scan_probe20/nodes_20.json"
+  }
+}

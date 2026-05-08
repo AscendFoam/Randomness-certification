@@ -1,0 +1,284 @@
+{
+  "route": "route5_analytic_backend_diagnostics",
+  "radius_values": [
+    0.0,
+    0.85,
+    1.25
+  ],
+  "phase_values": [
+    0.0,
+    0.7853981633974483,
+    1.5707963267948966,
+    2.356194490192345,
+    3.141592653589793,
+    3.9269908169872414,
+    4.71238898038469,
+    5.497787143782138
+  ],
+  "num_x_bins": 6,
+  "num_p_bins": 2,
+  "quadrature_range": 1.8,
+  "boundary_gamma": 1.0,
+  "num_trace_nodes": 400,
+  "cutoff_diagnostics": [
+    {
+      "cutoff": 4,
+      "num_local_states": 17,
+      "num_inputs": 289,
+      "num_outputs": 12,
+      "local_rank": 4,
+      "joint_dim": 16,
+      "local_operator_span_rank": 13,
+      "trace_vs_analytic": {
+        "max_abs_error": 0.36061793373771667,
+        "mean_abs_error": 0.025695318305496626,
+        "max_tv_distance": 0.3606179337377173,
+        "mean_tv_distance": 0.15417190983297976
+      },
+      "analytic_linear_span": {
+        "state_matrix_rank": 169,
+        "max_abs_fit_residual": 0.141267348111713,
+        "mean_abs_fit_residual": 0.13218460671003399,
+        "max_rel_fit_residual": 0.06670408464627257,
+        "mean_rel_fit_residual": 0.05601701744231543
+      },
+      "analytic_plain_povm_feasibility": {
+        "solver": "MOSEK",
+        "status": "infeasible",
+        "elapsed_seconds": 41.731541750000005,
+        "error": null
+      }
+    },
+    {
+      "cutoff": 5,
+      "num_local_states": 17,
+      "num_inputs": 289,
+      "num_outputs": 12,
+      "local_rank": 5,
+      "joint_dim": 25,
+      "local_operator_span_rank": 16,
+      "trace_vs_analytic": {
+        "max_abs_error": 0.19397764971350406,
+        "mean_abs_error": 0.014665492207700746,
+        "max_tv_distance": 0.26694448308638047,
+        "mean_tv_distance": 0.08799295324620447
+      },
+      "analytic_linear_span": {
+        "state_matrix_rank": 256,
+        "max_abs_fit_residual": 0.020933424888259035,
+        "mean_abs_fit_residual": 0.019505216192590845,
+        "max_rel_fit_residual": 0.009602331845272228,
+        "mean_rel_fit_residual": 0.00825318981360572
+      },
+      "analytic_plain_povm_feasibility": {
+        "solver": "MOSEK",
+        "status": "infeasible",
+        "elapsed_seconds": 45.08002133400004,
+        "error": null
+      }
+    },
+    {
+      "cutoff": 6,
+      "num_local_states": 17,
+      "num_inputs": 289,
+      "num_outputs": 12,
+      "local_rank": 6,
+      "joint_dim": 36,
+      "local_operator_span_rank": 17,
+      "trace_vs_analytic": {
+        "max_abs_error": 0.11988092695581865,
+        "mean_abs_error": 0.009023778842921337,
+        "max_tv_distance": 0.18902624651427888,
+        "mean_tv_distance": 0.05414267305752802
+      },
+      "analytic_linear_span": {
+        "state_matrix_rank": 289,
+        "max_abs_fit_residual": 1.7362024235057944e-14,
+        "mean_abs_fit_residual": 9.942434889518568e-15,
+        "max_rel_fit_residual": 5.504556902664853e-15,
+        "mean_rel_fit_residual": 3.892648958660212e-15
+      },
+      "analytic_plain_povm_feasibility": {
+        "solver": "MOSEK",
+        "status": "infeasible",
+        "elapsed_seconds": 84.61134675,
+        "error": null
+      }
+    },
+    {
+      "cutoff": 8,
+      "num_local_states": 17,
+      "num_inputs": 289,
+      "num_outputs": 12,
+      "local_rank": 8,
+      "joint_dim": 64,
+      "local_operator_span_rank": 17,
+      "trace_vs_analytic": {
+        "max_abs_error": 0.03470632884274216,
+        "mean_abs_error": 0.005899045062409639,
+        "max_tv_distance": 0.08704381173782172,
+        "mean_tv_distance": 0.03539427037445784
+      },
+      "analytic_linear_span": {
+        "state_matrix_rank": 289,
+        "max_abs_fit_residual": 2.132768935323619e-14,
+        "mean_abs_fit_residual": 1.233764872687755e-14,
+        "max_rel_fit_residual": 6.761854381598618e-15,
+        "mean_rel_fit_residual": 4.90943309913446e-15
+      }
+    },
+    {
+      "cutoff": 10,
+      "num_local_states": 17,
+      "num_inputs": 289,
+      "num_outputs": 12,
+      "local_rank": 10,
+      "joint_dim": 100,
+      "local_operator_span_rank": 17,
+      "trace_vs_analytic": {
+        "max_abs_error": 0.0340813989985036,
+        "mean_abs_error": 0.005642705295733545,
+        "max_tv_distance": 0.04947857072025883,
+        "mean_tv_distance": 0.03385623177440127
+      },
+      "analytic_linear_span": {
+        "state_matrix_rank": 289,
+        "max_abs_fit_residual": 2.4448436205797004e-14,
+        "mean_abs_fit_residual": 1.5082795144634475e-14,
+        "max_rel_fit_residual": 7.751274071155679e-15,
+        "mean_rel_fit_residual": 6.065877727182908e-15
+      }
+    },
+    {
+      "cutoff": 12,
+      "num_local_states": 17,
+      "num_inputs": 289,
+      "num_outputs": 12,
+      "local_rank": 12,
+      "joint_dim": 144,
+      "local_operator_span_rank": 17,
+      "trace_vs_analytic": {
+        "max_abs_error": 0.03422963740667184,
+        "mean_abs_error": 0.005636607048883736,
+        "max_tv_distance": 0.043571534423186745,
+        "mean_tv_distance": 0.03381964229330241
+      },
+      "analytic_linear_span": {
+        "state_matrix_rank": 289,
+        "max_abs_fit_residual": 4.3010757252858856e-14,
+        "mean_abs_fit_residual": 2.878890482325971e-14,
+        "max_rel_fit_residual": 1.363638003954649e-14,
+        "mean_rel_fit_residual": 1.1756712693836098e-14
+      }
+    },
+    {
+      "cutoff": 16,
+      "num_local_states": 17,
+      "num_inputs": 289,
+      "num_outputs": 12,
+      "local_rank": 16,
+      "joint_dim": 256,
+      "local_operator_span_rank": 17,
+      "trace_vs_analytic": {
+        "max_abs_error": 0.0342480364683973,
+        "mean_abs_error": 0.005636724519993994,
+        "max_tv_distance": 0.04187042436453914,
+        "mean_tv_distance": 0.03382034711996396
+      },
+      "analytic_linear_span": {
+        "state_matrix_rank": 289,
+        "max_abs_fit_residual": 9.924057714401178e-14,
+        "mean_abs_fit_residual": 7.209031769165989e-14,
+        "max_rel_fit_residual": 3.1463808398530934e-14,
+        "mean_rel_fit_residual": 2.932288986269861e-14
+      }
+    }
+  ],
+  "tail_summary": [
+    {
+      "alpha_abs": 0.85,
+      "mu": 0.7224999999999999,
+      "cutoff": 4,
+      "poisson_tail_probability": 0.006416050354848157
+    },
+    {
+      "alpha_abs": 0.85,
+      "mu": 0.7224999999999999,
+      "cutoff": 5,
+      "poisson_tail_probability": 0.0009033752095827241
+    },
+    {
+      "alpha_abs": 0.85,
+      "mu": 0.7224999999999999,
+      "cutoff": 6,
+      "poisson_tail_probability": 0.00010679365109189654
+    },
+    {
+      "alpha_abs": 0.85,
+      "mu": 0.7224999999999999,
+      "cutoff": 8,
+      "poisson_tail_probability": 9.714657529524828e-07
+    },
+    {
+      "alpha_abs": 0.85,
+      "mu": 0.7224999999999999,
+      "cutoff": 10,
+      "poisson_tail_probability": 5.5484026262320185e-09
+    },
+    {
+      "alpha_abs": 0.85,
+      "mu": 0.7224999999999999,
+      "cutoff": 12,
+      "poisson_tail_probability": 2.17105222688474e-11
+    },
+    {
+      "alpha_abs": 0.85,
+      "mu": 0.7224999999999999,
+      "cutoff": 16,
+      "poisson_tail_probability": 1.1102230246251565e-16
+    },
+    {
+      "alpha_abs": 1.25,
+      "mu": 1.5625,
+      "cutoff": 4,
+      "poisson_tail_probability": 0.07373021419285597
+    },
+    {
+      "alpha_abs": 1.25,
+      "mu": 1.5625,
+      "cutoff": 5,
+      "poisson_tail_probability": 0.021672663059447372
+    },
+    {
+      "alpha_abs": 1.25,
+      "mu": 1.5625,
+      "cutoff": 6,
+      "poisson_tail_probability": 0.005404678330257151
+    },
+    {
+      "alpha_abs": 1.25,
+      "mu": 1.5625,
+      "cutoff": 8,
+      "poisson_tail_probability": 0.00022258684053655386
+    },
+    {
+      "alpha_abs": 1.25,
+      "mu": 1.5625,
+      "cutoff": 10,
+      "poisson_tail_probability": 5.827026756000109e-06
+    },
+    {
+      "alpha_abs": 1.25,
+      "mu": 1.5625,
+      "cutoff": 12,
+      "poisson_tail_probability": 1.0518966142569752e-07
+    },
+    {
+      "alpha_abs": 1.25,
+      "mu": 1.5625,
+      "cutoff": 16,
+      "poisson_tail_probability": 1.391720072518865e-11
+    }
+  ],
+  "max_alpha_abs": 1.25
+}
